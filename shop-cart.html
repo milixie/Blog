@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="Description" content="购物车 使用flexbox的布局">
+		<title>购物车</title>
+		<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			font-size: 14px;
+			font-family: "微软雅黑"
+		}
+		html,
+		body{
+			height: 100%;
+		}
+		.shop-wrap{
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: column;
+			-webkit-flex-direction: column;
+			height: 100%;
+			justify-content: space-between;
+			background: #fcf2f2;
+		}
+		.shop-info {
+			align-self: flex-start;
+			-webkit-align-self: flex-start;
+			width: 100%;
+			overflow: scroll;
+		}
+		.shop-info li {
+			padding: 15px 10px;
+			border-bottom: 4px solid #fff;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+		.shop-info li:last-child {
+			border-bottom: none;
+		}
+		.shop-info li a {
+			line-height: 1.5em;
+			text-decoration: none;
+		}
+		.shop-info .shop-info-show {
+			padding-right: 8px;
+		}
+		.shop-info .shop-info-show p{
+			color: #ea5f02;
+			font-size: 12px;
+		}
+		.shop-info .shop-info-show p span{
+			font-size: 12px;
+		}
+		.shop-info li form {
+			min-width: 85px;
+			margin-top: 5px;
+		}
+		.shop-info li form input {
+			width: 25px;
+			height: 25px;
+			text-align: center;
+		}
+		.shop-info li form .shop-number{
+
+		}
+		.shop-footer {
+			align-self: flex-end;
+			-webkit-align-self: flex-end;
+			width: 100%;
+			background: #ea5f02;
+			color: #fff;
+			display: none;
+		}
+		.shop-footer .shop-total {
+			display: flex;
+			justify-content: space-between;
+		}
+		.shop-footer .shop-total .total {
+			padding: 10px;
+		}
+		.shop-footer .shop-total .total-btn{
+			min-width: 80px;
+			text-align: center;
+		}
+		input[type="button"] {
+			background: #ea5f02;
+			color: #fff;
+			outline: none;
+			border: none;
+		}
+		button {
+			background: #c40303;
+			color: #fff;
+			outline: none;
+			border: none;
+		}
+		</style>
+	</head>
+	<body>
+		 <div class="shop-wrap">
+		 	<ul id="shop-info" class="shop-info">
+	 			<li>
+	 				<div class="shop-info-show">
+	 					<a href="javascript:void(0)">2016冬装新款森马品牌冬季新品男士牛仔裤 商品号：95803585 尺码：M 颜色：blue</a>
+	 					<p>￥<span class="price">49.9</span></p>
+	 				</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+	 			<li>
+					<div class="shop-info-show">
+	 					<a href="javascript:void(0)">以纯官方旗舰店冬季新款潮流女士圆领毛衣 商品号：958035481385 尺码：M 颜色：blue</a>
+						<p>￥<span class="price">109.9</span></p>
+					</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+	 			<li>
+	 				<div class="shop-info-show">
+		 				<a href="javascript:void(0)">屈臣氏2016新款洗发水去屑柔顺拉芳品牌代言人赵薇 商品号：958035481385 尺码：500ML</a>
+		 				<p>￥<span class="price">119.9</span></p>
+	 				</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+	 			<li>
+	 				<div class="shop-info-show">
+		 				<a href="javascript:void(0)">2016好爸爸、蓝月亮洗衣液家庭必备套装 商品号：958035481385 尺码：1L</a>
+		 				<p>￥<span class="price">29.9</span></p>
+	 				</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+	 			<li>
+	 				<div class="shop-info-show">
+		 				<a href="javascript:void(0)">德国最新款防噪音耳塞多种颜色可选品牌旗舰店销售 商品号：958035481385 颜色：紫色 尺码：均码</a>
+		 				<p>￥<span class="price">9.9</span></p>
+	 				</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+	 			<li>
+	 				<div class="shop-info-show">
+		 				<a href="javascript:void(0)">冬季防冻裂屈臣氏护手霜两支装超值换算 商品号：455235295881385 尺码：300ML</a>
+		 				<p>￥<span class="price">39.9</span></p>
+	 				</div>
+	 				<form action="">
+	 					<input class="less-number" type="button" value="-">
+	 					<input class="shop-number" readonly type="text" value="0">
+	 					<input class="add-number" type="button" value="+">
+	 				</form>
+	 			</li>
+		 	</ul>
+		 	<div id="shop-footer" class="shop-footer">
+	 			<div class="shop-total">
+	 				<p class="total total-money">合计：￥<span id="total-price">0</span></p>
+	 				<button class="total total-btn" type="button">结算(<span id="total-shop-num">0</span>)</button>
+	 			</div>
+		 	</div>
+		</div>
+		<script type="text/javascript">
+		window.onload = function(){
+
+
+			//封装绑定的方法：
+			var util = {
+				addHand: function(ele, type, callback) {
+					if (ele.addEventListener) {
+						return ele.addEventListener(type, callback);
+					} else if (ele.attachEvent) {
+						return ele.attachEvent(type, callback);
+					} else {
+						ele['on' + type] = callback;
+					}
+				}
+			};
+
+			// function add
+
+			var oInfo = document.getElementById('shop-info'),
+					aLi = oInfo.getElementsByTagName('li'),
+					oFooter = document.getElementById('shop-footer'),
+
+					//商品单价数据数组
+					priceArr = document.getElementsByClassName('price'),
+
+					//减少商品个数按钮数组
+					lessArr = document.getElementsByClassName('less-number'),
+					//商品个数展示数组
+					addArr = document.getElementsByClassName('add-number'),
+					//增加商品个数按钮数组
+					shopNum = document.getElementsByClassName('shop-number'),
+
+					//结算处商品总价
+					totalPrice = document.getElementById('total-price'),
+					//结算处商品总数
+					totalShopNum = document.getElementById('total-shop-num');
+
+			var len = aLi.length;
+			for(var i = 0; i < len; i++) {
+				//增加索引
+				lessArr[i].index = addArr[i].index = i;
+				//定义一个变量表示所有的商品总数
+				var	numTotal = 0,
+					  priceTotal = 0;
+
+				//减少商品个数
+				util.addHand(lessArr[i], 'click', function(){
+					//每次点击减少商品个数的时候就要重新计算一下当前所有的商品个数总和
+					numTotal = 0;
+					for(var j = 0; j < len; j ++ ){
+						numTotal += Number(shopNum[j].value);
+					}
+
+					//每次点击减少商品个数的时候就要重新计算一下当前所有的商品价格总和
+					priceTotal = 0;
+					for(var m = 0; m < len; m++) {
+						priceTotal += Number(shopNum[m].value) * priceArr[m].innerHTML
+					}
+
+					//当个数大于0的时候点击才会有效果
+					if (shopNum[this.index].value > 0) {
+						shopNum[this.index].value --;
+						numTotal --;
+						priceTotal -= priceArr[this.index].innerHTML;
+					}
+					//当商品总和为0的时候 底部的结算不显示
+					if (numTotal == 0) {
+						oFooter.style.display = "none";
+					}
+
+					//结算处商品总数以及商品总价的显示
+					totalShopNum.innerHTML = numTotal;
+					totalPrice.innerHTML = parseFloat(priceTotal).toFixed(2);
+				});
+				//增加商品个数
+				util.addHand(addArr[i], 'click', function(){
+					shopNum[this.index].value ++;
+					numTotal ++;
+
+					priceTotal = 0;
+					for(var m = 0; m < len; m++) {
+						priceTotal += Number(shopNum[m].value) * priceArr[m].innerHTML
+					}
+
+					//结算处商品总数以及商品总价的显示
+					oFooter.style.display = 'block';
+					totalShopNum.innerHTML = numTotal;
+					totalPrice.innerHTML = parseFloat(priceTotal).toFixed(2);
+				});
+
+			};
+
+
+		}
+		</script>
+	</body>
+</html>
