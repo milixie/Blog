@@ -1,5 +1,7 @@
 # Blog
 
+[git命令大全](https://github.com/milixie/Git)
+
 [input 输入框输入时实时监听并且触发相应动作](https://github.com/milixie/Blog/issues/7)
 
 [在移动端设置 border 为1px 有时候会显示成2px 或3px，该怎么解决？](https://github.com/milixie/Blog/issues/6)
