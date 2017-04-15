@@ -1,5 +1,7 @@
 # Blog
 
+[移动端开发细节总结](https://github.com/milixie/Blog/issues/8)
+
 [git命令大全](https://github.com/milixie/Git)
 
 [input 输入框输入时实时监听并且触发相应动作](https://github.com/milixie/Blog/issues/7)
