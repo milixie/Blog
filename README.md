@@ -1,6 +1,6 @@
 # Blog
 
-[webpack 学习实践](https://github.com/milixie/Blog/tree/master/Webpack)
+[webpack 学习实践](https://github.com/milixie/Blog/tree/master/webpack)
 
 [CommonJs学习笔记](https://github.com/milixie/Blog/tree/master/CommonJs)
 
