@@ -1,5 +1,9 @@
 # Blog
 
+[webpack 学习实践](https://github.com/milixie/Blog/tree/master/Webpack)
+
+[CommonJs学习笔记](https://github.com/milixie/Blog/tree/master/CommonJs)
+
 [移动端开发细节总结](https://github.com/milixie/Blog/issues/8)
 
 [git命令大全](https://github.com/milixie/Git)
