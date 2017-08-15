@@ -1,5 +1,7 @@
 # Blog
 
+[babel 转码器](https://github.com/milixie/Blog/tree/master/babelrc)
+
 [webpack 学习实践](https://github.com/milixie/Blog/tree/master/webpack)
 
 [CommonJs学习笔记](https://github.com/milixie/Blog/tree/master/CommonJs)
