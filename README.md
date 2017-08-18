@@ -1,5 +1,7 @@
 # Blog
 
+[Vue 学习笔记](https://github.com/milixie/vue/blob/master/README.md)
+
 [gulp/grunt vs webpack](https://github.com/milixie/Blog/issues/10)
 
 [gulp 构建工具](https://github.com/milixie/Blog/tree/master/gulp)
