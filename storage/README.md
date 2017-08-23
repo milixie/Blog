@@ -1,3 +1,45 @@
+## 本地存储
+
+- localStorage
+
+- sessionStorage
+
+```
+//本地存储可以通过 window.localStorage || localStorage 来拿
+
+他们自带了方法：
+
+localStorage.setItem('name', 'mili');  //设置存储
+
+localStorage.getItem('name');  //取存储
+
+localStorage.removeItem('name');  //移除某个存储
+
+localStorage.clear();  //清楚存储
+
+sessionStorage.setItem('name', 'mili');  //设置存储
+
+sessionStorage.getItem('name');  //取存储
+
+sessionStorage.removeItem('name');  //移除某个存储
+
+sessionStorage.clear();  //清楚存储
+```
+
+## storage vs cookie
+
+与`cookie`相比，storage 有更多的优点
+
+- storage 有自身的 API 方法：`setItem`等
+
+- storage 的大小不受限制，而 cookie 的大小是受限制的
+
+- storage 是为了大容量的存储设计的
+
+- cookie 还需要指定作用域，不可以跨域调用
+
+- 但是 cookie 可以和服务器进行交互，而 storage 只是为了本地存储而存在的
+
 ## storage 的封装
 
 ```
