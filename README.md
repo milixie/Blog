@@ -1,5 +1,7 @@
 # Blog
 
+[存储 storage 的方法的封装](https://github.com/milixie/Blog/tree/master/storage)
+
 [cookie的读取和删除方法的封装](https://github.com/milixie/Blog/tree/master/cookie)
 
 [关于设计模式](https://github.com/milixie/Blog/tree/master/design)
