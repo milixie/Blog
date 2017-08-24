@@ -17,3 +17,71 @@ webSocket 是一种网络协议，最大的特点是，服务器可以主动向�
 > - 没有同源限制，客户端可以和服务器任意通信
 
 > - 协议标识符 `ws`, 加密后 `wss`
+
+### 使用
+
+先执行`npm i ws`安装 webSocket
+
+在服务端文件中：
+
+```
+const WebSocket = require('ws');
+
+const ws = new WebSocket('wss://echo.websocket.org');
+
+ws.onopen = (evt) => {
+  console.log('connection open ...');
+  ws.send('Hello webSocket');  //向服务器发送数据
+};
+
+ws.onmessage = (evt) => {
+  console.log('Received message:' + evt.data);
+  ws.close();
+};
+
+ws.onclose = (evt) => {
+  console.log('connection closed');
+};
+
+ws.onerror = (evt) => {
+  console.log('error' , evt);
+};
+
+```
+
+执行你的服务端代码文件，你会看到服务端会打印：
+
+
+```
+Server is running in http://localhost:8080/
+Express server listening on 8080
+connection open ...
+Received message:Hello webSocket
+connection closed
+
+```
+
+如果想指定多个回调
+
+```
+ws.addEventListener('open', function(event) {
+  //回调
+  console.log(event, 'add open');
+});
+
+ws.addEventListener('message', function(event) {
+  //回调
+  console.log('add message');
+});
+
+ws.addEventListener('close', function(event) {
+  //回调
+  console.log('add close');
+});
+
+ws.addEventListener('error', function(event) {
+  //回调
+  console.log('error');
+});
+
+```
