@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>
+  <button id="btn">点击发送 ajax 请求</button>
+  <p id="returnText"></p>
+</div>
+<script>
+  window.onload = function () {
+    /*
+      封装一个 ajax 请求
+     */
+    function ajax(options) {
+      options = options || {};
+      const type = (options.type || 'GET').toLowerCase();
+      const url = options.url;
+      const data_type = options.dataType || 'json';
+      const params = options.params || {};
+      let xhr = new XMLHttpRequest();
+      //做兼容
+      if (!window.XMLHttpRequest) {  //<=ie6
+        xhr = new ActiveXObject('Micorosoft.XMLHTTP');
+      }
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status >= 200 && xhr.status <= 300) {
+            options.success && options.success(xhr.responseText, xhr.responseXML);
+          } else {
+            options.fail && options.fail(xhr.status);
+          }
+        }
+      };
+      xhr.open(type, url);
+      xhr.send();
+
+      if (type === 'GET') {
+        xhr.open('GET', `${options.url}?${params}`, true);
+        xhr.send();
+      } else if (type === 'POST') {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(params);
+      }
+    }
+
+    document.getElementById('btn').onclick = function () {
+      ajax({
+        type: 'GET',
+        url: './test.json',
+        dataType: 'json',
+        params: {},
+        success: function (data, xml) {
+          document.getElementById('returnText').innerHTML = data;
+        },
+        fail: function (err) {
+          alert('请求失败了！！！', err);
+        }
+      })
+    };
+  };
+</script>
+</body>
+</html>

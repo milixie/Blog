@@ -1,5 +1,9 @@
 # Blog
 
+[封装一个 ajax](https://github.com/milixie/Blog/tree/master/ajax)
+
+[js 创建对象的几种方式](https://github.com/milixie/Blog/tree/master/create_obj)
+
 [webSocket API](https://github.com/milixie/Blog/tree/master/webSocket)
 
 [存储 storage 的方法的封装](https://github.com/milixie/Blog/tree/master/storage)
