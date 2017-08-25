@@ -1,5 +1,7 @@
 # Blog
 
+[webSocket API](https://github.com/milixie/Blog/tree/master/webSocket)
+
 [存储 storage 的方法的封装](https://github.com/milixie/Blog/tree/master/storage)
 
 [cookie的读取和删除方法的封装](https://github.com/milixie/Blog/tree/master/cookie)
