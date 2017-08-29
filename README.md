@@ -1,5 +1,7 @@
 # Blog
 
+[Promise 基本用法](https://github.com/milixie/Blog/tree/master/promise)
+
 [封装一个 ajax](https://github.com/milixie/Blog/tree/master/ajax)
 
 [js 创建对象的几种方式](https://github.com/milixie/Blog/tree/master/create_obj)

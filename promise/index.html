@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  window.onload = function () {
+    function render1() {
+      const p = new Promise(function (resolve, reject) {
+        console.log('第一个');
+        setTimeout(function () {
+          resolve('第一个成功啦!');
+        }, 2000);
+      });
+      return p;
+    }
+
+    function render2() {
+      const p = new Promise(function (resolve, reject) {
+        console.log('第二个');
+        setTimeout(function () {
+          resolve('第二个成功');
+        }, 2000);
+      });
+      return p;
+    }
+
+    function render3() {
+      const p = new Promise(function (resolve, reject) {
+        console.log('第三个');
+        setTimeout(function () {
+          resolve('第三个成功了');
+        }, 2000);
+      });
+      return p;
+    }
+
+    //使用链式调用，按顺序执行
+//    render1().then(function (data) {
+//      console.log('成功之后的回调！');
+//      console.log(data);
+//      return render2();
+//    }).then(function (data) {
+//      console.log(data);
+//      return render3();
+//    }).then(function (data) {
+//      console.log(data);
+//    }).catch(function () {
+//
+//    });
+
+    const render4 = Promise.all([render1(), render2(), render3()]);
+    console.log(render4);
+    render4.then(function (results) {
+      console.log(results);
+    }).catch(function () {
+
+    });
+
+    function loadImg() {
+      const p = new Promise(function (resolve, reject) {
+        const img = new Image();
+        img.onload = function () {
+          resolve(img);
+        };
+        img.src = 'mmm';
+      });
+      return p;
+    }
+
+    function timeout() {
+      const p = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          reject('timeout!!!');
+        },5000);
+      });
+      return p;
+    }
+//    loadImg().then(function (data) {
+//      console.log(data);
+//    }).catch(function (err) {
+//      console.log(err);
+//    });
+
+    const load = Promise.race([loadImg(), timeout()]);
+    load.then(function (data) {
+      console.log(data);
+    }).catch(function (err) {
+      console.log(err);
+    });
+
+  };
+</script>
+</body>
+</html>
