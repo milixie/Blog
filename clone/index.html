@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  window.onload = function () {
+    function getStrLen(str) {
+      if (!str) return 0;
+      let len = str && str.length;
+      for (let i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) > 255) {
+          len ++;
+        }
+      }
+      console.log(len);
+      return len;
+    }
+    getStrLen('美丽happy!');
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>city select</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    .city {
+      width: 300px;
+      margin: 30px auto;
+      position: relative;
+    }
+    .input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      outline: none;
+      padding: 0 20px;
+      font-size: 20px;
+    }
+    .city-gather {
+      position: absolute;
+      top: 60px;
+      width: 400px;
+      padding: 5px;
+      background: #fff;
+      box-shadow: 1px 1px 1px 0 #eee;
+      border: 1px solid #eee;
+      border-radius: 4px;
+    }
+    .city-gather li {
+      display: inline-block;
+      float: left;
+      padding: 5px 15px;
+      color: #999;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .city-gather li:hover {
+      background: #f6f6f6;
+      color: #666;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .hide {
+      display: none !important;
+    }
+  </style>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<div class="city j_city_wrap">
+  <input type="text" class="input j_city_select">
+  <ul class="city-gather clearfix j_city_list hide"></ul>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>

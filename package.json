@@ -1,0 +1,22 @@
+{
+  "name": "blog-learn",
+  "version": "1.0.0",
+  "description": "[Promise 基本用法](https://github.com/milixie/Blog/tree/master/promise)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milixie/Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milixie/Blog/issues"
+  },
+  "homepage": "https://github.com/milixie/Blog#readme",
+  "devDependencies": {
+    "jquery": "^3.2.1"
+  }
+}
