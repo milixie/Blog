@@ -1,5 +1,7 @@
 # Blog
 
+[数组去重](https://github.com/milixie/Blog/tree/master/array)
+
 [Promise 基本用法](https://github.com/milixie/Blog/tree/master/promise)
 
 [封装一个 ajax](https://github.com/milixie/Blog/tree/master/ajax)
