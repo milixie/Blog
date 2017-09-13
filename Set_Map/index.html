@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set vs Map</title>
+</head>
+<body>
+<script type="application/javascript">
+  window.onload = function () {
+    const set = new Set([1, 4, 2, 6, 2, 4, 5]);
+    const arr1 = [...set];
+
+    for (let item of set.keys()) {
+//      console.log(item);
+    }
+
+    for (let value of set.values()) {
+//      console.log(value);
+    }
+
+    for (let item of set.entries()) {
+//      console.log(item);
+    }
+
+    console.log(arr1);
+    const arr2 = arr1.filter(x => x % 2 === 0);
+    console.log(arr2);
+
+    const arr3 = new Set(arr2);
+    console.log(arr3);
+
+    const arr4 = [...arr3];
+    console.log(arr4);
+
+    console.log('------------Map');
+    const map = new Map([
+      ['name', 'mili', '1111'],
+      ['age', 12]
+    ]);
+    const obj1 = ['name'];
+    map.set(obj1, 'hameili');
+    console.log(map);
+
+    //size 属性
+    console.log(map.size);
+
+    //set 方法
+    map.set(['a'], 123);
+    console.log(map);
+
+    //get 方法
+    console.log(map.get(obj1));
+
+    //has 方法
+    console.log(map.has('name'));
+
+    //delete 方法
+    map.delete('name');
+    console.log(map);
+
+    //clear 方法
+//    map.clear();
+//    console.log(map);
+
+    /*
+    map的方法：
+    keys()
+    values()
+    entries(）
+    forEach()
+     */
+
+    for(let item of map.keys()) {
+      console.log(item);
+    }
+
+    for(let value of map.values()) {
+      console.log(value);
+    }
+
+    for(let item of map.entries()) {
+      console.log(item);
+    }
+
+    console.log('---------')
+
+    map.forEach(function (value, key) {
+      console.log(value, key);
+    });
+
+    //...
+    console.log([...map]);
+    console.log([...map.keys()])
+    console.log([...map.values()])
+    console.log([...map.entries()])
+
+    console.log('---------');
+
+    //Map 转为数组
+    console.log(map);
+    console.log([...map]);
+
+    //数组转为 Map
+    const arr5 = [['title', 'test'], ['set', 'value']];
+    console.log(new Map(arr5));
+
+    const map2 = new Map(arr5);
+
+    console.log('map to json')
+
+    function mapToJson(map) {
+      const obj = {};
+      for (let item of map.entries()) {
+        obj[item[0]] = item[1];
+      }
+      return obj;
+    }
+
+    const obj3 = mapToJson(map2);
+    console.log(obj3);
+
+    console.log('json to map')
+
+    function jsonToMap(obj) {
+      const map = new Map();
+      for(let key in obj) {
+        map.set(key, obj[key]);
+      }
+      return map;
+    }
+
+    const map3 = jsonToMap(obj3);
+    console.log(map3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
+</script>
+</body>
+</html>

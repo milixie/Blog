@@ -74,10 +74,11 @@
       const p = new Promise(function (resolve, reject) {
         setTimeout(function () {
           reject('timeout!!!');
-        },5000);
+        }, 5000);
       });
       return p;
     }
+
 //    loadImg().then(function (data) {
 //      console.log(data);
 //    }).catch(function (err) {
@@ -90,6 +91,31 @@
     }).catch(function (err) {
       console.log(err);
     });
+
+    let doSth = new Promise(function (resolve, reject) {
+      console.log('1', '----');
+      resolve();
+    });
+    setTimeout(function () {
+      doSth.then(function () {
+        console.log('2', '----');
+      });
+    }, 10000);
+
+
+    setTimeout(function () {
+      console.log(1)
+    }, 0);
+    new Promise(function executor(resolve) {
+      console.log(2);
+      for (let i = 0; i < 10000; i++) {
+        i == 9999 && resolve();
+      }
+      console.log(3);
+    }).then(function () {
+      console.log(4);
+    });
+    console.log(5);
 
   };
 </script>
