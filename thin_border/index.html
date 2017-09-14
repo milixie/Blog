@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>thin border</title>
+  <style rel="stylesheet">
+    .wrap-border {
+      width: 200px;
+      padding: 20px;
+    }
+    .thin-border {
+      position: relative;
+    }
+    .thin-border:after {
+      position: absolute;
+      content: ' ';
+      display: block;
+      border: 1px solid #ddd;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      left: -50%;
+      top: -50%;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap-border thin-border">
+    这是一条新闻
+  </div>
+</body>
+</html>
