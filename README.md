@@ -1,5 +1,7 @@
 # Blog
 
+[移动端细线 thin-border](https://github.com/milixie/Blog/tree/master/thin_border)
+
 [数组去重](https://github.com/milixie/Blog/tree/master/array)
 
 [Promise 基本用法](https://github.com/milixie/Blog/tree/master/promise)
