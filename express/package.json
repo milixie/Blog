@@ -1,0 +1,25 @@
+{
+  "name": "express-learn",
+  "version": "1.0.0",
+  "description": "express learn markdown",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "milixie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.1",
+    "express-generator": "^4.15.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1"
+  }
+}

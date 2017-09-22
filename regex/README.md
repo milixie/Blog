@@ -154,5 +154,25 @@ const regex9 = new RegExp(/^[\w-]+(?:\.[\w-]+)*@((?:[\w-]+\.)*\w[\w-]{0,66}\.[a-
 regex9.test('xie_mei-li.hcy.yhc@qq.xie_mi-li.love.com');  //true
 
 
+/*
+  方法：
+  regex.test(str)
+  regex.exec(str)
+  str.match(regex)
+  str.search(regex)
+  str.replace(a, b)
+  str.split('')
+  注意：exec 和 match 的写法不一样，其次如果有 /g， match 会返回所有匹配的数组，但是不会返回子匹配
+ */
+
+const regex10 = new RegExp(/(f)(\w+\s)+(g)/);
+const str = 'feel good';
+
+regex10.test(str);
+regex10.exec(str);
+str.match(regex10);
+str.search(regex10);
+str.replace('ee', 'ul');
+str.split(' ');
 
 ```
