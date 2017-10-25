@@ -1,5 +1,7 @@
 # Blog
 
+[Nodejs 下载文件是乱码了](https://github.com/milixie/Blog/tree/master/download_err)
+
 [Bulma： 一个 css 的框架](https://github.com/milixie/Blog/tree/master/bulma)
 
 [发现了一个很不错的画图工具：私用 plantJML 去画图](http://www.jianshu.com/p/e92a52770832)
