@@ -1,0 +1,14 @@
+{
+  "className": "3年2班",
+  "number": 3,
+  "students": [{
+    "name": "mili",
+    "age": 21
+  }, {
+    "name": "hcy",
+    "age": 21
+  }, {
+    "name": "yhc",
+    "age": 21
+  }]
+}
