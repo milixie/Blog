@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+  const Counter = React.createClass({
+    render: function() {
+      return (
+        <div className="child-wrap">
+          <p>这是计数的子组件 {this.props.num}</p>
+          <button onClick={this.props.handleAddClick}>{this.props.name}</button>
+        </div>
+      );
+    }
+  });
+
+  const InputContent = React.createClass({
+    getInitialState: function () {
+      return {
+        value: '20'
+      }
+    },
+    handleFocusClick: function () {
+       this.refs.nameInput.focus();
+    },
+    changeValue: function () {
+      this.setState({value: this.refs.nameInput.value});
+    },
+    render: function () {
+      return (
+        <div className="input-wrap">
+          <input type="text" ref="nameInput" value={this.state.value} placeholder="请输入名字" onChange={this.changeValue}/>
+          <p>value: {this.state.value}</p>
+          <button onClick={this.handleFocusClick}>聚焦</button>
+        </div>
+      )
+    }
+  });
+
+  const OpacityPart = React.createClass({
+    getInitialState: function () {
+      return {
+        opacity: 1
+      }
+    },
+    componentDidMount: function () {
+      this.timer = setInterval(function () {
+        let opacity = this.state.opacity;
+        opacity = parseFloat(opacity - 0.01).toFixed(2);
+        if (opacity >= 0 ) {
+          this.setState(function (state) {
+            return {
+              opacity: opacity
+            }
+          });
+        } else {
+          clearInterval(this.timer);
+        }
+      }.bind(this), 10);
+    },
+    render: function () {
+      return (
+        <div className="opacity-wrap" style={{opacity: this.state.opacity}}>
+          ddddd
+        </div>
+      )
+    }
+  });
+
+  const GetUserList = React.createClass({
+    getInitialState: function () {
+      return {
+        name: '等待请求结果...',
+        url: '等待请求结果...'
+      }
+    },
+    componentDidMount: function () {
+      const _self = this;
+      $.get(this.props.source, function (result) {
+        const lastGist = result[0];
+        _self.setState({
+          name: lastGist.owner.login,
+          url: lastGist.html_url
+        });
+      });
+    },
+    render: function () {
+      return (
+        <div className="ajax-part">
+          <p>name: {this.state.name}</p>
+          <p>url: {this.state.url}</p>
+        </div>
+      )
+    }
+  });
+
+  const ChangeInput = React.createClass({
+    getInitialState: function () {
+      return {
+        value: '双鱼座'
+      }
+    },
+    changeInput: function () {
+      this.setState({value: '天蝎座'})
+    },
+    render: function () {
+      return (
+        <div className="change-part">
+          <input type="button" onClick={this.changeInput} value="点击获取另一个匹配星座"/>
+          <p>{this.state.value}</p>
+        </div>
+      )
+    }
+  });
+
+
+  const Parent = React.createClass({
+    getInitialState: function() {
+      return {
+        num: 0,
+        text: '点击'
+      }
+    },
+    handleClick: function () {
+      this.setState((state) => {
+        return {num: state.num + 1};
+      });
+    },
+    render: function() {
+      return (
+        <div className="wrap">
+          <Counter num={this.state.num} handleAddClick={this.handleClick} name={this.state.text}></Counter>
+          <InputContent></InputContent>
+          <OpacityPart/>
+          <GetUserList source="https://api.github.com/users/octocat/gists"></GetUserList>
+          <ChangeInput/>
+        </div>
+      )
+    }
+  });
+
+  ReactDOM.render(
+    <Parent/>,
+    document.getElementById('root')
+  );
+</script>
+</body>
+</html>
