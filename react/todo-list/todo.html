@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>todo list by react</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <style>
+    .wrap {
+      width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper"></div>
+<script type="text/babel">
+  const Content = React.createClass({
+    getInitialState: function () {
+      return {
+        finished: 0,
+        value: '',
+        todo_lists: [],
+        pre_lists: []
+      }
+    },
+    handleAddList: function (e) {
+      const val = this.refs.list.value;
+      const lists = this.state.pre_lists;
+      if (e.keyCode === 13 && val) {
+        lists.push({
+          name: val,
+          finished: false
+        });
+        this.refs.list.value = '';
+        this.setState({
+          pre_lists: lists
+        });
+      }
+    },
+    changeStatus: function (item) {
+      console.log(item);
+    },
+//    componentWillMount: function () {
+//      this.lists = [];
+//      let finish_counter = 0;
+//      const self = this;
+//      this.state.pre_lists.forEach(function(item, index) {
+//        self.lists.push(
+//          <li key={index}>
+//            <input type="checkbox" />
+//            {item.name}
+//            <span style={{display: item.finished ? 'block': 'none'}}>finished</span>
+//          </li>
+//        );
+//      });
+//      this.setState({
+//        lists: this.lists
+//      });
+//      this.setState({finished: finish_counter});
+//      this.need_counter = this.state.lists.length - this.state.finished;
+//    },
+    render: function () {
+      return (
+        <div className="wrap">
+          <h2>这是一个使用 react 写的任务列表</h2>
+          <p>您共有{this.state.pre_lists.length}个任务</p>
+          <p>您已经完成了{this.state.finished}个</p>
+          <p>您还需要完成{this.need_counter}个</p>
+          <input type="text" ref="list" placeholder="请输入你需要做的任务" onKeyDown={this.handleAddList}/>
+          <ul>
+            {this.state.pre_lists}
+          </ul>
+        </div>
+      )
+    }
+  });
+  ReactDOM.render(
+    <Content/>,
+    document.getElementById('wrapper')
+  );
+</script>
+
+</body>
+</html>
