@@ -59,13 +59,12 @@
     getInitialState: function () {
       return {
         value: '',
-        todo_lists: [],
-        pre_lists: []
+        todo_lists: []
       }
     },
     handleAddList: function (e) {
       const val = this.refs.list.value;
-      const lists = this.state.pre_lists;
+      const lists = this.state.todo_lists;
       if (e.keyCode === 13 && val) {
         lists.push({
           name: val,
@@ -73,7 +72,7 @@
         });
         this.refs.list.value = '';
         this.setState({
-          pre_lists: lists
+          todo_lists: lists
         });
       }
     },
@@ -81,37 +80,37 @@
       const status = e.target.checked;
       const id = Number(e.target.parentElement.id);
       const item = {
-        name: this.state.pre_lists[id].name
+        name: this.state.todo_lists[id].name
       };
 
-      const new_list = this.state.pre_lists;
+      const new_list = this.state.todo_lists;
       new_list.splice(id, 1);
       item.finished = status;
       new_list.splice(id, 0, item);
       this.setState({
-        pre_lists: new_list
+        todo_lists: new_list
       });
     },
     deleteList: function (e) {
       const id = Number(e.target.parentElement.id);
-      const current = this.state.pre_lists;
+      const current = this.state.todo_lists;
       if (!current[id].finished) {
         const result = confirm('任务还没完成，确定要删除吗？');
         if (result) {
           current.splice(id, 1);
           this.setState({
-            pre_lists: current
+            todo_lists: current
           });
         }
       } else {
         current.splice(id, 1);
         this.setState({
-          pre_lists: current
+          todo_lists: current
         });
       }
     },
     render: function () {
-      const current = this.state.pre_lists;
+      const current = this.state.todo_lists;
       const lists = [];
       let finish_counter = 0;
       for (let i in current) {
@@ -128,9 +127,9 @@
       return (
         <div className="wrap">
           <h3>这是一个使用 react 写的任务列表</h3>
-          <p>您共有{this.state.pre_lists.length}个任务</p>
+          <p>您共有{this.state.todo_lists.length}个任务</p>
           <p>您已经完成了{finish_counter}个</p>
-          <p>您还需要完成{this.state.pre_lists.length - finish_counter}个</p>
+          <p>您还需要完成{this.state.todo_lists.length - finish_counter}个</p>
           <input type="text" ref="list" placeholder="请输入你需要做的任务" onKeyDown={this.handleAddList}/>
           <ul className="list-wrap">
             {lists}

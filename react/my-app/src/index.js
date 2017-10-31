@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
-import App from './App';
-import './example.css';
-import Example from './example';
+import App from '../component/app.jsx';
+// import Example from './component/example.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
-
-
 ReactDOM.render(<App name="root-part"/>, document.getElementById('root'));
-ReactDOM.render(<Example />, document.getElementById('example'));
+// ReactDOM.render(<Example />, document.getElementById('example'));
 
 registerServiceWorker();
