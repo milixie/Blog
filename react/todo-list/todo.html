@@ -8,8 +8,47 @@
   <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
   <style>
     .wrap {
-      width: 500px;
+      width: 340px;
       margin: 0 auto;
+    }
+    .list-wrap, .list-wrap li {
+      list-style: none;
+    }
+    .list-wrap {
+      padding: 0;
+    }
+    .list-wrap li {
+      margin: 5px 0;
+    }
+    .list-wrap li .finish {
+      font-size: 12px;
+      margin: 0 10px;
+      background: #666;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .list-wrap li .list-name {
+      margin: 0 6px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 16px 10px;
+      outline: none;
+      border-radius: 4px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+    }
+    button {
+      padding: 2px 10px;
+      font-size: 12px;
+      background: #FA5555;
+      outline: none;
+      border: 1px solid #FA5555;
+      border-radius: 4px;
+      color: #fff;
+      float: right;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -19,7 +58,6 @@
   const Content = React.createClass({
     getInitialState: function () {
       return {
-        finished: 0,
         value: '',
         todo_lists: [],
         pre_lists: []
@@ -39,38 +77,63 @@
         });
       }
     },
-    changeStatus: function (item) {
-      console.log(item);
+    changeStatus: function (e) {
+      const status = e.target.checked;
+      const id = Number(e.target.parentElement.id);
+      const item = {
+        name: this.state.pre_lists[id].name
+      };
+
+      const new_list = this.state.pre_lists;
+      new_list.splice(id, 1);
+      item.finished = status;
+      new_list.splice(id, 0, item);
+      this.setState({
+        pre_lists: new_list
+      });
     },
-//    componentWillMount: function () {
-//      this.lists = [];
-//      let finish_counter = 0;
-//      const self = this;
-//      this.state.pre_lists.forEach(function(item, index) {
-//        self.lists.push(
-//          <li key={index}>
-//            <input type="checkbox" />
-//            {item.name}
-//            <span style={{display: item.finished ? 'block': 'none'}}>finished</span>
-//          </li>
-//        );
-//      });
-//      this.setState({
-//        lists: this.lists
-//      });
-//      this.setState({finished: finish_counter});
-//      this.need_counter = this.state.lists.length - this.state.finished;
-//    },
+    deleteList: function (e) {
+      const id = Number(e.target.parentElement.id);
+      const current = this.state.pre_lists;
+      if (!current[id].finished) {
+        const result = confirm('任务还没完成，确定要删除吗？');
+        if (result) {
+          current.splice(id, 1);
+          this.setState({
+            pre_lists: current
+          });
+        }
+      } else {
+        current.splice(id, 1);
+        this.setState({
+          pre_lists: current
+        });
+      }
+    },
     render: function () {
+      const current = this.state.pre_lists;
+      const lists = [];
+      let finish_counter = 0;
+      for (let i in current) {
+        lists.push(
+          <li key={i} id={i}>
+            <input type="checkbox" checked={current[i].finished} onChange={this.changeStatus}/>
+            <span className="list-name" style={{'text-decoration': current[i].finished ? 'line-through': 'none'}}>{current[i].name}</span>
+            <span style={{display: current[i].finished ? 'inline': 'none'}} className="finish">finished</span>
+            <button onClick={this.deleteList}>删除</button>
+          </li>
+        );
+        if (current[i].finished) finish_counter++;
+      }
       return (
         <div className="wrap">
-          <h2>这是一个使用 react 写的任务列表</h2>
+          <h3>这是一个使用 react 写的任务列表</h3>
           <p>您共有{this.state.pre_lists.length}个任务</p>
-          <p>您已经完成了{this.state.finished}个</p>
-          <p>您还需要完成{this.need_counter}个</p>
+          <p>您已经完成了{finish_counter}个</p>
+          <p>您还需要完成{this.state.pre_lists.length - finish_counter}个</p>
           <input type="text" ref="list" placeholder="请输入你需要做的任务" onKeyDown={this.handleAddList}/>
-          <ul>
-            {this.state.pre_lists}
+          <ul className="list-wrap">
+            {lists}
           </ul>
         </div>
       )
