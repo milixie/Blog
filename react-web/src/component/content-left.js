@@ -26,7 +26,7 @@ class ContentLeft extends React.Component {
           <div className="parent-wrap">
             <p className={active === nav_data[i].id ? 'parent-title active': 'parent-title'} onClick={(e) => (this.props.toggleSubNav(e))}>
               {nav_data[i].title}
-              {nav_data[i].sub_item.length > 0 ? '+': ''}
+              <span className="add">{nav_data[i].sub_item.length > 0 ? '+': ''}</span>
             </p>
             <ul className="child-wrap" style={{display: nav_data[i].sub_item.length > 0 && nav_data[i].show_item ? 'block': 'none'}}>
               {sub_nav}

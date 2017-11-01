@@ -1,5 +1,7 @@
 @import "./main.scss";
 .pages {
+  min-width: 1000px;
+  overflow: auto;
   height: 100%;
   position: relative;
   .top-header {
@@ -7,6 +9,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    min-width: 1000px;
     padding: 0 30px;
     height: 60px;
     line-height: 60px;
@@ -79,6 +82,9 @@
               }
               &.active {
                 background: $light;
+              }
+              .add {
+                float: right;
               }
             }
             .child-wrap {
