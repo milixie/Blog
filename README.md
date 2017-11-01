@@ -1,5 +1,6 @@
 # Blog
 
+[Nodejs 一个新的框架 Fastify](https://github.com/milixie/Blog/tree/master/fastify)
 
 [Nodejs 下载文件是乱码了](https://github.com/milixie/Blog/tree/master/download_err)
 
