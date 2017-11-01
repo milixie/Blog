@@ -1,0 +1,51 @@
+
+$default: #99a9bf;
+$light: #e5e9f2;
+$dark: #20232a;
+$bright: #61dafb;
+$lightGray: #f8f8f8;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.vflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+
+
+ul, li {
+  list-style: none;
+}
+a {
+  color: $bright;
+  text-decoration: none;
+}
