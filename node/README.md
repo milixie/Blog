@@ -24,3 +24,7 @@ rm -rf /usr/local/bin/npm
 #### node 的版本管理工具 n
 
 [点击查看](http://www.jianshu.com/p/a927bcecdbc0)
+
+#### 直接安装 npm
+
+`curl -L https://npmjs.org/install.sh | sh`
