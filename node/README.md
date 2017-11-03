@@ -21,3 +21,6 @@ rm -rf /usr/local/bin/npm
 
 这样就可以把 npm 删除了
 
+#### node 的版本管理工具 n
+
+[点击查看](http://www.jianshu.com/p/a927bcecdbc0)
