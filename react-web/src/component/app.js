@@ -91,7 +91,8 @@ class App extends React.Component {
         }, {
           name: '常见问题'
         }]
-      }]
+      }],
+      course: ['语文', '数学', '英语']
     }
   }
   toggleSubNav(e) {
@@ -114,9 +115,8 @@ class App extends React.Component {
         <Top/>
         <div className="content flex">
           <ContentLeft active={this.state.active} data={this.state.nav_data} toggleSubNav={(e) => this.toggleSubNav(e)}/>
-          <ContentRight/>
+          <ContentRight course={this.state.course}/>
         </div>
-
       </div>
     );
   }

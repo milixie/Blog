@@ -92,7 +92,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
-	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n", ""]);
 
 /***/ }),
 /* 4 */
@@ -401,11 +401,11 @@
 
 	var _topJs2 = _interopRequireDefault(_topJs);
 
-	var _contentLeftJs = __webpack_require__(13);
+	var _contentLeftJs = __webpack_require__(12);
 
 	var _contentLeftJs2 = _interopRequireDefault(_contentLeftJs);
 
-	var _contentRightJs = __webpack_require__(14);
+	var _contentRightJs = __webpack_require__(13);
 
 	var _contentRightJs2 = _interopRequireDefault(_contentRightJs);
 
@@ -498,7 +498,8 @@
 	        }, {
 	          name: '常见问题'
 	        }]
-	      }]
+	      }],
+	      course: ['语文', '数学', '英语']
 	    };
 	  }
 
@@ -533,7 +534,7 @@
 	          _react2['default'].createElement(_contentLeftJs2['default'], { active: this.state.active, data: this.state.nav_data, toggleSubNav: function (e) {
 	              return _this.toggleSubNav(e);
 	            } }),
-	          _react2['default'].createElement(_contentRightJs2['default'], null)
+	          _react2['default'].createElement(_contentRightJs2['default'], { course: this.state.course })
 	        )
 	      );
 	    }
@@ -581,7 +582,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
-	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n\n.pages {\n  min-width: 1000px;\n  overflow: auto;\n  height: 100%;\n  position: relative; }\n  .pages .top-header {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    min-width: 1000px;\n    padding: 0 30px;\n    height: 60px;\n    line-height: 60px;\n    background: #20232a;\n    color: #61dafb; }\n    .pages .top-header .logo {\n      width: 60px;\n      float: left;\n      position: relative;\n      top: 8px; }\n    .pages .top-header .ul-list {\n      margin: 0 20px; }\n      .pages .top-header .ul-list li {\n        margin: 0 5px; }\n        .pages .top-header .ul-list li.active {\n          border-bottom: 3px solid #61dafb; }\n        .pages .top-header .ul-list li a {\n          display: inline-block;\n          padding: 0 20px;\n          text-decoration: none; }\n    .pages .top-header .search .search-box {\n      padding: 6px 15px;\n      border-radius: 20px;\n      outline: none;\n      border: none;\n      background: transparent;\n      color: #61dafb; }\n      .pages .top-header .search .search-box:focus {\n        background: rgba(255, 255, 255, 0.1); }\n    .pages .top-header .share a {\n      font-size: 12px;\n      color: #99a9bf; }\n  .pages .content {\n    height: 100%;\n    padding-top: 60px;\n    background: #e5e9f2; }\n    .pages .content .content-left {\n      width: 240px;\n      background: #fff;\n      box-shadow: 2px 0 2px #ddd;\n      height: 100%; }\n      .pages .content .content-left .nav-wrap {\n        font-size: 12px;\n        height: 100%;\n        overflow-y: auto; }\n        .pages .content .content-left .nav-wrap .li-wrap {\n          cursor: pointer;\n          border-bottom: 1px solid #eee; }\n          .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title {\n            background: #f8f8f8;\n            padding: 18px 20px;\n            font-size: 14px; }\n            .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title:hover {\n              background: #e5e9f2; }\n            .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title.active {\n              background: #e5e9f2; }\n            .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title .add {\n              float: right; }\n          .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li {\n            padding: 15px 30px; }\n            .pages .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li:hover {\n              color: #61dafb; }\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n\n.top-header {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  min-width: 1000px;\n  padding: 0 30px;\n  height: 60px;\n  line-height: 60px;\n  background: #20232a;\n  color: #61dafb; }\n  .top-header .logo {\n    width: 60px;\n    float: left;\n    position: relative;\n    top: 8px; }\n  .top-header .ul-list {\n    margin: 0 20px; }\n    .top-header .ul-list li {\n      margin: 0 5px; }\n      .top-header .ul-list li.active {\n        border-bottom: 3px solid #61dafb; }\n      .top-header .ul-list li a {\n        display: inline-block;\n        padding: 0 20px;\n        text-decoration: none; }\n  .top-header .search .search-box {\n    padding: 6px 15px;\n    border-radius: 20px;\n    outline: none;\n    border: none;\n    background: transparent;\n    color: #61dafb; }\n    .top-header .search .search-box:focus {\n      background: rgba(255, 255, 255, 0.1); }\n  .top-header .share a {\n    font-size: 12px;\n    color: #99a9bf; }\n\n.content {\n  height: 100%;\n  padding-top: 60px;\n  background: #e5e9f2; }\n  .content .content-left {\n    width: 240px;\n    background: #fff;\n    box-shadow: 2px 0 2px #ddd;\n    height: 100%; }\n    .content .content-left .nav-wrap {\n      font-size: 12px;\n      height: 100%;\n      overflow-y: auto; }\n      .content .content-left .nav-wrap .li-wrap {\n        cursor: pointer;\n        border-bottom: 1px solid #eee; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title {\n          background: #f8f8f8;\n          padding: 18px 20px;\n          font-size: 14px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title:hover {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title.active {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title .add {\n            float: right; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li {\n          padding: 15px 30px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li:hover {\n            color: #61dafb; }\n  .content .content-right {\n    height: 100%;\n    overflow: auto;\n    flex: 1;\n    padding: 20px; }\n    .content .content-right .team-wrap {\n      background: #fff; }\n      .content .content-right .team-wrap .team-content {\n        padding: 10px; }\n        .content .content-right .team-wrap .team-content .sub-team {\n          display: inline-block;\n          float: left;\n          border: 1px solid #f8f8f8;\n          padding: 15px;\n          border-radius: 4px;\n          box-shadow: 0 1px 1px #f8f8f8;\n          margin: 10px;\n          transition: all 0.3s; }\n          .content .content-right .team-wrap .team-content .sub-team:hover {\n            box-shadow: 2px 2px 2px #ddd;\n            transform: scale(1.05); }\n\n.pages {\n  min-width: 1000px;\n  overflow: auto;\n  height: 100%;\n  position: relative; }\n", ""]);
 
 /***/ }),
 /* 10 */
@@ -613,15 +614,50 @@
 	var Top = (function (_React$Component) {
 	  _inherits(Top, _React$Component);
 
-	  function Top() {
+	  function Top(props) {
 	    _classCallCheck(this, Top);
 
-	    _get(Object.getPrototypeOf(Top.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(Top.prototype), 'constructor', this).call(this, props);
+	    this.state = {
+	      current: 'home',
+	      nav_list: [{
+	        name: '首页',
+	        id: 'home'
+	      }, {
+	        name: '产品',
+	        id: 'product'
+	      }, {
+	        name: '博客',
+	        id: 'blog'
+	      }, {
+	        name: '关于我们',
+	        id: 'about'
+	      }]
+	    };
+	    this.handleSwitch = this.handleSwitch.bind(this);
 	  }
 
 	  _createClass(Top, [{
+	    key: 'handleSwitch',
+	    value: function handleSwitch() {}
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this = this;
+
+	      var nav = this.state.nav_list;
+	      var nav_list = [];
+	      nav.forEach(function (item, i) {
+	        nav_list.push(_react2['default'].createElement(
+	          'li',
+	          { key: i, id: item.id, className: _this.state.current === item.id ? 'active' : '', onClick: _this.handleSwitch },
+	          _react2['default'].createElement(
+	            'a',
+	            { href: 'javascript:void(0)' },
+	            item.name
+	          )
+	        ));
+	      });
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: 'top-header flex between' },
@@ -634,42 +670,7 @@
 	        _react2['default'].createElement(
 	          'ul',
 	          { className: 'flex ul-list' },
-	          _react2['default'].createElement(
-	            'li',
-	            { className: 'active' },
-	            _react2['default'].createElement(
-	              'a',
-	              { href: '' },
-	              '首页'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'li',
-	            null,
-	            _react2['default'].createElement(
-	              'a',
-	              { href: '' },
-	              '产品'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'li',
-	            null,
-	            _react2['default'].createElement(
-	              'a',
-	              { href: '' },
-	              '博客'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'li',
-	            null,
-	            _react2['default'].createElement(
-	              'a',
-	              { href: '' },
-	              '关于我们'
-	            )
-	          )
+	          nav_list
 	        ),
 	        _react2['default'].createElement(
 	          'div',
@@ -702,8 +703,7 @@
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NDEuOSA1OTUuMyI+CiAgICA8ZyBmaWxsPSIjNjFEQUZCIj4KICAgICAgICA8cGF0aCBkPSJNNjY2LjMgMjk2LjVjMC0zMi41LTQwLjctNjMuMy0xMDMuMS04Mi40IDE0LjQtNjMuNiA4LTExNC4yLTIwLjItMTMwLjQtNi41LTMuOC0xNC4xLTUuNi0yMi40LTUuNnYyMi4zYzQuNiAwIDguMy45IDExLjQgMi42IDEzLjYgNy44IDE5LjUgMzcuNSAxNC45IDc1LjctMS4xIDkuNC0yLjkgMTkuMy01LjEgMjkuNC0xOS42LTQuOC00MS04LjUtNjMuNS0xMC45LTEzLjUtMTguNS0yNy41LTM1LjMtNDEuNi01MCAzMi42LTMwLjMgNjMuMi00Ni45IDg0LTQ2LjlWNzhjLTI3LjUgMC02My41IDE5LjYtOTkuOSA1My42LTM2LjQtMzMuOC03Mi40LTUzLjItOTkuOS01My4ydjIyLjNjMjAuNyAwIDUxLjQgMTYuNSA4NCA0Ni42LTE0IDE0LjctMjggMzEuNC00MS4zIDQ5LjktMjIuNiAyLjQtNDQgNi4xLTYzLjYgMTEtMi4zLTEwLTQtMTkuNy01LjItMjktNC43LTM4LjIgMS4xLTY3LjkgMTQuNi03NS44IDMtMS44IDYuOS0yLjYgMTEuNS0yLjZWNzguNWMtOC40IDAtMTYgMS44LTIyLjYgNS42LTI4LjEgMTYuMi0zNC40IDY2LjctMTkuOSAxMzAuMS02Mi4yIDE5LjItMTAyLjcgNDkuOS0xMDIuNyA4Mi4zIDAgMzIuNSA0MC43IDYzLjMgMTAzLjEgODIuNC0xNC40IDYzLjYtOCAxMTQuMiAyMC4yIDEzMC40IDYuNSAzLjggMTQuMSA1LjYgMjIuNSA1LjYgMjcuNSAwIDYzLjUtMTkuNiA5OS45LTUzLjYgMzYuNCAzMy44IDcyLjQgNTMuMiA5OS45IDUzLjIgOC40IDAgMTYtMS44IDIyLjYtNS42IDI4LjEtMTYuMiAzNC40LTY2LjcgMTkuOS0xMzAuMSA2Mi0xOS4xIDEwMi41LTQ5LjkgMTAyLjUtODIuM3ptLTEzMC4yLTY2LjdjLTMuNyAxMi45LTguMyAyNi4yLTEzLjUgMzkuNS00LjEtOC04LjQtMTYtMTMuMS0yNC00LjYtOC05LjUtMTUuOC0xNC40LTIzLjQgMTQuMiAyLjEgMjcuOSA0LjcgNDEgNy45em0tNDUuOCAxMDYuNWMtNy44IDEzLjUtMTUuOCAyNi4zLTI0LjEgMzguMi0xNC45IDEuMy0zMCAyLTQ1LjIgMi0xNS4xIDAtMzAuMi0uNy00NS0xLjktOC4zLTExLjktMTYuNC0yNC42LTI0LjItMzgtNy42LTEzLjEtMTQuNS0yNi40LTIwLjgtMzkuOCA2LjItMTMuNCAxMy4yLTI2LjggMjAuNy0zOS45IDcuOC0xMy41IDE1LjgtMjYuMyAyNC4xLTM4LjIgMTQuOS0xLjMgMzAtMiA0NS4yLTIgMTUuMSAwIDMwLjIuNyA0NSAxLjkgOC4zIDExLjkgMTYuNCAyNC42IDI0LjIgMzggNy42IDEzLjEgMTQuNSAyNi40IDIwLjggMzkuOC02LjMgMTMuNC0xMy4yIDI2LjgtMjAuNyAzOS45em0zMi4zLTEzYzUuNCAxMy40IDEwIDI2LjggMTMuOCAzOS44LTEzLjEgMy4yLTI2LjkgNS45LTQxLjIgOCA0LjktNy43IDkuOC0xNS42IDE0LjQtMjMuNyA0LjYtOCA4LjktMTYuMSAxMy0yNC4xek00MjEuMiA0MzBjLTkuMy05LjYtMTguNi0yMC4zLTI3LjgtMzIgOSAuNCAxOC4yLjcgMjcuNS43IDkuNCAwIDE4LjctLjIgMjcuOC0uNy05IDExLjctMTguMyAyMi40LTI3LjUgMzJ6bS03NC40LTU4LjljLTE0LjItMi4xLTI3LjktNC43LTQxLTcuOSAzLjctMTIuOSA4LjMtMjYuMiAxMy41LTM5LjUgNC4xIDggOC40IDE2IDEzLjEgMjQgNC43IDggOS41IDE1LjggMTQuNCAyMy40ek00MjAuNyAxNjNjOS4zIDkuNiAxOC42IDIwLjMgMjcuOCAzMi05LS40LTE4LjItLjctMjcuNS0uNy05LjQgMC0xOC43LjItMjcuOC43IDktMTEuNyAxOC4zLTIyLjQgMjcuNS0zMnptLTc0IDU4LjljLTQuOSA3LjctOS44IDE1LjYtMTQuNCAyMy43LTQuNiA4LTguOSAxNi0xMyAyNC01LjQtMTMuNC0xMC0yNi44LTEzLjgtMzkuOCAxMy4xLTMuMSAyNi45LTUuOCA0MS4yLTcuOXptLTkwLjUgMTI1LjJjLTM1LjQtMTUuMS01OC4zLTM0LjktNTguMy01MC42IDAtMTUuNyAyMi45LTM1LjYgNTguMy01MC42IDguNi0zLjcgMTgtNyAyNy43LTEwLjEgNS43IDE5LjYgMTMuMiA0MCAyMi41IDYwLjktOS4yIDIwLjgtMTYuNiA0MS4xLTIyLjIgNjAuNi05LjktMy4xLTE5LjMtNi41LTI4LTEwLjJ6TTMxMCA0OTBjLTEzLjYtNy44LTE5LjUtMzcuNS0xNC45LTc1LjcgMS4xLTkuNCAyLjktMTkuMyA1LjEtMjkuNCAxOS42IDQuOCA0MSA4LjUgNjMuNSAxMC45IDEzLjUgMTguNSAyNy41IDM1LjMgNDEuNiA1MC0zMi42IDMwLjMtNjMuMiA0Ni45LTg0IDQ2LjktNC41LS4xLTguMy0xLTExLjMtMi43em0yMzcuMi03Ni4yYzQuNyAzOC4yLTEuMSA2Ny45LTE0LjYgNzUuOC0zIDEuOC02LjkgMi42LTExLjUgMi42LTIwLjcgMC01MS40LTE2LjUtODQtNDYuNiAxNC0xNC43IDI4LTMxLjQgNDEuMy00OS45IDIyLjYtMi40IDQ0LTYuMSA2My42LTExIDIuMyAxMC4xIDQuMSAxOS44IDUuMiAyOS4xem0zOC41LTY2LjdjLTguNiAzLjctMTggNy0yNy43IDEwLjEtNS43LTE5LjYtMTMuMi00MC0yMi41LTYwLjkgOS4yLTIwLjggMTYuNi00MS4xIDIyLjItNjAuNiA5LjkgMy4xIDE5LjMgNi41IDI4LjEgMTAuMiAzNS40IDE1LjEgNTguMyAzNC45IDU4LjMgNTAuNi0uMSAxNS43LTIzIDM1LjYtNTguNCA1MC42ek0zMjAuOCA3OC40eiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjQyMC45IiBjeT0iMjk2LjUiIHI9IjQ1LjciLz4KICAgICAgICA8cGF0aCBkPSJNNTIwLjUgNzguMXoiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
 
 /***/ }),
-/* 12 */,
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -751,17 +751,19 @@
 	      var nav_data = this.props.data;
 	      var active = this.props.active;
 	      var render_nav = [];
-	      for (var i in nav_data) {
+
+	      nav_data.forEach(function (item, i) {
 	        var sub_nav = [];
-	        if (nav_data[i].sub_item.length > 0) {
-	          for (var j in nav_data[i].sub_item) {
+	        if (item.sub_item.length > 0) {
+	          item.sub_item.forEach(function (sub) {
 	            sub_nav.push(_react2['default'].createElement(
 	              'li',
 	              { className: 'child-li' },
-	              nav_data[i].sub_item[j].name
+	              sub.name
 	            ));
-	          }
+	          });
 	        }
+
 	        render_nav.push(_react2['default'].createElement(
 	          'li',
 	          { className: 'li-wrap', key: i, id: i },
@@ -770,24 +772,25 @@
 	            { className: 'parent-wrap' },
 	            _react2['default'].createElement(
 	              'p',
-	              { className: active === nav_data[i].id ? 'parent-title active' : 'parent-title', onClick: function (e) {
+	              { className: active === item.id ? 'parent-title active' : 'parent-title', onClick: function (e) {
 	                  return _this.props.toggleSubNav(e);
 	                } },
-	              nav_data[i].title,
+	              item.title,
 	              _react2['default'].createElement(
 	                'span',
 	                { className: 'add' },
-	                nav_data[i].sub_item.length > 0 ? '+' : ''
+	                item.sub_item.length > 0 ? '+' : ''
 	              )
 	            ),
 	            _react2['default'].createElement(
 	              'ul',
-	              { className: 'child-wrap', style: { display: nav_data[i].sub_item.length > 0 && nav_data[i].show_item ? 'block' : 'none' } },
+	              { className: 'child-wrap', style: { display: item.sub_item.length > 0 && item.show_item ? 'block' : 'none' } },
 	              sub_nav
 	            )
 	          )
 	        ));
-	      }
+	      });
+
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: 'content-left' },
@@ -804,6 +807,133 @@
 	})(_react2['default'].Component);
 
 	exports['default'] = ContentLeft;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _teamJs = __webpack_require__(14);
+
+	var _teamJs2 = _interopRequireDefault(_teamJs);
+
+	var _learnJs = __webpack_require__(15);
+
+	var _learnJs2 = _interopRequireDefault(_learnJs);
+
+	function Clock(time) {
+	  return _react2['default'].createElement(
+	    'div',
+	    { className: 'clock' },
+	    '输出当前时间： ',
+	    _react2['default'].createElement(
+	      'span',
+	      null,
+	      time
+	    )
+	  );
+	}
+
+	var ContentRight = (function (_React$Component) {
+	  _inherits(ContentRight, _React$Component);
+
+	  function ContentRight(props) {
+	    _classCallCheck(this, ContentRight);
+
+	    _get(Object.getPrototypeOf(ContentRight.prototype), 'constructor', this).call(this, props);
+	    this.state = {
+	      date: new Date().toLocaleTimeString(),
+	      toggleOn: true
+	    };
+	    this.handleClick = this.handleClick.bind(this);
+	  }
+
+	  _createClass(ContentRight, [{
+	    key: 'tick',
+	    value: function tick() {
+	      this.setState({
+	        date: new Date().toLocaleTimeString()
+	      });
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      this.setState(function (state) {
+	        return {
+	          toggleOn: !state.toggleOn
+	        };
+	      });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this = this;
+
+	      this.timer = setInterval(function () {
+	        return _this.tick();
+	      }, 1000);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'content-right' },
+	        _react2['default'].createElement(_teamJs2['default'], null),
+	        _react2['default'].createElement(_learnJs2['default'], { course: this.props.course }),
+	        _react2['default'].createElement(
+	          'div',
+	          null,
+	          Clock(new Date().toLocaleTimeString())
+	        ),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'now' },
+	          this.state.date
+	        ),
+	        _react2['default'].createElement(
+	          'p',
+	          null,
+	          this.state.toggleOn ? '开启' : '关闭'
+	        ),
+	        _react2['default'].createElement(
+	          'button',
+	          { onClick: this.handleClick },
+	          '点击'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ContentRight;
+	})(_react2['default'].Component);
+
+	exports['default'] = ContentRight;
 	module.exports = exports['default'];
 
 /***/ }),
@@ -830,30 +960,146 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var ContentRight = (function (_React$Component) {
-	  _inherits(ContentRight, _React$Component);
+	var Team = (function (_React$Component) {
+	  _inherits(Team, _React$Component);
 
-	  function ContentRight() {
-	    _classCallCheck(this, ContentRight);
+	  function Team() {
+	    _classCallCheck(this, Team);
 
-	    _get(Object.getPrototypeOf(ContentRight.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(Team.prototype), 'constructor', this).apply(this, arguments);
 	  }
 
-	  _createClass(ContentRight, [{
+	  _createClass(Team, [{
 	    key: 'render',
 	    value: function render() {
+	      var data = [{
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/6.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/2.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/3.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/5.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/4.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/7.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/1.jpg',
+	        detail: '团队成立于2011年'
+	      }, {
+	        url: '',
+	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/8.jpg',
+	        detail: '团队成立于2011年'
+	      }];
+	      var teams = [];
+	      data.forEach(function (item, i) {
+	        teams.push(_react2['default'].createElement(
+	          'li',
+	          { className: 'sub-team', key: i },
+	          _react2['default'].createElement(
+	            'a',
+	            { href: item.url },
+	            _react2['default'].createElement('img', { src: item.img, alt: '' }),
+	            _react2['default'].createElement(
+	              'p',
+	              null,
+	              item.detail
+	            )
+	          )
+	        ));
+	      });
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: 'content-right' },
-	        'right'
+	        { className: 'team-wrap' },
+	        _react2['default'].createElement(
+	          'ul',
+	          { className: 'team-content clear' },
+	          teams
+	        )
 	      );
 	    }
 	  }]);
 
-	  return ContentRight;
+	  return Team;
 	})(_react2['default'].Component);
 
-	exports['default'] = ContentRight;
+	exports['default'] = Team;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function Comment(props) {
+	  var items = [];
+	  props.course.forEach(function (item, i) {
+	    items.push(_react2['default'].createElement(
+	      'li',
+	      { key: i },
+	      item
+	    ));
+	  });
+	  return _react2['default'].createElement(
+	    'ul',
+	    { className: 'course-wrap' },
+	    items
+	  );
+	}
+
+	var Learn = (function (_React$Component) {
+	  _inherits(Learn, _React$Component);
+
+	  function Learn() {
+	    _classCallCheck(this, Learn);
+
+	    _get(Object.getPrototypeOf(Learn.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Learn, [{
+	    key: 'render',
+	    value: function render() {
+	      return Comment(this.props);
+	    }
+	  }]);
+
+	  return Learn;
+	})(_react2['default'].Component);
+
+	exports['default'] = Learn;
 	module.exports = exports['default'];
 
 /***/ })
