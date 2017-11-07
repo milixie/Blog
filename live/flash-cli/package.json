@@ -1,0 +1,14 @@
+{
+  "name": "flash-cli",
+  "version": "0.0.1",
+  "description": "flash cli build",
+  "main": "index.js",
+  "bin": {
+    "flash": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "milixie",
+  "license": "ISC"
+}
