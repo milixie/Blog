@@ -12,7 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "mustache": "^2.3.0",
     "react": "^16.0.0",
+    "react-router": "^4.2.0",
     "sass": "^0.5.0"
   },
   "devDependencies": {
