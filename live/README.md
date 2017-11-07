@@ -241,4 +241,12 @@ const endTip = buildFilePath => {
 
 根据 yeoman 的标准去编写一个脚手架工程`generator-flash`
 
-github 地址`https://github.com/water-wheel/generator-flash`
+github 地址
+
+`https://github.com/water-wheel/generator-flash`
+
+相关地址：
+
+`https://github.com/water-wheel/learning-step`
+
+`https://github.com/water-wheel/flash-cli`
