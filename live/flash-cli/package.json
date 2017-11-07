@@ -10,5 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "milixie",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "ejs": "^2.5.7",
+    "inquirer": "^3.3.0",
+    "mkdirp": "^0.5.1",
+    "shelljs": "^0.7.8"
+  }
 }
