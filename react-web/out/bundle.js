@@ -92,7 +92,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
-	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.flex1 {\n  flex: 1; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n", ""]);
 
 /***/ }),
 /* 4 */
@@ -409,6 +409,10 @@
 
 	var _contentRightJs2 = _interopRequireDefault(_contentRightJs);
 
+	var _commonDialog = __webpack_require__(16);
+
+	var _commonDialog2 = _interopRequireDefault(_commonDialog);
+
 	var App = (function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -499,8 +503,11 @@
 	          name: '常见问题'
 	        }]
 	      }],
-	      course: ['语文', '数学', '英语']
+	      course: ['语文', '数学', '英语'],
+	      show_dialog: false
 	    };
+	    this.handleSureClick = this.handleSureClick.bind(this);
+	    this.handleCancelClick = this.handleCancelClick.bind(this);
 	  }
 
 	  _createClass(App, [{
@@ -520,6 +527,27 @@
 	      });
 	    }
 	  }, {
+	    key: 'showDialog',
+	    value: function showDialog(e) {
+	      this.setState({
+	        show_dialog: !this.state.show_dialog
+	      });
+	    }
+	  }, {
+	    key: 'handleSureClick',
+	    value: function handleSureClick() {
+	      this.setState({
+	        show_dialog: false
+	      });
+	    }
+	  }, {
+	    key: 'handleCancelClick',
+	    value: function handleCancelClick() {
+	      this.setState({
+	        show_dialog: false
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this = this;
@@ -534,8 +562,11 @@
 	          _react2['default'].createElement(_contentLeftJs2['default'], { active: this.state.active, data: this.state.nav_data, toggleSubNav: function (e) {
 	              return _this.toggleSubNav(e);
 	            } }),
-	          _react2['default'].createElement(_contentRightJs2['default'], { course: this.state.course })
-	        )
+	          _react2['default'].createElement(_contentRightJs2['default'], { course: this.state.course, showDialogClick: function (e) {
+	              return _this.showDialog(e);
+	            } })
+	        ),
+	        _react2['default'].createElement(_commonDialog2['default'], { show_dialog: this.state.show_dialog, msg: '您确定打开详情吗？', handleSure: this.handleSureClick, handleCancel: this.handleCancelClick })
 	      );
 	    }
 	  }]);
@@ -582,7 +613,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
-	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n\n.top-header {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  min-width: 1000px;\n  padding: 0 30px;\n  height: 60px;\n  line-height: 60px;\n  background: #20232a;\n  color: #61dafb; }\n  .top-header .logo {\n    width: 60px;\n    float: left;\n    position: relative;\n    top: 8px; }\n  .top-header .ul-list {\n    margin: 0 20px; }\n    .top-header .ul-list li {\n      margin: 0 5px; }\n      .top-header .ul-list li.active {\n        border-bottom: 3px solid #61dafb; }\n      .top-header .ul-list li a {\n        display: inline-block;\n        padding: 0 20px;\n        text-decoration: none; }\n  .top-header .search .search-box {\n    padding: 6px 15px;\n    border-radius: 20px;\n    outline: none;\n    border: none;\n    background: transparent;\n    color: #61dafb; }\n    .top-header .search .search-box:focus {\n      background: rgba(255, 255, 255, 0.1); }\n  .top-header .share a {\n    font-size: 12px;\n    color: #99a9bf; }\n\n.content {\n  height: 100%;\n  padding-top: 60px;\n  background: #e5e9f2; }\n  .content .content-left {\n    width: 240px;\n    background: #fff;\n    box-shadow: 2px 0 2px #ddd;\n    height: 100%; }\n    .content .content-left .nav-wrap {\n      font-size: 12px;\n      height: 100%;\n      overflow-y: auto; }\n      .content .content-left .nav-wrap .li-wrap {\n        cursor: pointer;\n        border-bottom: 1px solid #eee; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title {\n          background: #f8f8f8;\n          padding: 18px 20px;\n          font-size: 14px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title:hover {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title.active {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title .add {\n            float: right; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li {\n          padding: 15px 30px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li:hover {\n            color: #61dafb; }\n  .content .content-right {\n    height: 100%;\n    overflow: auto;\n    flex: 1;\n    padding: 20px; }\n    .content .content-right .team-wrap {\n      background: #fff; }\n      .content .content-right .team-wrap .team-content {\n        padding: 10px; }\n        .content .content-right .team-wrap .team-content .sub-team {\n          display: inline-block;\n          float: left;\n          border: 1px solid #f8f8f8;\n          padding: 15px;\n          border-radius: 4px;\n          box-shadow: 0 1px 1px #f8f8f8;\n          margin: 10px;\n          transition: all 0.3s; }\n          .content .content-right .team-wrap .team-content .sub-team:hover {\n            box-shadow: 2px 2px 2px #ddd;\n            transform: scale(1.05); }\n\n.pages {\n  min-width: 1000px;\n  overflow: auto;\n  height: 100%;\n  position: relative; }\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.container {\n  width: 100%;\n  height: 100%; }\n\n.flex {\n  display: flex; }\n\n.vflex {\n  display: flex;\n  flex-direction: column; }\n\n.flex1 {\n  flex: 1; }\n\n.between {\n  justify-content: space-between; }\n\n.clear {\n  *zoom: 1; }\n  .clear:before, .clear:after {\n    content: \" \";\n    display: table;\n    clear: both; }\n\nul, li {\n  list-style: none; }\n\na {\n  color: #61dafb;\n  text-decoration: none; }\n\n.dialog {\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.7); }\n  .dialog .msg-wrap {\n    width: 300px;\n    height: 180px;\n    background: #fff;\n    border-radius: 5px;\n    position: absolute;\n    left: 50%;\n    margin-left: -150px;\n    top: 200px;\n    justify-content: space-between;\n    padding-top: 30px;\n    text-align: center; }\n    .dialog .msg-wrap .sure-cancel {\n      height: 50px;\n      line-height: 50px;\n      justify-content: space-between;\n      border-top: 1px solid #ddd;\n      cursor: pointer; }\n      .dialog .msg-wrap .sure-cancel .cancel {\n        color: #99a9bf;\n        border-right: 1px solid #ddd; }\n      .dialog .msg-wrap .sure-cancel .sure {\n        color: #61dafb; }\n\n.top-header {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  min-width: 1000px;\n  padding: 0 30px;\n  height: 60px;\n  line-height: 60px;\n  background: #20232a;\n  color: #61dafb; }\n  .top-header .logo {\n    width: 60px;\n    float: left;\n    position: relative;\n    top: 8px; }\n  .top-header .ul-list {\n    margin: 0 20px; }\n    .top-header .ul-list li {\n      margin: 0 5px; }\n      .top-header .ul-list li.active {\n        border-bottom: 3px solid #61dafb; }\n      .top-header .ul-list li a {\n        display: inline-block;\n        padding: 0 20px;\n        text-decoration: none; }\n  .top-header .search .search-box {\n    padding: 6px 15px;\n    border-radius: 20px;\n    outline: none;\n    border: none;\n    background: transparent;\n    color: #61dafb; }\n    .top-header .search .search-box:focus {\n      background: rgba(255, 255, 255, 0.1); }\n  .top-header .share a {\n    font-size: 12px;\n    color: #99a9bf; }\n\n.content {\n  height: 100%;\n  padding-top: 60px;\n  background: #e5e9f2; }\n  .content .content-left {\n    width: 240px;\n    background: #fff;\n    box-shadow: 2px 0 2px #ddd;\n    height: 100%; }\n    .content .content-left .nav-wrap {\n      font-size: 12px;\n      height: 100%;\n      overflow-y: auto; }\n      .content .content-left .nav-wrap .li-wrap {\n        cursor: pointer;\n        border-bottom: 1px solid #eee; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title {\n          background: #f8f8f8;\n          padding: 18px 20px;\n          font-size: 14px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title:hover {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title.active {\n            background: #e5e9f2; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .parent-title .add {\n            float: right; }\n        .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li {\n          padding: 15px 30px; }\n          .content .content-left .nav-wrap .li-wrap .parent-wrap .child-wrap .child-li:hover {\n            color: #61dafb; }\n  .content .content-right {\n    height: 100%;\n    overflow: auto;\n    flex: 1;\n    padding: 20px; }\n    .content .content-right .team-wrap {\n      background: #fff; }\n      .content .content-right .team-wrap .team-content {\n        padding: 10px; }\n        .content .content-right .team-wrap .team-content .sub-team {\n          display: inline-block;\n          float: left;\n          border: 1px solid #f8f8f8;\n          padding: 15px;\n          border-radius: 4px;\n          box-shadow: 0 1px 1px #f8f8f8;\n          margin: 10px;\n          transition: all 0.3s; }\n          .content .content-right .team-wrap .team-content .sub-team:hover {\n            box-shadow: 2px 2px 2px #ddd;\n            transform: scale(1.05); }\n\n.pages {\n  min-width: 1000px;\n  overflow: auto;\n  height: 100%;\n  position: relative; }\n", ""]);
 
 /***/ }),
 /* 10 */
@@ -904,7 +935,7 @@
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: 'content-right' },
-	        _react2['default'].createElement(_teamJs2['default'], null),
+	        _react2['default'].createElement(_teamJs2['default'], { show_dialog: this.props.show_dialog, showDialogClick: this.props.showDialogClick }),
 	        _react2['default'].createElement(_learnJs2['default'], { course: this.props.course }),
 	        _react2['default'].createElement(
 	          'div',
@@ -963,16 +994,12 @@
 	var Team = (function (_React$Component) {
 	  _inherits(Team, _React$Component);
 
-	  function Team() {
+	  function Team(props) {
 	    _classCallCheck(this, Team);
 
-	    _get(Object.getPrototypeOf(Team.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Team, [{
-	    key: 'render',
-	    value: function render() {
-	      var data = [{
+	    _get(Object.getPrototypeOf(Team.prototype), 'constructor', this).call(this, props);
+	    this.state = {
+	      data: [{
 	        url: '',
 	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/6.jpg',
 	        detail: '团队成立于2011年'
@@ -1004,31 +1031,38 @@
 	        url: '',
 	        img: 'http://7xj5et.com1.z0.glb.clouddn.com/gallery/img/8.jpg',
 	        detail: '团队成立于2011年'
-	      }];
-	      var teams = [];
-	      data.forEach(function (item, i) {
-	        teams.push(_react2['default'].createElement(
-	          'li',
-	          { className: 'sub-team', key: i },
-	          _react2['default'].createElement(
-	            'a',
-	            { href: item.url },
-	            _react2['default'].createElement('img', { src: item.img, alt: '' }),
-	            _react2['default'].createElement(
-	              'p',
-	              null,
-	              item.detail
-	            )
-	          )
-	        ));
-	      });
+	      }]
+	    };
+	    // this.showDialog = this.showDialog.bind(this);
+	  }
+
+	  _createClass(Team, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this = this;
+
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: 'team-wrap' },
 	        _react2['default'].createElement(
 	          'ul',
 	          { className: 'team-content clear' },
-	          teams
+	          this.state.data.map(function (item, i) {
+	            return _react2['default'].createElement(
+	              'li',
+	              { className: 'sub-team', key: i, onClick: _this.props.showDialogClick },
+	              _react2['default'].createElement(
+	                'a',
+	                { href: 'javascript:void(0)' },
+	                _react2['default'].createElement('img', { src: item.img, alt: '' }),
+	                _react2['default'].createElement(
+	                  'p',
+	                  null,
+	                  item.detail
+	                )
+	              )
+	            );
+	          })
 	        )
 	      );
 	    }
@@ -1101,6 +1135,73 @@
 
 	exports['default'] = Learn;
 	module.exports = exports['default'];
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(7);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var Dialog = (function (_React$Component) {
+	  _inherits(Dialog, _React$Component);
+
+	  function Dialog(props) {
+	    _classCallCheck(this, Dialog);
+
+	    _get(Object.getPrototypeOf(Dialog.prototype), 'constructor', this).call(this, props);
+	  }
+
+	  _createClass(Dialog, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'dialog', style: { display: this.props.show_dialog ? 'block' : 'none' } },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'msg-wrap vflex' },
+	          _react2['default'].createElement(
+	            'div',
+	            null,
+	            this.props.msg
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'flex sure-cancel' },
+	            _react2['default'].createElement(
+	              'div',
+	              { className: 'cancel flex1', onClick: this.props.handleCancel },
+	              '取消'
+	            ),
+	            _react2['default'].createElement(
+	              'div',
+	              { className: 'sure flex1', onClick: this.props.handleSure },
+	              '确定'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Dialog;
+	})(_react2['default'].Component);
+
+	module.exports = Dialog;
 
 /***/ })
 /******/ ]);

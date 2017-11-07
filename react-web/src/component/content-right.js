@@ -45,7 +45,7 @@ class ContentRight extends React.Component {
   render() {
     return (
       <div className="content-right">
-        <Team/>
+        <Team show_dialog={this.props.show_dialog} showDialogClick={this.props.showDialogClick}/>
         <Learn course={this.props.course}/>
         <div>
           {Clock(new Date().toLocaleTimeString())}

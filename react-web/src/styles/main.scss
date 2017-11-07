@@ -36,6 +36,10 @@ html, body {
   flex-direction: column;
 }
 
+.flex1 {
+  flex: 1;
+}
+
 .between {
   justify-content: space-between;
 }

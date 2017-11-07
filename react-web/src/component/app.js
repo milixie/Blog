@@ -5,6 +5,7 @@ import '../styles/app.scss';
 import Top from './top.js';
 import ContentLeft from './content-left.js';
 import ContentRight from './content-right.js';
+import Dialog from './../common/dialog';
 
 class App extends React.Component {
   constructor() {
@@ -92,8 +93,11 @@ class App extends React.Component {
           name: '常见问题'
         }]
       }],
-      course: ['语文', '数学', '英语']
-    }
+      course: ['语文', '数学', '英语'],
+      show_dialog: false
+    };
+    this.handleSureClick = this.handleSureClick.bind(this);
+    this.handleCancelClick = this.handleCancelClick.bind(this);
   }
   toggleSubNav(e) {
     const id = Number(e.target.parentElement.parentElement.id || e.target.parentElement.parentElement.parentElement.id);
@@ -109,14 +113,30 @@ class App extends React.Component {
       active: data[id].id
     });
   }
+  showDialog(e) {
+    this.setState({
+      show_dialog: !this.state.show_dialog
+    })
+  }
+  handleSureClick() {
+    this.setState({
+      show_dialog: false
+    })
+  }
+  handleCancelClick() {
+    this.setState({
+      show_dialog: false
+    })
+  }
   render() {
     return (
       <div className="pages">
         <Top/>
         <div className="content flex">
           <ContentLeft active={this.state.active} data={this.state.nav_data} toggleSubNav={(e) => this.toggleSubNav(e)}/>
-          <ContentRight course={this.state.course}/>
+          <ContentRight course={this.state.course} showDialogClick={(e) => this.showDialog(e)}/>
         </div>
+        <Dialog show_dialog={this.state.show_dialog} msg="您确定打开详情吗？" handleSure={this.handleSureClick} handleCancel={this.handleCancelClick}/>
       </div>
     );
   }
