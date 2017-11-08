@@ -51,6 +51,21 @@ const question = [
     }]
   },
   {
+    type: 'rawlist',
+    name: 'test_rawlist',
+    message: '兴趣',
+    choices: [{
+      name: '吃',
+      value: 'chi'
+    }, {
+      name: '喝',
+      value: 'he'
+    }, {
+      name: '其他',
+      value: 'other'
+    }]
+  },
+  {
     type: 'checkbox',
     name: 'labels',
     message: '给自己贴几个标签吧',
@@ -70,6 +85,21 @@ const question = [
       name: '移动端开发',
       value: 'mobile移动端开发'
     }]
+  },
+  {
+    type: 'confirm',
+    name: '提醒',
+    message: '测试 confirm'
+  },
+  {
+    type: 'password',
+    name: '密码',
+    message: '请输入密码'
+  },
+  {
+    type: 'editor',
+    name: '测试编辑',
+    message: 'test 编辑'
   },
   {
     type: 'input',

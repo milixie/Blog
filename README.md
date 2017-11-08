@@ -1,5 +1,7 @@
 # Blog
 
+[inquirer：在终端和用户交互](https://github.com/milixie/Blog/tree/master/inquirer)
+
 [在终端输出彩色字体 Colors](https://github.com/milixie/Blog/tree/master/colors)
 
 [Nodejs 一个新的框架 Fastify](https://github.com/milixie/Blog/tree/master/fastify)
