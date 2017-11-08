@@ -72,7 +72,6 @@ ejs：模板渲染工具
 inquirer：提供 terminal 和用户交互的能力
 mkdirp： 生成文件夹 or 生成指定路径的文件夹
 shelljs：提供给 node 运行 shell 命令的能力
-
 ```
 
 直接安装

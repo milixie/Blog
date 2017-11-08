@@ -13,6 +13,7 @@ const shelljs = require('shelljs');
 //欢迎语
 console.log("\n" + "Hello World, I'm flash-cli".magenta + "\n");
 console.log("It's just a test".red + "\n");
+console.log('white'.white + '\n' + 'test'.green.bgRed)
 
 //常量
 const ENCODE = 'utf-8';
