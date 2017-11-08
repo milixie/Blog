@@ -102,3 +102,5 @@ inquirer.prompt(question).then(answer => {
 ```
 
 打开node shell 运行即可查看效果
+
+[参考链接 inquirer](http://npm.taobao.org/package/inquirer)
