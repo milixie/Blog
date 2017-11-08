@@ -2,7 +2,7 @@
 
 //Linux 的shell 脚本需要在开头给出解释程序，规定解释程序为 node
 
-require('colors');
+const Color = require('colors');
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
@@ -13,7 +13,15 @@ const shelljs = require('shelljs');
 //欢迎语
 console.log("\n" + "Hello World, I'm flash-cli".magenta + "\n");
 console.log("It's just a test".red + "\n");
-console.log('white'.white + '\n' + 'test'.green.bgRed)
+console.log('white'.white + '\n' + 'test'.green.bgRed);
+console.log(Color.underline('这个文本有下划线'));
+console.log(Color.bold('这个文本有加粗'));
+// console.log(Color.dim('这个文本昏暗'));
+// console.log(Color.italic('这个文本昏暗'));
+console.log(Color.inverse('这个文本反色'));
+// console.log(Color.hidden('这个文本反色'));
+// console.log(Color.strikethrough('这个文本反色'));
+// console.log(Color.blink('这个文本有下划线'));
 
 //常量
 const ENCODE = 'utf-8';
