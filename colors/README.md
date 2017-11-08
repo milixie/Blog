@@ -3,3 +3,5 @@
 ```
 console.log('test'.green.bgRed)
 ```
+
+![img](https://raw.githubusercontent.com/paulot/Colors/master/media/ANSIColors.png)
