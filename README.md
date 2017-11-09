@@ -1,5 +1,7 @@
 # Blog
 
+[yeoman 学习笔记，构建你的 generator 脚手架](https://github.com/milixie/Blog/tree/master/yeoman)
+
 [inquirer：在终端和用户交互](https://github.com/milixie/Blog/tree/master/inquirer)
 
 [在终端输出彩色字体 Colors](https://github.com/milixie/Blog/tree/master/colors)
