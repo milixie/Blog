@@ -16,6 +16,7 @@
   "author": "milixie",
   "license": "ISC",
   "dependencies": {
+    "npm-updater": "^3.0.3",
     "yeoman-generator": "^2.0.1"
   }
 }

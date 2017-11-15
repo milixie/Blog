@@ -250,3 +250,95 @@ github 地址
 `https://github.com/water-wheel/learning-step`
 
 `https://github.com/water-wheel/flash-cli`
+
+###
+
+>- 整体架构分析
+
+>- 模板工程的分类
+
+>- generator-flash 的执行流程
+
+>- 暴露尽可能少的配置文件
+
+>- 扩展一般 webpack 配置的兼容性
+
+>- 为模板工程添加语法糖
+
+>- 数据 mock 功能开发
+
+>- 组件中关于 readme 的统一化
+
+>- 黑科技
+
+
+
+#### 整体架构分析
+
+>- 团队目的：先解决重复造轮子的问题，每个团队的成员应该完成业务的需求
+
+>- 剥离组件：可以复用的组件尽可能的剥离出来，把它剥离成一个 npm 的包，维护单一方便，可以把剥离的组件放在公司私有网站上面
+
+>- 减少开发者的学习成本，把 webpack 的配置内联到 npm 包中，仅留下几个路径配置项
+
+>- 新老架构的对比
+
+老架构中每个项目的公用代码都是只放在这个项目里面的，比如一个公司里面有多个并存的项目，那么每个项目里面都是需要放一份公用的代码，这样每次新建一个新的项目都需要我们手动 copy 这些代码，重复造轮子，而且会使得项目结构特别乱，难以维护
+
+新架构中，我们可以把这些功能函数和通用组件都提取出来，放到我们公司的 npm 私有库，
+
+
+#### 模板工程的分类
+
+检查版本是不是最新的使用`npm-updater`
+
+整个模板示例
+
+#### 给开发者暴露出更少的 webpack 配置
+
+让 webpack 的配置更通用一些，把该支持的都支持
+
+把 webpack 的配置提取一个 npm 包
+
+将版本锁定
+
+扩展一般webpack配置的兼容性
+
+安装定义的规范写目录结构，自动计算出 entry 的
+
+通过脚手架内置方法
+
+1.rem vs px 计算方法
+
+2.
+
+#### how to mock
+
+启动本地服务来作为接口的服务器，建立一个 mock 文件夹，监听 mock 数据的变化，如果有变化，重启 mock 服务器
+
+需要把 mock server 启动
+
+json server 启动过程
+
+
+### 关于 `README` 统一化的问题
+
+生成字符字的工具：figlet
+
+`npm i figlet-cli`
+
+`figlet hello`
+
+
+生成目录结构的 tree
+`npm i tree-cli`
+
+在命令行中执行 `tree`
+
+
+
+
+
+
+https://github.com/water-wheel/learning-step#
+https://github.com/water-wheel/learning-step

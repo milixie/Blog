@@ -153,3 +153,42 @@ module.exports = class extends Generator {
 在`generator-dev`这个文件夹下，执行命令 `npm link`
 
 这个操作将会安装你的项目并且软连接到一个全局模块到你本地文件，然后你可以执行`yo dev`然后就会看到打印的这句`this is a function of getInfo`，这就是你的第一个 `generator`
+
+
+### 使用 `Inquirer` 的 `prompts` 去与用户建立交互
+
+```
+const Generator = require('yeoman-generator');
+
+class Base extends Generator {
+  constructor(args, opts) {
+    super(args, opts);
+    this.option('babel');
+  }
+  prompting() {
+    const question = [{
+      type: 'input',
+      name: 'project_name',
+      message: '请输入您的项目名称',
+      default: this.appname
+    }, {
+      type: 'confirm',
+      name: 'is_over_18',
+      message: '您是否年满18周岁？'
+    }];
+    return this.prompt(question).then(answer => {
+      console.log('项目名称：', answer.project_name);
+      console.log('是否年满18周岁', answer.is_over_18);
+    });
+  }
+}
+
+module.exports = class extends Base {
+  exec() {
+    this.prompting();
+  }
+};
+```
+执行 `yo dev` 后，看效果
+
+
