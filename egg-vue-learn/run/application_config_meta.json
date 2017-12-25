@@ -1,0 +1,334 @@
+{
+  "siteFile": {
+    "/favicon.ico": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js"
+  },
+  "view": {
+    "cache": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view/config/config.local.js",
+    "root": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue/config/config.default.js",
+    "mapping": {
+      ".js": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue/config/config.default.js"
+    }
+  },
+  "vuessr": {
+    "layout": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "injectRes": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "injectCss": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "manifest": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js",
+    "buildConfig": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js",
+    "injectJs": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js",
+    "crossorigin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js",
+    "fallbackToClient": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js",
+    "afterRender": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/config.default.js"
+  },
+  "logger": {
+    "consoleLevel": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "encoding": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "env": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "level": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+    "maxAge": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "dynamic": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static/config/config.default.js"
+  },
+  "keys": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+  "middleware": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.default.js",
+  "development": {
+    "watchDirs": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "ignoreDirs": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "fastReady": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-development/config/config.default.js"
+  },
+  "logview": {
+    "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "prefix": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logview/config/config.default.js",
+    "staticHost": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logview/config/config.default.js"
+  },
+  "webpack": {
+    "webpackConfigList": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "port": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js",
+    "proxy": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js",
+    "proxyMapping": {
+      "js": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js",
+      "css": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js",
+      "json": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js",
+      "html": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/config.default.js"
+    }
+  },
+  "security": {
+    "domainWhiteList": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/config.local.js",
+    "protocolWhiteList": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "vue": {
+    "cache": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue/config/config.local.js"
+  },
+  "cors": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-cors/config/config.default.js",
+  "webpackvue": {
+    "manifest": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack-vue/config/config.default.js"
+  },
+  "env": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "name": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "version": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "description": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "build": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "build-dev": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "build-test": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "start": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "start-test": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "start-prod": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "kill": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "kill-mac": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "kill-win": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "restart": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "lint": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "fix": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "axios": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "co": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "co-wait": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "core-js": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-logger": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-view-vue": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-view-vue-ssr": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "element-ui": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "extend": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "lodash": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "mint-ui": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "mockjs": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "moment": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vue": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vue-hot-reload-api": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vue-router": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vue-template-compiler": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vuex": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vuex-router-sync": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod-egg": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "autoprefixer": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-core": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-loader": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-plugin-add-module-exports": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-plugin-syntax-dynamic-import": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-assign": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-rest-spread": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-runtime": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "babel-preset-env": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "cross-env": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "directory-named-webpack-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "easywebpack-vue": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-logview": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-webpack": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "egg-webpack-vue": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "eslint-plugin-vue": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "html-webpack-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "imagemin-webpack-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "ip": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "less": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "less-loader": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "node-sass": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "npm-install-webpack-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "postcss-loader": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "progress-bar-webpack-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "sass-loader": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "vconsole": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "webpack-manifest-plugin": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "url": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "license": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "homepage": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "strict": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "depth": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    }
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxAge": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    }
+  },
+  "coreMiddleware": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "port": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "responseTimeout": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/config.default.js"
+  }
+}

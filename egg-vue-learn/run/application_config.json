@@ -1,0 +1,2373 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function anonymous>"
+    },
+    "security": {
+      "domainWhiteList": [
+        "http://localhost:7001",
+        "http://127.0.0.1:7001",
+        "http://192.168.2.123:7001",
+        "http://localhost:9000",
+        "http://127.0.0.1:9000",
+        "http://192.168.2.123:9000",
+        "http://localhost:9001",
+        "http://127.0.0.1:9001",
+        "http://192.168.2.123:9001"
+      ],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "useSession": false,
+        "ignoreJSON": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "matching": "<Function anonymous>"
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      }
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-jsonp/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-onerror/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-development/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-schedule/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-cors/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack-vue/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logview/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/locales",
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
+    "development": {
+      "watchDirs": [
+        "build"
+      ],
+      "ignoreDirs": [
+        "app/web",
+        "public",
+        "config"
+      ],
+      "fastReady": false,
+      "reloadOnDebug": true
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000,
+      "maxAge": 0,
+      "files": "<LRU>"
+    },
+    "view": {
+      "root": [
+        "/Users/xintongxue/mili/Blog/egg-vue-learn/app/view"
+      ],
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "vue",
+      "mapping": {
+        ".js": "vue"
+      }
+    },
+    "vue": {
+      "cache": false
+    },
+    "vuessr": {
+      "layout": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/view/layout.html",
+      "manifest": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/manifest.json",
+      "buildConfig": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/buildConfig.json",
+      "injectCss": false,
+      "injectJs": true,
+      "crossorigin": false,
+      "injectRes": [],
+      "fallbackToClient": true,
+      "afterRender": "<Function afterRender>"
+    },
+    "cors": {
+      "origin": "<Function corsOrigin>",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH",
+      "credentials": false,
+      "keepHeadersOnError": true
+    },
+    "webpack": {
+      "port": 9000,
+      "proxy": true,
+      "proxyMapping": {
+        "js": "text/javascript; charset=UTF-8",
+        "css": "text/css; charset=UTF-8",
+        "json": "application/json; charset=UTF-8",
+        "html": "text/html; charset=UTF-8"
+      },
+      "webpackConfigList": [
+        {
+          "resolve": {
+            "extensions": [
+              ".js",
+              ".jsx",
+              ".vue"
+            ],
+            "alias": {
+              "server": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server.js",
+              "client": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client.js",
+              "app": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/app.js",
+              "asset": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/asset",
+              "component": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/component",
+              "framework": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework",
+              "store": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/store",
+              "vue": "vue/dist/vue.common.js"
+            }
+          },
+          "resolveLoader": {
+            "modules": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/easywebpack/node_modules",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/easywebpack-vue/node_modules"
+            ]
+          },
+          "entry": {
+            "about/about": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/about/about.vue"
+            ],
+            "css/module/module": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/css/module/module.vue"
+            ],
+            "dynamic/dynamic": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/dynamic/dynamic.vue"
+            ],
+            "element/element": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/element/element.vue"
+            ],
+            "index/index": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/index/index.vue"
+            ],
+            "less/less": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/less/less.vue"
+            ],
+            "router/router": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/router/router.vue"
+            ],
+            "sass/sass": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/sass/sass.vue"
+            ],
+            "app/app": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/app/app.js"
+            ],
+            "pack/inline": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/inject/pack-inline.js"
+            ],
+            "element/front": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/html/element/front.js"
+            ],
+            "home/index": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-hot-middleware/client?path=http://192.168.2.123:9000/__webpack_hmr&noInfo=false&reload=true&quiet=false",
+              "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/html/home/index.vue"
+            ]
+          },
+          "output": {
+            "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/public",
+            "publicPath": "http://192.168.2.123:9000/public/",
+            "filename": "js/[name].js",
+            "chunkFilename": "js/chunk/[name].js"
+          },
+          "module": {
+            "rules": [
+              {
+                "test": {},
+                "exclude": {},
+                "use": [
+                  {
+                    "loader": "babel-loader"
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  }
+                ],
+                "exclude": []
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  },
+                  {
+                    "loader": "sass-loader"
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  },
+                  {
+                    "loader": "sass-loader",
+                    "options": {
+                      "indentedSyntax": true
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "url-loader",
+                    "options": {
+                      "limit": 1024,
+                      "name": "img/[name].[ext]"
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "url-loader",
+                    "options": {
+                      "limit": 1024,
+                      "name": "font/[name].[ext]"
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "exclude": {},
+                "use": [
+                  {
+                    "loader": "vue-loader",
+                    "options": {
+                      "preLoaders": {
+                        "scss": "sass-loader",
+                        "sass": "sass-loader?{\"indentedSyntax\":true}"
+                      },
+                      "loaders": {
+                        "css": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          }
+                        ],
+                        "scss": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          },
+                          {
+                            "loader": "sass-loader"
+                          }
+                        ],
+                        "sass": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          },
+                          {
+                            "loader": "sass-loader",
+                            "options": {
+                              "indentedSyntax": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "vue-html-loader"
+                  }
+                ]
+              }
+            ]
+          },
+          "plugins": [
+            {
+              "options": {},
+              "__lable__": "module"
+            },
+            {
+              "__lable__": "error"
+            },
+            {
+              "options": {},
+              "__lable__": "nameModule"
+            },
+            {
+              "definitions": {
+                "process.env.NODE_ENV": "\"development\""
+              },
+              "__lable__": "define"
+            },
+            {
+              "chunkNames": [
+                "vendor"
+              ],
+              "minChunks": 5,
+              "selectedChunks": [
+                "about/about",
+                "css/module/module",
+                "dynamic/dynamic",
+                "element/element",
+                "index/index",
+                "less/less",
+                "router/router",
+                "sass/sass",
+                "app/app",
+                "element/front",
+                "home/index",
+                "about/about",
+                "css/module/module",
+                "dynamic/dynamic",
+                "element/element",
+                "index/index",
+                "less/less",
+                "router/router",
+                "sass/sass",
+                "app/app",
+                "element/front",
+                "home/index"
+              ],
+              "ident": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js2",
+              "__lable__": "commonsChunk"
+            },
+            {
+              "chunkNames": [
+                "runtime"
+              ],
+              "selectedChunks": [
+                "vendor"
+              ],
+              "ident": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js3",
+              "__lable__": "runtime"
+            },
+            {
+              "options": {},
+              "fullBuildTimeout": 200,
+              "requestTimeout": 10000,
+              "__lable__": "hot"
+            },
+            {
+              "opts": {
+                "basePath": "",
+                "publicPath": "",
+                "fileName": "../config/manifest.json",
+                "stripSrc": null,
+                "transformExtensions": {},
+                "writeToFileEmit": false,
+                "cache": null,
+                "seed": null,
+                "filter": null,
+                "map": null,
+                "reduce": null
+              },
+              "__plugin__": "webpack-manifest-plugin",
+              "__lable__": "manifest"
+            },
+            {
+              "opts": {
+                "baseDir": "/Users/xintongxue/mili/Blog/egg-vue-learn",
+                "host": "http://192.168.2.123:9000",
+                "proxy": true,
+                "commonsChunk": [
+                  "runtime",
+                  "vendor"
+                ],
+                "buildPath": "/Users/xintongxue/mili/Blog/egg-vue-learn/public",
+                "publicPath": "http://192.168.2.123:9000/public/",
+                "filepath": "config/buildConfig.json"
+              },
+              "__lable__": "buildfile"
+            },
+            {
+              "__plugin__": "progress-bar-webpack-plugin",
+              "__lable__": "progress"
+            },
+            {
+              "__plugin__": "directory-named-webpack-plugin",
+              "__lable__": "directoryname"
+            },
+            {
+              "options": {
+                "template": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/view/layout.html",
+                "filename": "html/element/front.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": {
+                  "removeComments": true,
+                  "collapseWhitespace": true,
+                  "removeAttributeQuotes": true
+                },
+                "cache": true,
+                "showErrors": true,
+                "chunks": [
+                  "runtime",
+                  "vendor",
+                  "element/front"
+                ],
+                "excludeChunks": [],
+                "title": "Webpack App",
+                "xhtml": false
+              },
+              "__plugin__": "html-webpack-plugin",
+              "__lable__": "element/front"
+            },
+            {
+              "options": {
+                "template": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/view/layout.html",
+                "filename": "html/home/index.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": {
+                  "removeComments": true,
+                  "collapseWhitespace": true,
+                  "removeAttributeQuotes": true
+                },
+                "cache": true,
+                "showErrors": true,
+                "chunks": [
+                  "runtime",
+                  "vendor",
+                  "home/index"
+                ],
+                "excludeChunks": [],
+                "title": "Webpack App",
+                "xhtml": false
+              },
+              "__plugin__": "html-webpack-plugin",
+              "__lable__": "home/index"
+            }
+          ]
+        },
+        {
+          "resolve": {
+            "extensions": [
+              ".js",
+              ".jsx",
+              ".vue"
+            ],
+            "alias": {
+              "server": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server.js",
+              "client": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/client.js",
+              "app": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/app.js",
+              "asset": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/asset",
+              "component": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/component",
+              "framework": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework",
+              "store": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/store",
+              "vue": "vue/dist/vue.runtime.common.js"
+            }
+          },
+          "resolveLoader": {
+            "modules": [
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/easywebpack/node_modules",
+              "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/easywebpack-vue/node_modules"
+            ]
+          },
+          "target": "node",
+          "output": {
+            "libraryTarget": "commonjs2",
+            "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/view",
+            "publicPath": "http://192.168.2.123:9000/public/",
+            "filename": "[name].js"
+          },
+          "context": "/Users/xintongxue/mili/Blog/egg-vue-learn",
+          "node": {
+            "__filename": false,
+            "__dirname": false
+          },
+          "externals": {
+            "@types": "commonjs2 @types",
+            "abbrev": "commonjs2 abbrev",
+            "accepts": "commonjs2 accepts",
+            "acorn": "commonjs2 acorn",
+            "acorn-dynamic-import": "commonjs2 acorn-dynamic-import",
+            "acorn-jsx": "commonjs2 acorn-jsx",
+            "address": "commonjs2 address",
+            "agent-base": "commonjs2 agent-base",
+            "agentkeepalive": "commonjs2 agentkeepalive",
+            "ajv": "commonjs2 ajv",
+            "ajv-keywords": "commonjs2 ajv-keywords",
+            "align-text": "commonjs2 align-text",
+            "alphanum-sort": "commonjs2 alphanum-sort",
+            "amdefine": "commonjs2 amdefine",
+            "ansi-escapes": "commonjs2 ansi-escapes",
+            "ansi-html": "commonjs2 ansi-html",
+            "ansi-regex": "commonjs2 ansi-regex",
+            "ansi-styles": "commonjs2 ansi-styles",
+            "any-promise": "commonjs2 any-promise",
+            "anymatch": "commonjs2 anymatch",
+            "aproba": "commonjs2 aproba",
+            "archive-type": "commonjs2 archive-type",
+            "are-we-there-yet": "commonjs2 are-we-there-yet",
+            "argparse": "commonjs2 argparse",
+            "aria-query": "commonjs2 aria-query",
+            "arr-diff": "commonjs2 arr-diff",
+            "arr-flatten": "commonjs2 arr-flatten",
+            "array-differ": "commonjs2 array-differ",
+            "array-find-index": "commonjs2 array-find-index",
+            "array-includes": "commonjs2 array-includes",
+            "array-union": "commonjs2 array-union",
+            "array-uniq": "commonjs2 array-uniq",
+            "array-unique": "commonjs2 array-unique",
+            "arrify": "commonjs2 arrify",
+            "art-template": "commonjs2 art-template",
+            "asap": "commonjs2 asap",
+            "asn1": "commonjs2 asn1",
+            "asn1.js": "commonjs2 asn1.js",
+            "assert": "commonjs2 assert",
+            "assert-plus": "commonjs2 assert-plus",
+            "ast-types": "commonjs2 ast-types",
+            "ast-types-flow": "commonjs2 ast-types-flow",
+            "async": "commonjs2 async",
+            "async-each": "commonjs2 async-each",
+            "async-each-series": "commonjs2 async-each-series",
+            "async-foreach": "commonjs2 async-foreach",
+            "async-throttle": "commonjs2 async-throttle",
+            "async-validator": "commonjs2 async-validator",
+            "asynckit": "commonjs2 asynckit",
+            "autod-egg": "commonjs2 autod-egg",
+            "autoprefixer": "commonjs2 autoprefixer",
+            "await-event": "commonjs2 await-event",
+            "aws-sign2": "commonjs2 aws-sign2",
+            "aws4": "commonjs2 aws4",
+            "axios": "commonjs2 axios",
+            "axobject-query": "commonjs2 axobject-query",
+            "babel-code-frame": "commonjs2 babel-code-frame",
+            "babel-core": "commonjs2 babel-core",
+            "babel-eslint": "commonjs2 babel-eslint",
+            "babel-generator": "commonjs2 babel-generator",
+            "babel-helper-builder-binary-assignment-operator-visitor": "commonjs2 babel-helper-builder-binary-assignment-operator-visitor",
+            "babel-helper-call-delegate": "commonjs2 babel-helper-call-delegate",
+            "babel-helper-define-map": "commonjs2 babel-helper-define-map",
+            "babel-helper-explode-assignable-expression": "commonjs2 babel-helper-explode-assignable-expression",
+            "babel-helper-function-name": "commonjs2 babel-helper-function-name",
+            "babel-helper-get-function-arity": "commonjs2 babel-helper-get-function-arity",
+            "babel-helper-hoist-variables": "commonjs2 babel-helper-hoist-variables",
+            "babel-helper-optimise-call-expression": "commonjs2 babel-helper-optimise-call-expression",
+            "babel-helper-regex": "commonjs2 babel-helper-regex",
+            "babel-helper-remap-async-to-generator": "commonjs2 babel-helper-remap-async-to-generator",
+            "babel-helper-replace-supers": "commonjs2 babel-helper-replace-supers",
+            "babel-helper-vue-jsx-merge-props": "commonjs2 babel-helper-vue-jsx-merge-props",
+            "babel-helpers": "commonjs2 babel-helpers",
+            "babel-loader": "commonjs2 babel-loader",
+            "babel-messages": "commonjs2 babel-messages",
+            "babel-plugin-add-module-exports": "commonjs2 babel-plugin-add-module-exports",
+            "babel-plugin-check-es2015-constants": "commonjs2 babel-plugin-check-es2015-constants",
+            "babel-plugin-syntax-async-functions": "commonjs2 babel-plugin-syntax-async-functions",
+            "babel-plugin-syntax-dynamic-import": "commonjs2 babel-plugin-syntax-dynamic-import",
+            "babel-plugin-syntax-exponentiation-operator": "commonjs2 babel-plugin-syntax-exponentiation-operator",
+            "babel-plugin-syntax-object-rest-spread": "commonjs2 babel-plugin-syntax-object-rest-spread",
+            "babel-plugin-syntax-trailing-function-commas": "commonjs2 babel-plugin-syntax-trailing-function-commas",
+            "babel-plugin-transform-async-to-generator": "commonjs2 babel-plugin-transform-async-to-generator",
+            "babel-plugin-transform-es2015-arrow-functions": "commonjs2 babel-plugin-transform-es2015-arrow-functions",
+            "babel-plugin-transform-es2015-block-scoped-functions": "commonjs2 babel-plugin-transform-es2015-block-scoped-functions",
+            "babel-plugin-transform-es2015-block-scoping": "commonjs2 babel-plugin-transform-es2015-block-scoping",
+            "babel-plugin-transform-es2015-classes": "commonjs2 babel-plugin-transform-es2015-classes",
+            "babel-plugin-transform-es2015-computed-properties": "commonjs2 babel-plugin-transform-es2015-computed-properties",
+            "babel-plugin-transform-es2015-destructuring": "commonjs2 babel-plugin-transform-es2015-destructuring",
+            "babel-plugin-transform-es2015-duplicate-keys": "commonjs2 babel-plugin-transform-es2015-duplicate-keys",
+            "babel-plugin-transform-es2015-for-of": "commonjs2 babel-plugin-transform-es2015-for-of",
+            "babel-plugin-transform-es2015-function-name": "commonjs2 babel-plugin-transform-es2015-function-name",
+            "babel-plugin-transform-es2015-literals": "commonjs2 babel-plugin-transform-es2015-literals",
+            "babel-plugin-transform-es2015-modules-amd": "commonjs2 babel-plugin-transform-es2015-modules-amd",
+            "babel-plugin-transform-es2015-modules-commonjs": "commonjs2 babel-plugin-transform-es2015-modules-commonjs",
+            "babel-plugin-transform-es2015-modules-systemjs": "commonjs2 babel-plugin-transform-es2015-modules-systemjs",
+            "babel-plugin-transform-es2015-modules-umd": "commonjs2 babel-plugin-transform-es2015-modules-umd",
+            "babel-plugin-transform-es2015-object-super": "commonjs2 babel-plugin-transform-es2015-object-super",
+            "babel-plugin-transform-es2015-parameters": "commonjs2 babel-plugin-transform-es2015-parameters",
+            "babel-plugin-transform-es2015-shorthand-properties": "commonjs2 babel-plugin-transform-es2015-shorthand-properties",
+            "babel-plugin-transform-es2015-spread": "commonjs2 babel-plugin-transform-es2015-spread",
+            "babel-plugin-transform-es2015-sticky-regex": "commonjs2 babel-plugin-transform-es2015-sticky-regex",
+            "babel-plugin-transform-es2015-template-literals": "commonjs2 babel-plugin-transform-es2015-template-literals",
+            "babel-plugin-transform-es2015-typeof-symbol": "commonjs2 babel-plugin-transform-es2015-typeof-symbol",
+            "babel-plugin-transform-es2015-unicode-regex": "commonjs2 babel-plugin-transform-es2015-unicode-regex",
+            "babel-plugin-transform-exponentiation-operator": "commonjs2 babel-plugin-transform-exponentiation-operator",
+            "babel-plugin-transform-object-assign": "commonjs2 babel-plugin-transform-object-assign",
+            "babel-plugin-transform-object-rest-spread": "commonjs2 babel-plugin-transform-object-rest-spread",
+            "babel-plugin-transform-regenerator": "commonjs2 babel-plugin-transform-regenerator",
+            "babel-plugin-transform-runtime": "commonjs2 babel-plugin-transform-runtime",
+            "babel-plugin-transform-strict-mode": "commonjs2 babel-plugin-transform-strict-mode",
+            "babel-preset-env": "commonjs2 babel-preset-env",
+            "babel-register": "commonjs2 babel-register",
+            "babel-runtime": "commonjs2 babel-runtime",
+            "babel-template": "commonjs2 babel-template",
+            "babel-traverse": "commonjs2 babel-traverse",
+            "babel-types": "commonjs2 babel-types",
+            "babylon": "commonjs2 babylon",
+            "balanced-match": "commonjs2 balanced-match",
+            "base64-js": "commonjs2 base64-js",
+            "bcrypt-pbkdf": "commonjs2 bcrypt-pbkdf",
+            "beeper": "commonjs2 beeper",
+            "big.js": "commonjs2 big.js",
+            "bin-build": "commonjs2 bin-build",
+            "bin-check": "commonjs2 bin-check",
+            "bin-version": "commonjs2 bin-version",
+            "bin-version-check": "commonjs2 bin-version-check",
+            "bin-wrapper": "commonjs2 bin-wrapper",
+            "binary-extensions": "commonjs2 binary-extensions",
+            "binary-mirror-config": "commonjs2 binary-mirror-config",
+            "bl": "commonjs2 bl",
+            "black-hole-stream": "commonjs2 black-hole-stream",
+            "block-stream": "commonjs2 block-stream",
+            "bluebird": "commonjs2 bluebird",
+            "bn.js": "commonjs2 bn.js",
+            "boolbase": "commonjs2 boolbase",
+            "boom": "commonjs2 boom",
+            "brace-expansion": "commonjs2 brace-expansion",
+            "braces": "commonjs2 braces",
+            "brorand": "commonjs2 brorand",
+            "browserify-aes": "commonjs2 browserify-aes",
+            "browserify-cipher": "commonjs2 browserify-cipher",
+            "browserify-des": "commonjs2 browserify-des",
+            "browserify-rsa": "commonjs2 browserify-rsa",
+            "browserify-sign": "commonjs2 browserify-sign",
+            "browserify-zlib": "commonjs2 browserify-zlib",
+            "browserslist": "commonjs2 browserslist",
+            "buffer": "commonjs2 buffer",
+            "buffer-crc32": "commonjs2 buffer-crc32",
+            "buffer-to-vinyl": "commonjs2 buffer-to-vinyl",
+            "buffer-xor": "commonjs2 buffer-xor",
+            "builtin-modules": "commonjs2 builtin-modules",
+            "builtin-status-codes": "commonjs2 builtin-status-codes",
+            "busboy": "commonjs2 busboy",
+            "byte": "commonjs2 byte",
+            "bytes": "commonjs2 bytes",
+            "caller-path": "commonjs2 caller-path",
+            "callsites": "commonjs2 callsites",
+            "camel-case": "commonjs2 camel-case",
+            "camelcase": "commonjs2 camelcase",
+            "camelcase-keys": "commonjs2 camelcase-keys",
+            "caniuse-api": "commonjs2 caniuse-api",
+            "caniuse-db": "commonjs2 caniuse-db",
+            "caniuse-lite": "commonjs2 caniuse-lite",
+            "capture-stack-trace": "commonjs2 capture-stack-trace",
+            "caseless": "commonjs2 caseless",
+            "caw": "commonjs2 caw",
+            "center-align": "commonjs2 center-align",
+            "cfork": "commonjs2 cfork",
+            "chalk": "commonjs2 chalk",
+            "chan": "commonjs2 chan",
+            "change-case": "commonjs2 change-case",
+            "chokidar": "commonjs2 chokidar",
+            "chownr": "commonjs2 chownr",
+            "cipher-base": "commonjs2 cipher-base",
+            "circular-json": "commonjs2 circular-json",
+            "clap": "commonjs2 clap",
+            "clean-css": "commonjs2 clean-css",
+            "cli-cursor": "commonjs2 cli-cursor",
+            "cli-spinners": "commonjs2 cli-spinners",
+            "cli-width": "commonjs2 cli-width",
+            "cliui": "commonjs2 cliui",
+            "clone": "commonjs2 clone",
+            "clone-deep": "commonjs2 clone-deep",
+            "clone-stats": "commonjs2 clone-stats",
+            "cluster-client": "commonjs2 cluster-client",
+            "cluster-reload": "commonjs2 cluster-reload",
+            "cmd-shim": "commonjs2 cmd-shim",
+            "co": "commonjs2 co",
+            "co-body": "commonjs2 co-body",
+            "co-busboy": "commonjs2 co-busboy",
+            "co-from-stream": "commonjs2 co-from-stream",
+            "co-fs-extra": "commonjs2 co-fs-extra",
+            "co-parallel": "commonjs2 co-parallel",
+            "co-read": "commonjs2 co-read",
+            "co-thread": "commonjs2 co-thread",
+            "co-wait": "commonjs2 co-wait",
+            "coa": "commonjs2 coa",
+            "code-point-at": "commonjs2 code-point-at",
+            "color": "commonjs2 color",
+            "color-convert": "commonjs2 color-convert",
+            "color-name": "commonjs2 color-name",
+            "color-string": "commonjs2 color-string",
+            "colormin": "commonjs2 colormin",
+            "colors": "commonjs2 colors",
+            "combined-stream": "commonjs2 combined-stream",
+            "commander": "commonjs2 commander",
+            "commondir": "commonjs2 commondir",
+            "composition": "commonjs2 composition",
+            "compressible": "commonjs2 compressible",
+            "concat-map": "commonjs2 concat-map",
+            "concat-stream": "commonjs2 concat-stream",
+            "console-browserify": "commonjs2 console-browserify",
+            "console-control-strings": "commonjs2 console-control-strings",
+            "console-stream": "commonjs2 console-stream",
+            "consolidate": "commonjs2 consolidate",
+            "constant-case": "commonjs2 constant-case",
+            "constants-browserify": "commonjs2 constants-browserify",
+            "contains-path": "commonjs2 contains-path",
+            "content-disposition": "commonjs2 content-disposition",
+            "content-type": "commonjs2 content-type",
+            "convert-source-map": "commonjs2 convert-source-map",
+            "cookie": "commonjs2 cookie",
+            "cookies": "commonjs2 cookies",
+            "copy-to": "commonjs2 copy-to",
+            "core-js": "commonjs2 core-js",
+            "core-util-is": "commonjs2 core-util-is",
+            "cosmiconfig": "commonjs2 cosmiconfig",
+            "crc": "commonjs2 crc",
+            "create-ecdh": "commonjs2 create-ecdh",
+            "create-error-class": "commonjs2 create-error-class",
+            "create-hash": "commonjs2 create-hash",
+            "create-hmac": "commonjs2 create-hmac",
+            "cron-parser": "commonjs2 cron-parser",
+            "cross-env": "commonjs2 cross-env",
+            "cross-spawn": "commonjs2 cross-spawn",
+            "cryptiles": "commonjs2 cryptiles",
+            "crypto-browserify": "commonjs2 crypto-browserify",
+            "csrf": "commonjs2 csrf",
+            "css-color-names": "commonjs2 css-color-names",
+            "css-loader": "commonjs2 css-loader",
+            "css-select": "commonjs2 css-select",
+            "css-selector-tokenizer": "commonjs2 css-selector-tokenizer",
+            "css-what": "commonjs2 css-what",
+            "cssesc": "commonjs2 cssesc",
+            "cssfilter": "commonjs2 cssfilter",
+            "cssnano": "commonjs2 cssnano",
+            "csso": "commonjs2 csso",
+            "currently-unhandled": "commonjs2 currently-unhandled",
+            "d": "commonjs2 d",
+            "damerau-levenshtein": "commonjs2 damerau-levenshtein",
+            "dashdash": "commonjs2 dashdash",
+            "data-uri-to-buffer": "commonjs2 data-uri-to-buffer",
+            "date-now": "commonjs2 date-now",
+            "dateformat": "commonjs2 dateformat",
+            "de-indent": "commonjs2 de-indent",
+            "debounce": "commonjs2 debounce",
+            "debug": "commonjs2 debug",
+            "decamelize": "commonjs2 decamelize",
+            "decompress": "commonjs2 decompress",
+            "decompress-tar": "commonjs2 decompress-tar",
+            "decompress-tarbz2": "commonjs2 decompress-tarbz2",
+            "decompress-targz": "commonjs2 decompress-targz",
+            "decompress-unzip": "commonjs2 decompress-unzip",
+            "deep-equal": "commonjs2 deep-equal",
+            "deep-extend": "commonjs2 deep-extend",
+            "deep-is": "commonjs2 deep-is",
+            "deepmerge": "commonjs2 deepmerge",
+            "default-user-agent": "commonjs2 default-user-agent",
+            "define-properties": "commonjs2 define-properties",
+            "defined": "commonjs2 defined",
+            "degenerator": "commonjs2 degenerator",
+            "del": "commonjs2 del",
+            "delayed-stream": "commonjs2 delayed-stream",
+            "delegates": "commonjs2 delegates",
+            "depd": "commonjs2 depd",
+            "des.js": "commonjs2 des.js",
+            "destroy": "commonjs2 destroy",
+            "detect-indent": "commonjs2 detect-indent",
+            "detect-node": "commonjs2 detect-node",
+            "detect-port": "commonjs2 detect-port",
+            "dicer": "commonjs2 dicer",
+            "diffie-hellman": "commonjs2 diffie-hellman",
+            "digest-header": "commonjs2 digest-header",
+            "directory-named-webpack-plugin": "commonjs2 directory-named-webpack-plugin",
+            "doctrine": "commonjs2 doctrine",
+            "dom-converter": "commonjs2 dom-converter",
+            "dom-serializer": "commonjs2 dom-serializer",
+            "domain-browser": "commonjs2 domain-browser",
+            "domelementtype": "commonjs2 domelementtype",
+            "domhandler": "commonjs2 domhandler",
+            "domutils": "commonjs2 domutils",
+            "dot-case": "commonjs2 dot-case",
+            "download": "commonjs2 download",
+            "duplexer2": "commonjs2 duplexer2",
+            "duplexify": "commonjs2 duplexify",
+            "each-async": "commonjs2 each-async",
+            "easywebpack": "commonjs2 easywebpack",
+            "easywebpack-vue": "commonjs2 easywebpack-vue",
+            "ecc-jsbn": "commonjs2 ecc-jsbn",
+            "ee-first": "commonjs2 ee-first",
+            "egg": "commonjs2 egg",
+            "egg-cluster": "commonjs2 egg-cluster",
+            "egg-cookies": "commonjs2 egg-cookies",
+            "egg-core": "commonjs2 egg-core",
+            "egg-cors": "commonjs2 egg-cors",
+            "egg-development": "commonjs2 egg-development",
+            "egg-i18n": "commonjs2 egg-i18n",
+            "egg-jsonp": "commonjs2 egg-jsonp",
+            "egg-logger": "commonjs2 egg-logger",
+            "egg-logrotator": "commonjs2 egg-logrotator",
+            "egg-logview": "commonjs2 egg-logview",
+            "egg-multipart": "commonjs2 egg-multipart",
+            "egg-onerror": "commonjs2 egg-onerror",
+            "egg-path-matching": "commonjs2 egg-path-matching",
+            "egg-schedule": "commonjs2 egg-schedule",
+            "egg-security": "commonjs2 egg-security",
+            "egg-session": "commonjs2 egg-session",
+            "egg-static": "commonjs2 egg-static",
+            "egg-utils": "commonjs2 egg-utils",
+            "egg-validate": "commonjs2 egg-validate",
+            "egg-view": "commonjs2 egg-view",
+            "egg-view-vue": "commonjs2 egg-view-vue",
+            "egg-view-vue-ssr": "commonjs2 egg-view-vue-ssr",
+            "egg-watcher": "commonjs2 egg-watcher",
+            "egg-webpack": "commonjs2 egg-webpack",
+            "egg-webpack-vue": "commonjs2 egg-webpack-vue",
+            "electron-to-chromium": "commonjs2 electron-to-chromium",
+            "element-ui": "commonjs2 element-ui",
+            "elliptic": "commonjs2 elliptic",
+            "emoji-regex": "commonjs2 emoji-regex",
+            "emojis-list": "commonjs2 emojis-list",
+            "enable": "commonjs2 enable",
+            "encoding": "commonjs2 encoding",
+            "end-of-stream": "commonjs2 end-of-stream",
+            "enhanced-resolve": "commonjs2 enhanced-resolve",
+            "entities": "commonjs2 entities",
+            "errno": "commonjs2 errno",
+            "error-ex": "commonjs2 error-ex",
+            "error-inject": "commonjs2 error-inject",
+            "es-abstract": "commonjs2 es-abstract",
+            "es-to-primitive": "commonjs2 es-to-primitive",
+            "es5-ext": "commonjs2 es5-ext",
+            "es6-iterator": "commonjs2 es6-iterator",
+            "es6-map": "commonjs2 es6-map",
+            "es6-promise": "commonjs2 es6-promise",
+            "es6-promisify": "commonjs2 es6-promisify",
+            "es6-set": "commonjs2 es6-set",
+            "es6-symbol": "commonjs2 es6-symbol",
+            "es6-templates": "commonjs2 es6-templates",
+            "es6-weak-map": "commonjs2 es6-weak-map",
+            "escape-html": "commonjs2 escape-html",
+            "escape-string-regexp": "commonjs2 escape-string-regexp",
+            "escodegen": "commonjs2 escodegen",
+            "escope": "commonjs2 escope",
+            "eslint": "commonjs2 eslint",
+            "eslint-config-egg": "commonjs2 eslint-config-egg",
+            "eslint-import-resolver-node": "commonjs2 eslint-import-resolver-node",
+            "eslint-module-utils": "commonjs2 eslint-module-utils",
+            "eslint-plugin-html": "commonjs2 eslint-plugin-html",
+            "eslint-plugin-import": "commonjs2 eslint-plugin-import",
+            "eslint-plugin-jsx-a11y": "commonjs2 eslint-plugin-jsx-a11y",
+            "eslint-plugin-react": "commonjs2 eslint-plugin-react",
+            "eslint-plugin-vue": "commonjs2 eslint-plugin-vue",
+            "eslint-scope": "commonjs2 eslint-scope",
+            "espree": "commonjs2 espree",
+            "esprima": "commonjs2 esprima",
+            "esquery": "commonjs2 esquery",
+            "esrecurse": "commonjs2 esrecurse",
+            "estraverse": "commonjs2 estraverse",
+            "esutils": "commonjs2 esutils",
+            "event-emitter": "commonjs2 event-emitter",
+            "events": "commonjs2 events",
+            "evp_bytestokey": "commonjs2 evp_bytestokey",
+            "exec-buffer": "commonjs2 exec-buffer",
+            "exec-series": "commonjs2 exec-series",
+            "execa": "commonjs2 execa",
+            "executable": "commonjs2 executable",
+            "expand-brackets": "commonjs2 expand-brackets",
+            "expand-range": "commonjs2 expand-range",
+            "extend": "commonjs2 extend",
+            "extend-shallow": "commonjs2 extend-shallow",
+            "extend2": "commonjs2 extend2",
+            "external-editor": "commonjs2 external-editor",
+            "extglob": "commonjs2 extglob",
+            "extract-text-webpack-plugin": "commonjs2 extract-text-webpack-plugin",
+            "extsprintf": "commonjs2 extsprintf",
+            "fancy-log": "commonjs2 fancy-log",
+            "fast-deep-equal": "commonjs2 fast-deep-equal",
+            "fast-json-stable-stringify": "commonjs2 fast-json-stable-stringify",
+            "fast-levenshtein": "commonjs2 fast-levenshtein",
+            "fastparse": "commonjs2 fastparse",
+            "fbjs": "commonjs2 fbjs",
+            "fd-slicer": "commonjs2 fd-slicer",
+            "figures": "commonjs2 figures",
+            "file-entry-cache": "commonjs2 file-entry-cache",
+            "file-loader": "commonjs2 file-loader",
+            "file-type": "commonjs2 file-type",
+            "file-uri-to-path": "commonjs2 file-uri-to-path",
+            "filename-regex": "commonjs2 filename-regex",
+            "filename-reserved-regex": "commonjs2 filename-reserved-regex",
+            "filenamify": "commonjs2 filenamify",
+            "fill-range": "commonjs2 fill-range",
+            "find-cache-dir": "commonjs2 find-cache-dir",
+            "find-up": "commonjs2 find-up",
+            "find-versions": "commonjs2 find-versions",
+            "first-chunk-stream": "commonjs2 first-chunk-stream",
+            "flat-cache": "commonjs2 flat-cache",
+            "flatten": "commonjs2 flatten",
+            "follow-redirects": "commonjs2 follow-redirects",
+            "for-in": "commonjs2 for-in",
+            "for-own": "commonjs2 for-own",
+            "foreach": "commonjs2 foreach",
+            "forever-agent": "commonjs2 forever-agent",
+            "form-data": "commonjs2 form-data",
+            "fresh": "commonjs2 fresh",
+            "fs-extra": "commonjs2 fs-extra",
+            "fs-readdir-recursive": "commonjs2 fs-readdir-recursive",
+            "fs.realpath": "commonjs2 fs.realpath",
+            "fsevents": "commonjs2 fsevents",
+            "fstream": "commonjs2 fstream",
+            "ftp": "commonjs2 ftp",
+            "function-bind": "commonjs2 function-bind",
+            "functional-red-black-tree": "commonjs2 functional-red-black-tree",
+            "gauge": "commonjs2 gauge",
+            "gaze": "commonjs2 gaze",
+            "get-caller-file": "commonjs2 get-caller-file",
+            "get-proxy": "commonjs2 get-proxy",
+            "get-ready": "commonjs2 get-ready",
+            "get-stdin": "commonjs2 get-stdin",
+            "get-stream": "commonjs2 get-stream",
+            "get-uri": "commonjs2 get-uri",
+            "getpass": "commonjs2 getpass",
+            "gifsicle": "commonjs2 gifsicle",
+            "glob": "commonjs2 glob",
+            "glob-base": "commonjs2 glob-base",
+            "glob-parent": "commonjs2 glob-parent",
+            "glob-stream": "commonjs2 glob-stream",
+            "globals": "commonjs2 globals",
+            "globby": "commonjs2 globby",
+            "globule": "commonjs2 globule",
+            "glogg": "commonjs2 glogg",
+            "got": "commonjs2 got",
+            "graceful": "commonjs2 graceful",
+            "graceful-fs": "commonjs2 graceful-fs",
+            "graceful-process": "commonjs2 graceful-process",
+            "graceful-readlink": "commonjs2 graceful-readlink",
+            "gulp-decompress": "commonjs2 gulp-decompress",
+            "gulp-rename": "commonjs2 gulp-rename",
+            "gulp-sourcemaps": "commonjs2 gulp-sourcemaps",
+            "gulp-util": "commonjs2 gulp-util",
+            "gulplog": "commonjs2 gulplog",
+            "har-schema": "commonjs2 har-schema",
+            "har-validator": "commonjs2 har-validator",
+            "has": "commonjs2 has",
+            "has-ansi": "commonjs2 has-ansi",
+            "has-flag": "commonjs2 has-flag",
+            "has-gulplog": "commonjs2 has-gulplog",
+            "has-unicode": "commonjs2 has-unicode",
+            "hash-base": "commonjs2 hash-base",
+            "hash-sum": "commonjs2 hash-sum",
+            "hash.js": "commonjs2 hash.js",
+            "hawk": "commonjs2 hawk",
+            "he": "commonjs2 he",
+            "header-case": "commonjs2 header-case",
+            "hmac-drbg": "commonjs2 hmac-drbg",
+            "hoek": "commonjs2 hoek",
+            "home-or-tmp": "commonjs2 home-or-tmp",
+            "hosted-git-info": "commonjs2 hosted-git-info",
+            "html-comment-regex": "commonjs2 html-comment-regex",
+            "html-entities": "commonjs2 html-entities",
+            "html-minifier": "commonjs2 html-minifier",
+            "html-webpack-plugin": "commonjs2 html-webpack-plugin",
+            "htmlparser2": "commonjs2 htmlparser2",
+            "http-assert": "commonjs2 http-assert",
+            "http-errors": "commonjs2 http-errors",
+            "http-proxy-agent": "commonjs2 http-proxy-agent",
+            "http-signature": "commonjs2 http-signature",
+            "https-browserify": "commonjs2 https-browserify",
+            "https-proxy-agent": "commonjs2 https-proxy-agent",
+            "humanize-bytes": "commonjs2 humanize-bytes",
+            "humanize-ms": "commonjs2 humanize-ms",
+            "iconv-lite": "commonjs2 iconv-lite",
+            "icss-replace-symbols": "commonjs2 icss-replace-symbols",
+            "icss-utils": "commonjs2 icss-utils",
+            "ieee754": "commonjs2 ieee754",
+            "ignore": "commonjs2 ignore",
+            "image-size": "commonjs2 image-size",
+            "imagemin": "commonjs2 imagemin",
+            "imagemin-gifsicle": "commonjs2 imagemin-gifsicle",
+            "imagemin-jpegtran": "commonjs2 imagemin-jpegtran",
+            "imagemin-optipng": "commonjs2 imagemin-optipng",
+            "imagemin-pngquant": "commonjs2 imagemin-pngquant",
+            "imagemin-svgo": "commonjs2 imagemin-svgo",
+            "imagemin-webpack-plugin": "commonjs2 imagemin-webpack-plugin",
+            "imurmurhash": "commonjs2 imurmurhash",
+            "in-publish": "commonjs2 in-publish",
+            "indent-string": "commonjs2 indent-string",
+            "indexes-of": "commonjs2 indexes-of",
+            "indexof": "commonjs2 indexof",
+            "inflation": "commonjs2 inflation",
+            "inflection": "commonjs2 inflection",
+            "inflight": "commonjs2 inflight",
+            "inherits": "commonjs2 inherits",
+            "ini": "commonjs2 ini",
+            "inquirer": "commonjs2 inquirer",
+            "interpret": "commonjs2 interpret",
+            "invariant": "commonjs2 invariant",
+            "invert-kv": "commonjs2 invert-kv",
+            "ip": "commonjs2 ip",
+            "ip-regex": "commonjs2 ip-regex",
+            "is-absolute": "commonjs2 is-absolute",
+            "is-absolute-url": "commonjs2 is-absolute-url",
+            "is-arrayish": "commonjs2 is-arrayish",
+            "is-binary-path": "commonjs2 is-binary-path",
+            "is-buffer": "commonjs2 is-buffer",
+            "is-builtin-module": "commonjs2 is-builtin-module",
+            "is-bzip2": "commonjs2 is-bzip2",
+            "is-callable": "commonjs2 is-callable",
+            "is-class": "commonjs2 is-class",
+            "is-date-object": "commonjs2 is-date-object",
+            "is-directory": "commonjs2 is-directory",
+            "is-dotfile": "commonjs2 is-dotfile",
+            "is-equal-shallow": "commonjs2 is-equal-shallow",
+            "is-extendable": "commonjs2 is-extendable",
+            "is-extglob": "commonjs2 is-extglob",
+            "is-finite": "commonjs2 is-finite",
+            "is-fullwidth-code-point": "commonjs2 is-fullwidth-code-point",
+            "is-gif": "commonjs2 is-gif",
+            "is-glob": "commonjs2 is-glob",
+            "is-gzip": "commonjs2 is-gzip",
+            "is-jpg": "commonjs2 is-jpg",
+            "is-keyword-js": "commonjs2 is-keyword-js",
+            "is-lower-case": "commonjs2 is-lower-case",
+            "is-nan": "commonjs2 is-nan",
+            "is-natural-number": "commonjs2 is-natural-number",
+            "is-number": "commonjs2 is-number",
+            "is-obj": "commonjs2 is-obj",
+            "is-path-cwd": "commonjs2 is-path-cwd",
+            "is-path-in-cwd": "commonjs2 is-path-in-cwd",
+            "is-path-inside": "commonjs2 is-path-inside",
+            "is-plain-obj": "commonjs2 is-plain-obj",
+            "is-plain-object": "commonjs2 is-plain-object",
+            "is-png": "commonjs2 is-png",
+            "is-posix-bracket": "commonjs2 is-posix-bracket",
+            "is-primitive": "commonjs2 is-primitive",
+            "is-promise": "commonjs2 is-promise",
+            "is-redirect": "commonjs2 is-redirect",
+            "is-regex": "commonjs2 is-regex",
+            "is-relative": "commonjs2 is-relative",
+            "is-resolvable": "commonjs2 is-resolvable",
+            "is-retry-allowed": "commonjs2 is-retry-allowed",
+            "is-stream": "commonjs2 is-stream",
+            "is-svg": "commonjs2 is-svg",
+            "is-symbol": "commonjs2 is-symbol",
+            "is-tar": "commonjs2 is-tar",
+            "is-type-of": "commonjs2 is-type-of",
+            "is-typedarray": "commonjs2 is-typedarray",
+            "is-upper-case": "commonjs2 is-upper-case",
+            "is-url": "commonjs2 is-url",
+            "is-utf8": "commonjs2 is-utf8",
+            "is-valid-glob": "commonjs2 is-valid-glob",
+            "is-windows": "commonjs2 is-windows",
+            "is-wsl": "commonjs2 is-wsl",
+            "is-zip": "commonjs2 is-zip",
+            "isarray": "commonjs2 isarray",
+            "isexe": "commonjs2 isexe",
+            "isobject": "commonjs2 isobject",
+            "isomorphic-fetch": "commonjs2 isomorphic-fetch",
+            "isstream": "commonjs2 isstream",
+            "jpegtran-bin": "commonjs2 jpegtran-bin",
+            "js-base64": "commonjs2 js-base64",
+            "js-tokens": "commonjs2 js-tokens",
+            "js-yaml": "commonjs2 js-yaml",
+            "jsbn": "commonjs2 jsbn",
+            "jschardet": "commonjs2 jschardet",
+            "jsesc": "commonjs2 jsesc",
+            "json-loader": "commonjs2 json-loader",
+            "json-schema": "commonjs2 json-schema",
+            "json-schema-traverse": "commonjs2 json-schema-traverse",
+            "json-stable-stringify": "commonjs2 json-stable-stringify",
+            "json-stable-stringify-without-jsonify": "commonjs2 json-stable-stringify-without-jsonify",
+            "json-stringify-safe": "commonjs2 json-stringify-safe",
+            "json5": "commonjs2 json5",
+            "jsonfile": "commonjs2 jsonfile",
+            "jsonify": "commonjs2 jsonify",
+            "jsonp-body": "commonjs2 jsonp-body",
+            "jsprim": "commonjs2 jsprim",
+            "jsx-ast-utils": "commonjs2 jsx-ast-utils",
+            "kcors": "commonjs2 kcors",
+            "keygrip": "commonjs2 keygrip",
+            "kind-of": "commonjs2 kind-of",
+            "klaw": "commonjs2 klaw",
+            "koa": "commonjs2 koa",
+            "koa-bodyparser": "commonjs2 koa-bodyparser",
+            "koa-compose": "commonjs2 koa-compose",
+            "koa-is-json": "commonjs2 koa-is-json",
+            "koa-locales": "commonjs2 koa-locales",
+            "koa-onerror": "commonjs2 koa-onerror",
+            "koa-override": "commonjs2 koa-override",
+            "koa-router": "commonjs2 koa-router",
+            "koa-send": "commonjs2 koa-send",
+            "koa-session": "commonjs2 koa-session",
+            "koa-static": "commonjs2 koa-static",
+            "koa-static-cache": "commonjs2 koa-static-cache",
+            "koa-webpack-dev-middleware": "commonjs2 koa-webpack-dev-middleware",
+            "koa-webpack-hot-middleware": "commonjs2 koa-webpack-hot-middleware",
+            "lazy-cache": "commonjs2 lazy-cache",
+            "lazy-req": "commonjs2 lazy-req",
+            "lazystream": "commonjs2 lazystream",
+            "lcid": "commonjs2 lcid",
+            "less": "commonjs2 less",
+            "less-loader": "commonjs2 less-loader",
+            "levn": "commonjs2 levn",
+            "load-json-file": "commonjs2 load-json-file",
+            "loader-runner": "commonjs2 loader-runner",
+            "loader-utils": "commonjs2 loader-utils",
+            "locate-path": "commonjs2 locate-path",
+            "lodash": "commonjs2 lodash",
+            "lodash._basecopy": "commonjs2 lodash._basecopy",
+            "lodash._basetostring": "commonjs2 lodash._basetostring",
+            "lodash._basevalues": "commonjs2 lodash._basevalues",
+            "lodash._getnative": "commonjs2 lodash._getnative",
+            "lodash._isiterateecall": "commonjs2 lodash._isiterateecall",
+            "lodash._reescape": "commonjs2 lodash._reescape",
+            "lodash._reevaluate": "commonjs2 lodash._reevaluate",
+            "lodash._reinterpolate": "commonjs2 lodash._reinterpolate",
+            "lodash._root": "commonjs2 lodash._root",
+            "lodash.assign": "commonjs2 lodash.assign",
+            "lodash.camelcase": "commonjs2 lodash.camelcase",
+            "lodash.clonedeep": "commonjs2 lodash.clonedeep",
+            "lodash.cond": "commonjs2 lodash.cond",
+            "lodash.escape": "commonjs2 lodash.escape",
+            "lodash.isarguments": "commonjs2 lodash.isarguments",
+            "lodash.isarray": "commonjs2 lodash.isarray",
+            "lodash.isequal": "commonjs2 lodash.isequal",
+            "lodash.keys": "commonjs2 lodash.keys",
+            "lodash.map": "commonjs2 lodash.map",
+            "lodash.memoize": "commonjs2 lodash.memoize",
+            "lodash.mergewith": "commonjs2 lodash.mergewith",
+            "lodash.restparam": "commonjs2 lodash.restparam",
+            "lodash.tail": "commonjs2 lodash.tail",
+            "lodash.template": "commonjs2 lodash.template",
+            "lodash.templatesettings": "commonjs2 lodash.templatesettings",
+            "lodash.uniq": "commonjs2 lodash.uniq",
+            "log-symbols": "commonjs2 log-symbols",
+            "logalot": "commonjs2 logalot",
+            "long": "commonjs2 long",
+            "longest": "commonjs2 longest",
+            "loose-envify": "commonjs2 loose-envify",
+            "loud-rejection": "commonjs2 loud-rejection",
+            "lower-case": "commonjs2 lower-case",
+            "lower-case-first": "commonjs2 lower-case-first",
+            "lowercase-keys": "commonjs2 lowercase-keys",
+            "lpad-align": "commonjs2 lpad-align",
+            "lru-cache": "commonjs2 lru-cache",
+            "macaddress": "commonjs2 macaddress",
+            "make-dir": "commonjs2 make-dir",
+            "map-obj": "commonjs2 map-obj",
+            "math-expression-evaluator": "commonjs2 math-expression-evaluator",
+            "md5.js": "commonjs2 md5.js",
+            "media-typer": "commonjs2 media-typer",
+            "mem": "commonjs2 mem",
+            "memory-fs": "commonjs2 memory-fs",
+            "meow": "commonjs2 meow",
+            "merge-source-map": "commonjs2 merge-source-map",
+            "merge-stream": "commonjs2 merge-stream",
+            "methods": "commonjs2 methods",
+            "micromatch": "commonjs2 micromatch",
+            "miller-rabin": "commonjs2 miller-rabin",
+            "mime": "commonjs2 mime",
+            "mime-db": "commonjs2 mime-db",
+            "mime-types": "commonjs2 mime-types",
+            "mimic-fn": "commonjs2 mimic-fn",
+            "minimalistic-assert": "commonjs2 minimalistic-assert",
+            "minimalistic-crypto-utils": "commonjs2 minimalistic-crypto-utils",
+            "minimatch": "commonjs2 minimatch",
+            "minimist": "commonjs2 minimist",
+            "minipass": "commonjs2 minipass",
+            "minizlib": "commonjs2 minizlib",
+            "mint-ui": "commonjs2 mint-ui",
+            "mixin-object": "commonjs2 mixin-object",
+            "mkdirp": "commonjs2 mkdirp",
+            "mockjs": "commonjs2 mockjs",
+            "moment": "commonjs2 moment",
+            "moment-timezone": "commonjs2 moment-timezone",
+            "ms": "commonjs2 ms",
+            "multipipe": "commonjs2 multipipe",
+            "mustache": "commonjs2 mustache",
+            "mute-stream": "commonjs2 mute-stream",
+            "mz": "commonjs2 mz",
+            "nan": "commonjs2 nan",
+            "natural-compare": "commonjs2 natural-compare",
+            "ncname": "commonjs2 ncname",
+            "ndir": "commonjs2 ndir",
+            "negotiator": "commonjs2 negotiator",
+            "netmask": "commonjs2 netmask",
+            "no-case": "commonjs2 no-case",
+            "node-fetch": "commonjs2 node-fetch",
+            "node-gyp": "commonjs2 node-gyp",
+            "node-homedir": "commonjs2 node-homedir",
+            "node-libs-browser": "commonjs2 node-libs-browser",
+            "node-noop": "commonjs2 node-noop",
+            "node-sass": "commonjs2 node-sass",
+            "node-status-codes": "commonjs2 node-status-codes",
+            "nopt": "commonjs2 nopt",
+            "normalize-git-url": "commonjs2 normalize-git-url",
+            "normalize-package-data": "commonjs2 normalize-package-data",
+            "normalize-path": "commonjs2 normalize-path",
+            "normalize-range": "commonjs2 normalize-range",
+            "normalize-url": "commonjs2 normalize-url",
+            "npm-install-webpack-plugin": "commonjs2 npm-install-webpack-plugin",
+            "npm-package-arg": "commonjs2 npm-package-arg",
+            "npm-run-path": "commonjs2 npm-run-path",
+            "npminstall": "commonjs2 npminstall",
+            "npmlog": "commonjs2 npmlog",
+            "nth-check": "commonjs2 nth-check",
+            "num2fraction": "commonjs2 num2fraction",
+            "number-is-nan": "commonjs2 number-is-nan",
+            "oauth-sign": "commonjs2 oauth-sign",
+            "object-assign": "commonjs2 object-assign",
+            "object-keys": "commonjs2 object-keys",
+            "object.assign": "commonjs2 object.assign",
+            "object.omit": "commonjs2 object.omit",
+            "on-finished": "commonjs2 on-finished",
+            "once": "commonjs2 once",
+            "onetime": "commonjs2 onetime",
+            "only": "commonjs2 only",
+            "opn": "commonjs2 opn",
+            "optionator": "commonjs2 optionator",
+            "optipng-bin": "commonjs2 optipng-bin",
+            "ora": "commonjs2 ora",
+            "ordered-read-streams": "commonjs2 ordered-read-streams",
+            "os-browserify": "commonjs2 os-browserify",
+            "os-filter-obj": "commonjs2 os-filter-obj",
+            "os-homedir": "commonjs2 os-homedir",
+            "os-locale": "commonjs2 os-locale",
+            "os-name": "commonjs2 os-name",
+            "os-tmpdir": "commonjs2 os-tmpdir",
+            "osenv": "commonjs2 osenv",
+            "osx-release": "commonjs2 osx-release",
+            "p-finally": "commonjs2 p-finally",
+            "p-limit": "commonjs2 p-limit",
+            "p-locate": "commonjs2 p-locate",
+            "p-pipe": "commonjs2 p-pipe",
+            "pac-proxy-agent": "commonjs2 pac-proxy-agent",
+            "pac-resolver": "commonjs2 pac-resolver",
+            "pako": "commonjs2 pako",
+            "param-case": "commonjs2 param-case",
+            "parameter": "commonjs2 parameter",
+            "parse-asn1": "commonjs2 parse-asn1",
+            "parse-glob": "commonjs2 parse-glob",
+            "parse-json": "commonjs2 parse-json",
+            "parseurl": "commonjs2 parseurl",
+            "pascal-case": "commonjs2 pascal-case",
+            "path-browserify": "commonjs2 path-browserify",
+            "path-case": "commonjs2 path-case",
+            "path-dirname": "commonjs2 path-dirname",
+            "path-exists": "commonjs2 path-exists",
+            "path-is-absolute": "commonjs2 path-is-absolute",
+            "path-is-inside": "commonjs2 path-is-inside",
+            "path-key": "commonjs2 path-key",
+            "path-parse": "commonjs2 path-parse",
+            "path-to-regexp": "commonjs2 path-to-regexp",
+            "path-type": "commonjs2 path-type",
+            "pbkdf2": "commonjs2 pbkdf2",
+            "pend": "commonjs2 pend",
+            "performance-now": "commonjs2 performance-now",
+            "pify": "commonjs2 pify",
+            "pinkie": "commonjs2 pinkie",
+            "pinkie-promise": "commonjs2 pinkie-promise",
+            "pkg-dir": "commonjs2 pkg-dir",
+            "platform": "commonjs2 platform",
+            "pluralize": "commonjs2 pluralize",
+            "pngquant-bin": "commonjs2 pngquant-bin",
+            "postcss": "commonjs2 postcss",
+            "postcss-calc": "commonjs2 postcss-calc",
+            "postcss-colormin": "commonjs2 postcss-colormin",
+            "postcss-convert-values": "commonjs2 postcss-convert-values",
+            "postcss-discard-comments": "commonjs2 postcss-discard-comments",
+            "postcss-discard-duplicates": "commonjs2 postcss-discard-duplicates",
+            "postcss-discard-empty": "commonjs2 postcss-discard-empty",
+            "postcss-discard-overridden": "commonjs2 postcss-discard-overridden",
+            "postcss-discard-unused": "commonjs2 postcss-discard-unused",
+            "postcss-filter-plugins": "commonjs2 postcss-filter-plugins",
+            "postcss-load-config": "commonjs2 postcss-load-config",
+            "postcss-load-options": "commonjs2 postcss-load-options",
+            "postcss-load-plugins": "commonjs2 postcss-load-plugins",
+            "postcss-loader": "commonjs2 postcss-loader",
+            "postcss-merge-idents": "commonjs2 postcss-merge-idents",
+            "postcss-merge-longhand": "commonjs2 postcss-merge-longhand",
+            "postcss-merge-rules": "commonjs2 postcss-merge-rules",
+            "postcss-message-helpers": "commonjs2 postcss-message-helpers",
+            "postcss-minify-font-values": "commonjs2 postcss-minify-font-values",
+            "postcss-minify-gradients": "commonjs2 postcss-minify-gradients",
+            "postcss-minify-params": "commonjs2 postcss-minify-params",
+            "postcss-minify-selectors": "commonjs2 postcss-minify-selectors",
+            "postcss-modules-extract-imports": "commonjs2 postcss-modules-extract-imports",
+            "postcss-modules-local-by-default": "commonjs2 postcss-modules-local-by-default",
+            "postcss-modules-scope": "commonjs2 postcss-modules-scope",
+            "postcss-modules-values": "commonjs2 postcss-modules-values",
+            "postcss-normalize-charset": "commonjs2 postcss-normalize-charset",
+            "postcss-normalize-url": "commonjs2 postcss-normalize-url",
+            "postcss-ordered-values": "commonjs2 postcss-ordered-values",
+            "postcss-reduce-idents": "commonjs2 postcss-reduce-idents",
+            "postcss-reduce-initial": "commonjs2 postcss-reduce-initial",
+            "postcss-reduce-transforms": "commonjs2 postcss-reduce-transforms",
+            "postcss-selector-parser": "commonjs2 postcss-selector-parser",
+            "postcss-svgo": "commonjs2 postcss-svgo",
+            "postcss-unique-selectors": "commonjs2 postcss-unique-selectors",
+            "postcss-value-parser": "commonjs2 postcss-value-parser",
+            "postcss-zindex": "commonjs2 postcss-zindex",
+            "prelude-ls": "commonjs2 prelude-ls",
+            "prepend-http": "commonjs2 prepend-http",
+            "preserve": "commonjs2 preserve",
+            "prettier": "commonjs2 prettier",
+            "pretty-error": "commonjs2 pretty-error",
+            "private": "commonjs2 private",
+            "process": "commonjs2 process",
+            "process-nextick-args": "commonjs2 process-nextick-args",
+            "progress": "commonjs2 progress",
+            "progress-bar-webpack-plugin": "commonjs2 progress-bar-webpack-plugin",
+            "promise": "commonjs2 promise",
+            "prop-types": "commonjs2 prop-types",
+            "proxy-agent": "commonjs2 proxy-agent",
+            "prr": "commonjs2 prr",
+            "pseudomap": "commonjs2 pseudomap",
+            "public-encrypt": "commonjs2 public-encrypt",
+            "punycode": "commonjs2 punycode",
+            "q": "commonjs2 q",
+            "qs": "commonjs2 qs",
+            "query-string": "commonjs2 query-string",
+            "querystring": "commonjs2 querystring",
+            "querystring-es3": "commonjs2 querystring-es3",
+            "raf.js": "commonjs2 raf.js",
+            "random-bytes": "commonjs2 random-bytes",
+            "randomatic": "commonjs2 randomatic",
+            "randombytes": "commonjs2 randombytes",
+            "randomfill": "commonjs2 randomfill",
+            "range-parser": "commonjs2 range-parser",
+            "raw-body": "commonjs2 raw-body",
+            "rc": "commonjs2 rc",
+            "read-all-stream": "commonjs2 read-all-stream",
+            "read-pkg": "commonjs2 read-pkg",
+            "read-pkg-up": "commonjs2 read-pkg-up",
+            "readable-stream": "commonjs2 readable-stream",
+            "readdirp": "commonjs2 readdirp",
+            "ready-callback": "commonjs2 ready-callback",
+            "recast": "commonjs2 recast",
+            "rechoir": "commonjs2 rechoir",
+            "redent": "commonjs2 redent",
+            "reduce-css-calc": "commonjs2 reduce-css-calc",
+            "reduce-function-call": "commonjs2 reduce-function-call",
+            "regenerate": "commonjs2 regenerate",
+            "regenerator-runtime": "commonjs2 regenerator-runtime",
+            "regenerator-transform": "commonjs2 regenerator-transform",
+            "regex-cache": "commonjs2 regex-cache",
+            "regexpu-core": "commonjs2 regexpu-core",
+            "regjsgen": "commonjs2 regjsgen",
+            "regjsparser": "commonjs2 regjsparser",
+            "relateurl": "commonjs2 relateurl",
+            "remove-trailing-separator": "commonjs2 remove-trailing-separator",
+            "renderkid": "commonjs2 renderkid",
+            "repeat-element": "commonjs2 repeat-element",
+            "repeat-string": "commonjs2 repeat-string",
+            "repeating": "commonjs2 repeating",
+            "replace-ext": "commonjs2 replace-ext",
+            "request": "commonjs2 request",
+            "require-directory": "commonjs2 require-directory",
+            "require-from-string": "commonjs2 require-from-string",
+            "require-main-filename": "commonjs2 require-main-filename",
+            "require-uncached": "commonjs2 require-uncached",
+            "resolve": "commonjs2 resolve",
+            "resolve-from": "commonjs2 resolve-from",
+            "resolve-path": "commonjs2 resolve-path",
+            "restore-cursor": "commonjs2 restore-cursor",
+            "right-align": "commonjs2 right-align",
+            "rimraf": "commonjs2 rimraf",
+            "ripemd160": "commonjs2 ripemd160",
+            "rndm": "commonjs2 rndm",
+            "run-async": "commonjs2 run-async",
+            "runscript": "commonjs2 runscript",
+            "rx-lite": "commonjs2 rx-lite",
+            "rx-lite-aggregates": "commonjs2 rx-lite-aggregates",
+            "safe-buffer": "commonjs2 safe-buffer",
+            "safe-timers": "commonjs2 safe-timers",
+            "sass-graph": "commonjs2 sass-graph",
+            "sass-loader": "commonjs2 sass-loader",
+            "sax": "commonjs2 sax",
+            "schema-utils": "commonjs2 schema-utils",
+            "scmp": "commonjs2 scmp",
+            "scss-tokenizer": "commonjs2 scss-tokenizer",
+            "sdk-base": "commonjs2 sdk-base",
+            "seek-bzip": "commonjs2 seek-bzip",
+            "semver": "commonjs2 semver",
+            "semver-regex": "commonjs2 semver-regex",
+            "semver-truncate": "commonjs2 semver-truncate",
+            "sendmessage": "commonjs2 sendmessage",
+            "sentence-case": "commonjs2 sentence-case",
+            "serialize-javascript": "commonjs2 serialize-javascript",
+            "serialize-json": "commonjs2 serialize-json",
+            "set-blocking": "commonjs2 set-blocking",
+            "set-immediate-shim": "commonjs2 set-immediate-shim",
+            "setimmediate": "commonjs2 setimmediate",
+            "setprototypeof": "commonjs2 setprototypeof",
+            "sha.js": "commonjs2 sha.js",
+            "shallow-clone": "commonjs2 shallow-clone",
+            "shebang-command": "commonjs2 shebang-command",
+            "shebang-regex": "commonjs2 shebang-regex",
+            "shelljs": "commonjs2 shelljs",
+            "signal-exit": "commonjs2 signal-exit",
+            "slash": "commonjs2 slash",
+            "slice-ansi": "commonjs2 slice-ansi",
+            "smart-buffer": "commonjs2 smart-buffer",
+            "snake-case": "commonjs2 snake-case",
+            "sntp": "commonjs2 sntp",
+            "socks": "commonjs2 socks",
+            "socks-proxy-agent": "commonjs2 socks-proxy-agent",
+            "sort-keys": "commonjs2 sort-keys",
+            "source-list-map": "commonjs2 source-list-map",
+            "source-map": "commonjs2 source-map",
+            "source-map-support": "commonjs2 source-map-support",
+            "sparkles": "commonjs2 sparkles",
+            "spdx-correct": "commonjs2 spdx-correct",
+            "spdx-expression-parse": "commonjs2 spdx-expression-parse",
+            "spdx-license-ids": "commonjs2 spdx-license-ids",
+            "sprintf-js": "commonjs2 sprintf-js",
+            "squeak": "commonjs2 squeak",
+            "sshpk": "commonjs2 sshpk",
+            "stack-trace": "commonjs2 stack-trace",
+            "stat-mode": "commonjs2 stat-mode",
+            "statuses": "commonjs2 statuses",
+            "stdout-stream": "commonjs2 stdout-stream",
+            "stream-browserify": "commonjs2 stream-browserify",
+            "stream-combiner2": "commonjs2 stream-combiner2",
+            "stream-http": "commonjs2 stream-http",
+            "stream-shift": "commonjs2 stream-shift",
+            "streamsearch": "commonjs2 streamsearch",
+            "strict-uri-encode": "commonjs2 strict-uri-encode",
+            "string-width": "commonjs2 string-width",
+            "string_decoder": "commonjs2 string_decoder",
+            "stringstream": "commonjs2 stringstream",
+            "strip-ansi": "commonjs2 strip-ansi",
+            "strip-bom": "commonjs2 strip-bom",
+            "strip-bom-stream": "commonjs2 strip-bom-stream",
+            "strip-dirs": "commonjs2 strip-dirs",
+            "strip-eof": "commonjs2 strip-eof",
+            "strip-indent": "commonjs2 strip-indent",
+            "strip-json-comments": "commonjs2 strip-json-comments",
+            "strip-outer": "commonjs2 strip-outer",
+            "style-loader": "commonjs2 style-loader",
+            "sum-up": "commonjs2 sum-up",
+            "supports-color": "commonjs2 supports-color",
+            "svgo": "commonjs2 svgo",
+            "swap-case": "commonjs2 swap-case",
+            "table": "commonjs2 table",
+            "tapable": "commonjs2 tapable",
+            "tar": "commonjs2 tar",
+            "tar-stream": "commonjs2 tar-stream",
+            "tcp-base": "commonjs2 tcp-base",
+            "temp-dir": "commonjs2 temp-dir",
+            "tempfile": "commonjs2 tempfile",
+            "text-table": "commonjs2 text-table",
+            "thenify": "commonjs2 thenify",
+            "thenify-all": "commonjs2 thenify-all",
+            "throttle-debounce": "commonjs2 throttle-debounce",
+            "through": "commonjs2 through",
+            "through2": "commonjs2 through2",
+            "through2-filter": "commonjs2 through2-filter",
+            "thunkify": "commonjs2 thunkify",
+            "thunkify-wrap": "commonjs2 thunkify-wrap",
+            "time-stamp": "commonjs2 time-stamp",
+            "timed-out": "commonjs2 timed-out",
+            "timers-browserify": "commonjs2 timers-browserify",
+            "title-case": "commonjs2 title-case",
+            "tmp": "commonjs2 tmp",
+            "to-absolute-glob": "commonjs2 to-absolute-glob",
+            "to-arraybuffer": "commonjs2 to-arraybuffer",
+            "to-fast-properties": "commonjs2 to-fast-properties",
+            "toposort": "commonjs2 toposort",
+            "tough-cookie": "commonjs2 tough-cookie",
+            "trim-newlines": "commonjs2 trim-newlines",
+            "trim-repeated": "commonjs2 trim-repeated",
+            "trim-right": "commonjs2 trim-right",
+            "tryit": "commonjs2 tryit",
+            "tsscmp": "commonjs2 tsscmp",
+            "tty-browserify": "commonjs2 tty-browserify",
+            "tunnel-agent": "commonjs2 tunnel-agent",
+            "tweetnacl": "commonjs2 tweetnacl",
+            "type-check": "commonjs2 type-check",
+            "type-is": "commonjs2 type-is",
+            "typedarray": "commonjs2 typedarray",
+            "ua-parser-js": "commonjs2 ua-parser-js",
+            "uglify-js": "commonjs2 uglify-js",
+            "uglify-to-browserify": "commonjs2 uglify-to-browserify",
+            "uglifyjs-webpack-plugin": "commonjs2 uglifyjs-webpack-plugin",
+            "uid-safe": "commonjs2 uid-safe",
+            "uniq": "commonjs2 uniq",
+            "uniqid": "commonjs2 uniqid",
+            "uniqs": "commonjs2 uniqs",
+            "unique-stream": "commonjs2 unique-stream",
+            "unpipe": "commonjs2 unpipe",
+            "unzip-response": "commonjs2 unzip-response",
+            "upper-case": "commonjs2 upper-case",
+            "upper-case-first": "commonjs2 upper-case-first",
+            "url": "commonjs2 url",
+            "url-loader": "commonjs2 url-loader",
+            "url-parse-lax": "commonjs2 url-parse-lax",
+            "url-regex": "commonjs2 url-regex",
+            "urllib": "commonjs2 urllib",
+            "util": "commonjs2 util",
+            "util-deprecate": "commonjs2 util-deprecate",
+            "utila": "commonjs2 utila",
+            "utility": "commonjs2 utility",
+            "uuid": "commonjs2 uuid",
+            "vali-date": "commonjs2 vali-date",
+            "validate-npm-package-license": "commonjs2 validate-npm-package-license",
+            "vary": "commonjs2 vary",
+            "vconsole": "commonjs2 vconsole",
+            "vendors": "commonjs2 vendors",
+            "verror": "commonjs2 verror",
+            "vinyl": "commonjs2 vinyl",
+            "vinyl-assign": "commonjs2 vinyl-assign",
+            "vinyl-fs": "commonjs2 vinyl-fs",
+            "vm-browserify": "commonjs2 vm-browserify",
+            "vue": "commonjs2 vue",
+            "vue-hot-reload-api": "commonjs2 vue-hot-reload-api",
+            "vue-html-loader": "commonjs2 vue-html-loader",
+            "vue-lazyload": "commonjs2 vue-lazyload",
+            "vue-loader": "commonjs2 vue-loader",
+            "vue-router": "commonjs2 vue-router",
+            "vue-server-renderer": "commonjs2 vue-server-renderer",
+            "vue-style-loader": "commonjs2 vue-style-loader",
+            "vue-template-compiler": "commonjs2 vue-template-compiler",
+            "vue-template-es2015-compiler": "commonjs2 vue-template-es2015-compiler",
+            "vuex": "commonjs2 vuex",
+            "vuex-router-sync": "commonjs2 vuex-router-sync",
+            "ware": "commonjs2 ware",
+            "watchpack": "commonjs2 watchpack",
+            "webpack": "commonjs2 webpack",
+            "webpack-dev-middleware": "commonjs2 webpack-dev-middleware",
+            "webpack-hot-middleware": "commonjs2 webpack-hot-middleware",
+            "webpack-manifest-normalize": "commonjs2 webpack-manifest-normalize",
+            "webpack-manifest-plugin": "commonjs2 webpack-manifest-plugin",
+            "webpack-merge": "commonjs2 webpack-merge",
+            "webpack-sources": "commonjs2 webpack-sources",
+            "webpack-tool": "commonjs2 webpack-tool",
+            "whatwg-fetch": "commonjs2 whatwg-fetch",
+            "whet.extend": "commonjs2 whet.extend",
+            "which": "commonjs2 which",
+            "which-module": "commonjs2 which-module",
+            "wide-align": "commonjs2 wide-align",
+            "win-release": "commonjs2 win-release",
+            "window-size": "commonjs2 window-size",
+            "wordwrap": "commonjs2 wordwrap",
+            "wrap-ansi": "commonjs2 wrap-ansi",
+            "wrap-fn": "commonjs2 wrap-fn",
+            "wrappy": "commonjs2 wrappy",
+            "write": "commonjs2 write",
+            "wt": "commonjs2 wt",
+            "xml-char-classes": "commonjs2 xml-char-classes",
+            "xregexp": "commonjs2 xregexp",
+            "xss": "commonjs2 xss",
+            "xtend": "commonjs2 xtend",
+            "y18n": "commonjs2 y18n",
+            "yallist": "commonjs2 yallist",
+            "yargs": "commonjs2 yargs",
+            "yargs-parser": "commonjs2 yargs-parser",
+            "yauzl": "commonjs2 yauzl",
+            "ylru": "commonjs2 ylru"
+          },
+          "entry": {
+            "about/about": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/about/about.vue",
+            "css/module/module": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/css/module/module.vue",
+            "dynamic/dynamic": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/dynamic/dynamic.vue",
+            "element/element": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/element/element.vue",
+            "index/index": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/index/index.vue",
+            "less/less": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/less/less.vue",
+            "router/router": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/router/router.vue",
+            "sass/sass": "babel-loader!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/framework/vue/entry/server-loader.js!/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/sass/sass.vue",
+            "app/app": "/Users/xintongxue/mili/Blog/egg-vue-learn/app/web/page/app/app.js"
+          },
+          "module": {
+            "rules": [
+              {
+                "test": {},
+                "exclude": {},
+                "use": [
+                  {
+                    "loader": "babel-loader"
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  }
+                ],
+                "exclude": []
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  },
+                  {
+                    "loader": "sass-loader"
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "css-loader",
+                    "options": {
+                      "minimize": false
+                    }
+                  },
+                  {
+                    "loader": "postcss-loader"
+                  },
+                  {
+                    "loader": "sass-loader",
+                    "options": {
+                      "indentedSyntax": true
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "url-loader",
+                    "options": {
+                      "limit": 1024,
+                      "name": "img/[name].[ext]"
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "url-loader",
+                    "options": {
+                      "limit": 1024,
+                      "name": "font/[name].[ext]"
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "exclude": {},
+                "use": [
+                  {
+                    "loader": "vue-loader",
+                    "options": {
+                      "preLoaders": {
+                        "scss": "sass-loader",
+                        "sass": "sass-loader?{\"indentedSyntax\":true}"
+                      },
+                      "loaders": {
+                        "css": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          }
+                        ],
+                        "scss": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          },
+                          {
+                            "loader": "sass-loader"
+                          }
+                        ],
+                        "sass": [
+                          "vue-style-loader",
+                          {
+                            "loader": "css-loader",
+                            "options": {
+                              "minimize": false
+                            }
+                          },
+                          {
+                            "loader": "postcss-loader"
+                          },
+                          {
+                            "loader": "sass-loader",
+                            "options": {
+                              "indentedSyntax": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "test": {},
+                "use": [
+                  {
+                    "loader": "vue-html-loader"
+                  }
+                ]
+              }
+            ]
+          },
+          "plugins": [
+            {
+              "options": {},
+              "__lable__": "module"
+            },
+            {
+              "__lable__": "error"
+            },
+            {
+              "definitions": {
+                "process.env.NODE_ENV": "\"development\"",
+                "process.env.VUE_ENV": "\"server\"",
+                "isNode": true
+              },
+              "__lable__": "define"
+            },
+            {
+              "__plugin__": "progress-bar-webpack-plugin",
+              "__lable__": "progress"
+            },
+            {
+              "__plugin__": "directory-named-webpack-plugin",
+              "__lable__": "directoryname"
+            }
+          ]
+        }
+      ]
+    },
+    "webpackvue": {
+      "manifest": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/manifest.json"
+    },
+    "logview": {
+      "prefix": "__logs",
+      "staticHost": "https://unpkg.cnpmjs.org",
+      "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/logs"
+    },
+    "env": "local",
+    "name": "egg-vue-learn",
+    "keys": "<String len: 6>",
+    "proxy": false,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "x-forwarded-host",
+    "pkg": {
+      "name": "egg-vue-learn",
+      "version": "3.0.3",
+      "description": "egg and vue",
+      "scripts": {
+        "build": "cross-env easywebpack build prod",
+        "build-dev": "cross-env easywebpack build dev",
+        "build-test": "cross-env easywebpack build test",
+        "start": "node index.js",
+        "start-test": "cross-env EGG_SERVER_ENV=test node index.js",
+        "start-prod": "cross-env EGG_SERVER_ENV=prod NODE_ENV=production npm start",
+        "kill": "pkill --signal SIGINT egg-vue-webpack-boilerplate",
+        "kill-mac": "kill -9 $(lsof -i:7001 |grep 'node'|awk '{print $2}')",
+        "kill-win": "taskkill -PID $(netstat -ano | findstr 7001|awk '{print $5}') -F",
+        "restart": "npm run kill-port && npm run start",
+        "lint": "eslint .",
+        "fix": "eslint --fix ."
+      },
+      "dependencies": {
+        "axios": "^0.16.2",
+        "co": "^4.6.0",
+        "co-wait": "^0.0.0",
+        "core-js": "^2.4.0",
+        "egg": "^1.4.0",
+        "egg-logger": "^1.5.0",
+        "egg-validate": "^1.0.0",
+        "egg-view-vue": "^1.0.0",
+        "egg-view-vue-ssr": "^2.1.1",
+        "element-ui": "^1.4.1",
+        "extend": "~3.0.0",
+        "lodash": "^4.17.4",
+        "mint-ui": "^2.2.9",
+        "mockjs": "^1.0.1-beta3",
+        "moment": "^2.17.1",
+        "vue": "^2.4.2",
+        "vue-hot-reload-api": "^2.1.0",
+        "vue-router": "^2.7.0",
+        "vue-template-compiler": "^2.4.4",
+        "vuex": "^2.3.1",
+        "vuex-router-sync": "^4.2.0"
+      },
+      "devDependencies": {
+        "autod-egg": "^1.0.0",
+        "autoprefixer": "^7.1.4",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-object-assign": "^6.22.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-runtime": "^6.15.0",
+        "babel-preset-env": "^1.6.0",
+        "cross-env": "^5.0.0",
+        "directory-named-webpack-plugin": "^2.2.3",
+        "easywebpack-vue": "^3.2.0",
+        "egg-cors": "^1.1.0",
+        "egg-logview": "^1.0.0",
+        "egg-webpack": "^3.0.0",
+        "egg-webpack-vue": "^1.0.0",
+        "eslint": "^4.3.0",
+        "eslint-config-egg": "^5.0.0",
+        "eslint-plugin-vue": "^2.0.1",
+        "html-webpack-plugin": "^2.30.1",
+        "imagemin-webpack-plugin": "^1.5.2",
+        "ip": "^1.1.5",
+        "less": "^2.7.2",
+        "less-loader": "^4.0.5",
+        "node-sass": "^4.5.3",
+        "npm-install-webpack-plugin": "^4.0.5",
+        "postcss-loader": "^2.0.6",
+        "progress-bar-webpack-plugin": "^1.10.0",
+        "sass-loader": "^6.0.6",
+        "vconsole": "^2.5.2",
+        "webpack-manifest-plugin": "^1.3.2"
+      },
+      "engines": {
+        "node": ">=6.0.0"
+      },
+      "ci": {
+        "version": "6, 7, 8"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hubcarl/egg-vue-webpack-boilerplate.git"
+      },
+      "author": "hubcarl@126.com",
+      "license": "MIT",
+      "homepage": "https://github.com/hubcarl/egg-vue-webpack-boilerplate"
+    },
+    "baseDir": "/Users/xintongxue/mili/Blog/egg-vue-learn",
+    "HOME": "/Users/xintongxue",
+    "rundir": "/Users/xintongxue/mili/Blog/egg-vue-learn/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 4286>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "100kb",
+      "jsonLimit": "100kb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "/Users/xintongxue/mili/Blog/egg-vue-learn/logs",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "DEBUG",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "egg-vue-learn-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": true,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheMaxLength": 1000,
+      "dnsCacheMaxAge": 10000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "coreMiddleware": [
+      "cors",
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "logview"
+    ],
+    "workerStartTimeout": 600000,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "responseTimeout": 60000
+    },
+    "middleware": [
+      "access"
+    ],
+    "coreMiddlewares": [
+      "cors",
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "logview"
+    ],
+    "appMiddlewares": [
+      "access"
+    ],
+    "appMiddleware": [
+      "access"
+    ],
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-session",
+      "version": "2.1.1"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-security",
+      "version": "1.12.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-jsonp",
+      "version": "1.2.2"
+    },
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-onerror",
+      "version": "1.6.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-i18n",
+      "version": "1.2.0"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-watcher",
+      "version": "2.2.0"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-multipart",
+      "version": "1.5.1"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-development",
+      "version": "1.3.2"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-schedule",
+      "version": "2.6.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator",
+      "version": "2.3.0"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-static",
+      "version": "1.4.1"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view",
+      "version": "1.1.2"
+    },
+    "vue": {
+      "enable": true,
+      "package": "egg-view-vue",
+      "name": "vue",
+      "dependencies": [
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue",
+      "version": "1.0.0"
+    },
+    "vuessr": {
+      "enable": true,
+      "package": "egg-view-vue-ssr",
+      "name": "vuessr",
+      "dependencies": [
+        "vue"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr",
+      "version": "2.1.1"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.local.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-cors",
+      "version": "1.2.0"
+    },
+    "webpack": {
+      "enable": true,
+      "package": "egg-webpack",
+      "name": "webpack",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.local.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack",
+      "version": "3.0.0"
+    },
+    "webpackvue": {
+      "enable": true,
+      "package": "egg-webpack-vue",
+      "name": "webpackvue",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.local.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack-vue",
+      "version": "1.0.0"
+    },
+    "logview": {
+      "package": "egg-logview",
+      "env": [
+        "local"
+      ],
+      "enable": true,
+      "name": "logview",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "from": "/Users/xintongxue/mili/Blog/egg-vue-learn/config/plugin.local.js",
+      "path": "/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logview",
+      "version": "1.0.0"
+    }
+  }
+}

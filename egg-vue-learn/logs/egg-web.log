@@ -1,0 +1,227 @@
+2017-11-15 17:34:58,560 INFO 41412 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:34:58,612 INFO 41412 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:34:58,612 INFO 41412 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:34:58,851 INFO 41412 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:34:58,864 INFO 41412 [egg-security] use csrf middleware
+2017-11-15 17:34:58,866 INFO 41412 [egg-security] use methodnoallow middleware
+2017-11-15 17:34:58,866 INFO 41412 [egg-security] use noopen middleware
+2017-11-15 17:34:58,867 INFO 41412 [egg-security] use nosniff middleware
+2017-11-15 17:34:58,871 INFO 41412 [egg-security] use xssProtection middleware
+2017-11-15 17:34:58,874 INFO 41412 [egg-security] use xframe middleware
+2017-11-15 17:34:58,874 INFO 41412 [egg-security] use dta middleware
+2017-11-15 17:34:58,875 INFO 41412 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:34:59,029 INFO 41412 [egg-watcher:app] watcher start success
+2017-11-15 17:34:58,577 INFO 41411 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:34:58,631 INFO 41411 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:34:58,631 INFO 41411 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:34:58,847 INFO 41411 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:34:58,851 INFO 41411 [egg-security] use csrf middleware
+2017-11-15 17:34:58,854 INFO 41411 [egg-security] use methodnoallow middleware
+2017-11-15 17:34:58,864 INFO 41411 [egg-security] use noopen middleware
+2017-11-15 17:34:58,865 INFO 41411 [egg-security] use nosniff middleware
+2017-11-15 17:34:58,866 INFO 41411 [egg-security] use xssProtection middleware
+2017-11-15 17:34:58,867 INFO 41411 [egg-security] use xframe middleware
+2017-11-15 17:34:58,868 INFO 41411 [egg-security] use dta middleware
+2017-11-15 17:34:58,868 INFO 41411 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:34:59,039 INFO 41411 [egg-watcher:app] watcher start success
+2017-11-15 17:34:58,618 INFO 41410 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:34:58,830 INFO 41410 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:34:58,830 INFO 41410 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:34:59,049 INFO 41410 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:34:59,064 INFO 41410 [egg-security] use csrf middleware
+2017-11-15 17:34:59,066 INFO 41410 [egg-security] use methodnoallow middleware
+2017-11-15 17:34:59,067 INFO 41410 [egg-security] use noopen middleware
+2017-11-15 17:34:59,068 INFO 41410 [egg-security] use nosniff middleware
+2017-11-15 17:34:59,068 INFO 41410 [egg-security] use xssProtection middleware
+2017-11-15 17:34:59,069 INFO 41410 [egg-security] use xframe middleware
+2017-11-15 17:34:59,070 INFO 41410 [egg-security] use dta middleware
+2017-11-15 17:34:59,070 INFO 41410 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:34:59,129 INFO 41410 [egg-watcher:app] watcher start success
+2017-11-15 17:34:58,788 INFO 41409 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:34:58,930 INFO 41409 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:34:58,930 INFO 41409 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:34:59,118 INFO 41409 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:34:59,124 INFO 41409 [egg-security] use csrf middleware
+2017-11-15 17:34:59,125 INFO 41409 [egg-security] use methodnoallow middleware
+2017-11-15 17:34:59,126 INFO 41409 [egg-security] use noopen middleware
+2017-11-15 17:34:59,126 INFO 41409 [egg-security] use nosniff middleware
+2017-11-15 17:34:59,127 INFO 41409 [egg-security] use xssProtection middleware
+2017-11-15 17:34:59,127 INFO 41409 [egg-security] use xframe middleware
+2017-11-15 17:34:59,128 INFO 41409 [egg-security] use dta middleware
+2017-11-15 17:34:59,128 INFO 41409 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:34:59,173 INFO 41409 [egg-watcher:app] watcher start success
+2017-11-15 17:35:47,015 INFO 41478 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:35:47,280 INFO 41478 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:35:47,280 INFO 41478 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:35:47,548 INFO 41478 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:35:47,552 INFO 41478 [egg-security] use csrf middleware
+2017-11-15 17:35:47,554 INFO 41478 [egg-security] use methodnoallow middleware
+2017-11-15 17:35:47,554 INFO 41478 [egg-security] use noopen middleware
+2017-11-15 17:35:47,555 INFO 41478 [egg-security] use nosniff middleware
+2017-11-15 17:35:47,557 INFO 41478 [egg-security] use xssProtection middleware
+2017-11-15 17:35:47,557 INFO 41478 [egg-security] use xframe middleware
+2017-11-15 17:35:47,559 INFO 41478 [egg-security] use dta middleware
+2017-11-15 17:35:47,559 INFO 41478 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:35:47,669 INFO 41478 [egg-watcher:app] watcher start success
+2017-11-15 17:35:47,019 INFO 41481 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:35:47,270 INFO 41481 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:35:47,271 INFO 41481 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:35:47,506 INFO 41481 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:35:47,545 INFO 41481 [egg-security] use csrf middleware
+2017-11-15 17:35:47,553 INFO 41481 [egg-security] use methodnoallow middleware
+2017-11-15 17:35:47,554 INFO 41481 [egg-security] use noopen middleware
+2017-11-15 17:35:47,556 INFO 41481 [egg-security] use nosniff middleware
+2017-11-15 17:35:47,556 INFO 41481 [egg-security] use xssProtection middleware
+2017-11-15 17:35:47,558 INFO 41481 [egg-security] use xframe middleware
+2017-11-15 17:35:47,559 INFO 41481 [egg-security] use dta middleware
+2017-11-15 17:35:47,559 INFO 41481 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:35:47,645 INFO 41481 [egg-watcher:app] watcher start success
+2017-11-15 17:35:47,073 INFO 41480 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:35:47,298 INFO 41480 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:35:47,298 INFO 41480 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:35:47,563 INFO 41480 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:35:47,567 INFO 41480 [egg-security] use csrf middleware
+2017-11-15 17:35:47,568 INFO 41480 [egg-security] use methodnoallow middleware
+2017-11-15 17:35:47,568 INFO 41480 [egg-security] use noopen middleware
+2017-11-15 17:35:47,571 INFO 41480 [egg-security] use nosniff middleware
+2017-11-15 17:35:47,571 INFO 41480 [egg-security] use xssProtection middleware
+2017-11-15 17:35:47,573 INFO 41480 [egg-security] use xframe middleware
+2017-11-15 17:35:47,575 INFO 41480 [egg-security] use dta middleware
+2017-11-15 17:35:47,575 INFO 41480 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:35:47,677 INFO 41480 [egg-watcher:app] watcher start success
+2017-11-15 17:35:47,085 INFO 41479 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:35:47,447 INFO 41479 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:35:47,447 INFO 41479 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:35:47,588 INFO 41479 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:35:47,597 INFO 41479 [egg-security] use csrf middleware
+2017-11-15 17:35:47,600 INFO 41479 [egg-security] use methodnoallow middleware
+2017-11-15 17:35:47,601 INFO 41479 [egg-security] use noopen middleware
+2017-11-15 17:35:47,604 INFO 41479 [egg-security] use nosniff middleware
+2017-11-15 17:35:47,606 INFO 41479 [egg-security] use xssProtection middleware
+2017-11-15 17:35:47,607 INFO 41479 [egg-security] use xframe middleware
+2017-11-15 17:35:47,607 INFO 41479 [egg-security] use dta middleware
+2017-11-15 17:35:47,607 INFO 41479 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:35:47,709 INFO 41479 [egg-watcher:app] watcher start success
+2017-11-15 17:42:47,447 INFO 41577 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:42:47,495 INFO 41577 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:42:47,495 INFO 41577 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:42:47,588 INFO 41577 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:42:47,591 INFO 41577 [egg-security] use csrf middleware
+2017-11-15 17:42:47,593 INFO 41577 [egg-security] use methodnoallow middleware
+2017-11-15 17:42:47,593 INFO 41577 [egg-security] use noopen middleware
+2017-11-15 17:42:47,594 INFO 41577 [egg-security] use nosniff middleware
+2017-11-15 17:42:47,596 INFO 41577 [egg-security] use xssProtection middleware
+2017-11-15 17:42:47,596 INFO 41577 [egg-security] use xframe middleware
+2017-11-15 17:42:47,597 INFO 41577 [egg-security] use dta middleware
+2017-11-15 17:42:47,597 INFO 41577 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:42:47,646 INFO 41577 [egg-watcher:app] watcher start success
+2017-11-15 17:42:47,446 INFO 41578 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:42:47,491 INFO 41578 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:42:47,491 INFO 41578 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:42:47,588 INFO 41578 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:42:47,591 INFO 41578 [egg-security] use csrf middleware
+2017-11-15 17:42:47,594 INFO 41578 [egg-security] use methodnoallow middleware
+2017-11-15 17:42:47,594 INFO 41578 [egg-security] use noopen middleware
+2017-11-15 17:42:47,595 INFO 41578 [egg-security] use nosniff middleware
+2017-11-15 17:42:47,595 INFO 41578 [egg-security] use xssProtection middleware
+2017-11-15 17:42:47,596 INFO 41578 [egg-security] use xframe middleware
+2017-11-15 17:42:47,597 INFO 41578 [egg-security] use dta middleware
+2017-11-15 17:42:47,597 INFO 41578 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:42:47,659 INFO 41578 [egg-watcher:app] watcher start success
+2017-11-15 17:42:47,450 INFO 41580 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:42:47,505 INFO 41580 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:42:47,505 INFO 41580 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:42:47,596 INFO 41580 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:42:47,599 INFO 41580 [egg-security] use csrf middleware
+2017-11-15 17:42:47,600 INFO 41580 [egg-security] use methodnoallow middleware
+2017-11-15 17:42:47,601 INFO 41580 [egg-security] use noopen middleware
+2017-11-15 17:42:47,601 INFO 41580 [egg-security] use nosniff middleware
+2017-11-15 17:42:47,602 INFO 41580 [egg-security] use xssProtection middleware
+2017-11-15 17:42:47,602 INFO 41580 [egg-security] use xframe middleware
+2017-11-15 17:42:47,602 INFO 41580 [egg-security] use dta middleware
+2017-11-15 17:42:47,602 INFO 41580 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:42:47,673 INFO 41580 [egg-watcher:app] watcher start success
+2017-11-15 17:42:47,594 INFO 41579 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-15 17:42:47,645 INFO 41579 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-15 17:42:47,645 INFO 41579 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-15 17:42:47,741 INFO 41579 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-15 17:42:47,747 INFO 41579 [egg-security] use csrf middleware
+2017-11-15 17:42:47,749 INFO 41579 [egg-security] use methodnoallow middleware
+2017-11-15 17:42:47,750 INFO 41579 [egg-security] use noopen middleware
+2017-11-15 17:42:47,751 INFO 41579 [egg-security] use nosniff middleware
+2017-11-15 17:42:47,751 INFO 41579 [egg-security] use xssProtection middleware
+2017-11-15 17:42:47,751 INFO 41579 [egg-security] use xframe middleware
+2017-11-15 17:42:47,752 INFO 41579 [egg-security] use dta middleware
+2017-11-15 17:42:47,752 INFO 41579 [egg-security] compose 7 middlewares into one security middleware
+2017-11-15 17:42:47,786 INFO 41579 [egg-watcher:app] watcher start success
+2017-11-15 19:12:36,149 WARN 41577 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:12:36,157 WARN 41579 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:12:36,155 WARN 41580 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:28:05,560 WARN 41578 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:28:05,560 WARN 41579 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:28:05,560 WARN 41580 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 19:28:05,561 WARN 41577 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 20:13:44,259 WARN 41577 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 20:13:44,256 WARN 41580 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 20:13:44,256 WARN 41578 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-15 20:13:44,257 WARN 41579 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:00:37,201 WARN 41580 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:00:37,246 WARN 41579 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:00:37,280 WARN 41577 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:00:37,263 WARN 41578 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:23:13,302 INFO 42553 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-16 09:23:13,348 INFO 42553 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-16 09:23:13,348 INFO 42553 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-16 09:23:13,439 INFO 42553 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-16 09:23:13,443 INFO 42553 [egg-security] use csrf middleware
+2017-11-16 09:23:13,444 INFO 42553 [egg-security] use methodnoallow middleware
+2017-11-16 09:23:13,445 INFO 42553 [egg-security] use noopen middleware
+2017-11-16 09:23:13,445 INFO 42553 [egg-security] use nosniff middleware
+2017-11-16 09:23:13,446 INFO 42553 [egg-security] use xssProtection middleware
+2017-11-16 09:23:13,447 INFO 42553 [egg-security] use xframe middleware
+2017-11-16 09:23:13,448 INFO 42553 [egg-security] use dta middleware
+2017-11-16 09:23:13,448 INFO 42553 [egg-security] compose 7 middlewares into one security middleware
+2017-11-16 09:23:13,491 INFO 42553 [egg-watcher:app] watcher start success
+2017-11-16 09:23:13,306 INFO 42550 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-16 09:23:13,355 INFO 42550 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-16 09:23:13,355 INFO 42550 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-16 09:23:13,439 INFO 42550 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-16 09:23:13,444 INFO 42550 [egg-security] use csrf middleware
+2017-11-16 09:23:13,446 INFO 42550 [egg-security] use methodnoallow middleware
+2017-11-16 09:23:13,447 INFO 42550 [egg-security] use noopen middleware
+2017-11-16 09:23:13,447 INFO 42550 [egg-security] use nosniff middleware
+2017-11-16 09:23:13,448 INFO 42550 [egg-security] use xssProtection middleware
+2017-11-16 09:23:13,448 INFO 42550 [egg-security] use xframe middleware
+2017-11-16 09:23:13,449 INFO 42550 [egg-security] use dta middleware
+2017-11-16 09:23:13,449 INFO 42550 [egg-security] compose 7 middlewares into one security middleware
+2017-11-16 09:23:13,524 INFO 42550 [egg-watcher:app] watcher start success
+2017-11-16 09:23:13,303 INFO 42551 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-16 09:23:13,347 INFO 42551 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-16 09:23:13,347 INFO 42551 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-16 09:23:13,440 INFO 42551 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-16 09:23:13,444 INFO 42551 [egg-security] use csrf middleware
+2017-11-16 09:23:13,445 INFO 42551 [egg-security] use methodnoallow middleware
+2017-11-16 09:23:13,445 INFO 42551 [egg-security] use noopen middleware
+2017-11-16 09:23:13,446 INFO 42551 [egg-security] use nosniff middleware
+2017-11-16 09:23:13,446 INFO 42551 [egg-security] use xssProtection middleware
+2017-11-16 09:23:13,447 INFO 42551 [egg-security] use xframe middleware
+2017-11-16 09:23:13,448 INFO 42551 [egg-security] use dta middleware
+2017-11-16 09:23:13,448 INFO 42551 [egg-security] compose 7 middlewares into one security middleware
+2017-11-16 09:23:13,493 INFO 42551 [egg-watcher:app] watcher start success
+2017-11-16 09:23:13,420 INFO 42552 [egg:logger] init all loggers with options: {"dir":"/Users/xintongxue/mili/Blog/egg-vue-learn/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-vue-learn-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":true,"type":"application"}
+2017-11-16 09:23:13,470 INFO 42552 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/clean_log.js
+2017-11-16 09:23:13,470 INFO 42552 [egg-schedule]: register schedule /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2017-11-16 09:23:13,566 INFO 42552 [egg-static] starting static serve /public/ -> /Users/xintongxue/mili/Blog/egg-vue-learn/public
+2017-11-16 09:23:13,570 INFO 42552 [egg-security] use csrf middleware
+2017-11-16 09:23:13,571 INFO 42552 [egg-security] use methodnoallow middleware
+2017-11-16 09:23:13,571 INFO 42552 [egg-security] use noopen middleware
+2017-11-16 09:23:13,572 INFO 42552 [egg-security] use nosniff middleware
+2017-11-16 09:23:13,572 INFO 42552 [egg-security] use xssProtection middleware
+2017-11-16 09:23:13,572 INFO 42552 [egg-security] use xframe middleware
+2017-11-16 09:23:13,573 INFO 42552 [egg-security] use dta middleware
+2017-11-16 09:23:13,573 INFO 42552 [egg-security] compose 7 middlewares into one security middleware
+2017-11-16 09:23:13,607 INFO 42552 [egg-watcher:app] watcher start success
+2017-11-16 09:53:14,574 WARN 42553 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:53:14,573 WARN 42551 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:53:14,605 WARN 42550 [ClusterClient:Watcher] follower closed, and try to init it again
+2017-11-16 09:53:14,604 WARN 42552 [ClusterClient:Watcher] follower closed, and try to init it again

@@ -1,0 +1,200 @@
+2017-11-15 17:34:59,386 ERROR 41407 nodejs.unhandledExceptionError: listen EADDRINUSE :::9001
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1351:14)
+    at listenInCluster (net.js:1392:12)
+    at Server.listen (net.js:1476:7)
+    at Application.app.listen (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/koa/lib/application.js:74:24)
+    at WebpackServer.createWebpackServer (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/webpack-tool/lib/tool.js:207:9)
+    at config.webpackConfigList.forEach (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/lib/server.js:24:13)
+    at Array.forEach (<anonymous>)
+    at WebpackServer.start (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/lib/server.js:22:35)
+    at Messenger.agent.messenger.on (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack/agent.js:6:38)
+    at emitOne (events.js:121:20)
+    at Messenger.emit (events.js:211:7)
+    at Messenger._onMessage (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg/lib/core/messenger.js:116:12)
+    at emitTwo (events.js:126:13)
+    at process.emit (events.js:214:7)
+code: 'EADDRINUSE'
+errno: 'EADDRINUSE'
+syscall: 'listen'
+address: '::'
+port: 9001
+name: 'unhandledExceptionError'
+pid: 41407
+hostname: 5
+
+2017-11-15 17:35:20,321 ERROR 41411 [index/index.js] server render bundle error, try client render, the server render error Error: read webpack memory file[/Users/xintongxue/mili/Blog/egg-vue-learn/app/view/index/index.js] content is empty, please check if the file exists
+    at /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack-vue/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+2017-11-15 17:35:20,353 ERROR 41411 [-/192.168.2.123/-/665ms GET /] nodejs.TypeError: Cannot read property 'index/index.js' of undefined
+    at Resource.inject (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/lib/resource.js:152:43)
+    at promise.then.html (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/app/extend/context.js:27:41)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 41411
+hostname: 5
+
+2017-11-15 17:35:55,967 ERROR 41481 [index/index.js] server render bundle error, try client render, the server render error Error: read webpack memory file[/Users/xintongxue/mili/Blog/egg-vue-learn/app/view/index/index.js] content is empty, please check if the file exists
+    at /Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-webpack-vue/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+2017-11-15 17:35:55,998 ERROR 41481 [-/192.168.2.123/-/342ms GET /] nodejs.TypeError: Cannot read property 'index/index.js' of undefined
+    at Resource.inject (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/lib/resource.js:152:43)
+    at promise.then.html (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/egg-view-vue-ssr/app/extend/context.js:27:41)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 41481
+hostname: 5
+
+2017-11-15 19:12:36,158 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 587149ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:12:36,159 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 587232ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:12:36,164 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 587149ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:12:36,165 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 587125ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:28:05,560 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 909382ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:28:05,561 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 909382ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:28:05,562 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 909382ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 19:28:05,564 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 909382ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 20:13:44,257 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 2718667ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 20:13:44,259 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 2718666ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 20:13:44,270 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 2718666ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-15 20:13:44,271 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 2718665ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-16 09:00:37,304 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 46012688ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-16 09:00:37,306 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 46012687ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-16 09:00:37,421 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 46012685ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
+2017-11-16 09:00:37,437 ERROR 41576 nodejs.ClusterClientNoResponseError: client no response in 46012684ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xintongxue/mili/Blog/egg-vue-learn/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+name: 'ClusterClientNoResponseError'
+pid: 41576
+hostname: 5
+
