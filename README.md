@@ -1,5 +1,7 @@
 # Blog
 
+[微信小程序中使用swiper时如果使用了flex布局，iOS默认高度是150px，该如何解决呢](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=&docid=fa962e46aa26431ac5dd4a8665ce04de)
+
 [yeoman 学习笔记，构建你的 generator 脚手架](https://github.com/milixie/Blog/tree/master/yeoman)
 
 [inquirer：在终端和用户交互](https://github.com/milixie/Blog/tree/master/inquirer)
