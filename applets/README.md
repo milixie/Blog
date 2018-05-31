@@ -25,6 +25,17 @@ button:after {
 
 
 
+小程序
+`wx.navigateTo` 与 `wx.redirectTo` 与 `wx.reLaunch` 的区别
 
+他们都可以导向到一个新的页面，不同的是
+
+1. `wx.navigateTo` 是打开一个新的页面，可以返回
+
+2. `wx.redirectTo` 是关闭当前页面，打开一个新的页面，可以返回，但是刚刚打开的页面已经被关闭了
+
+3. `wx.reLaunch` 是关闭所有其他页面，打开一个新的页面
+
+4. 还有一个重要的区别：在`app.js`中 `wx.navigateTo` 与 `wx.redirectTo` 不起作用， 在普通非入口文件中，  `wx.reLaunch`不起作用（经测试，苹果手机上是可以的，但是安卓机上面不行）
 
 
