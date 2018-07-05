@@ -1,5 +1,8 @@
 # Blog
 
+
+[图片预加载](https://github.com/milixie/Blog/photo)
+
 [nodejs中的package.json里面的版本号 ~ 与 ^ 的区别](https://github.com/milixie/Blog/issues/11)
 
 [微信小程序问题总结](https://github.com/milixie/Blog/tree/master/applets)
