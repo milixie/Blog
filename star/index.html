@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>todo list by react</title>
+  <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .star-wrap {
+      text-align: center;
+    }
+    .star-wrap .title {
+      margin: 20px;
+    }
+    .wrap {
+      list-style: none;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .wrap-show {
+      list-style: none;
+      display: flex;
+      width: 100%;
+    }
+    .wrap li, .wrap-show li {
+      list-style: none;
+      cursor: pointer;
+    }
+    .wrap li .star, .wrap-show li .star {
+      font-size: 40px;
+      color: grey;
+    }
+    .wrap li .star.light, .wrap-show li .star.light {
+      color: #FFDC56;
+    }
+    .show-star {
+      position: relative;
+      left: 50%;
+      margin-left: -100px;
+    }
+    .show-star .wrap-show {
+      width: 200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+    }
+    .show-star .absolute {
+
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper"></div>
+<script type="text/babel">
+  const Content = React.createClass({
+    getInitialState: function () {
+      return {
+        current: 0,
+        starList: [],
+        star: 3.7
+      }
+    },
+    starHandler: function (e, i) {
+      this.setState({
+        current: i
+      })
+    },
+    render: function () {
+      const star = {
+        1: '极差',
+        2: '差',
+        3: '一般',
+        4: '挺好',
+        5: '极好',
+      }
+      const numbers = [1, 2, 3, 4, 5]
+      const starList = []
+      const showStarList = []
+      const lightStarList = []
+      numbers.forEach(i => {
+        starList.push(
+          <li key={i} onClick={e => this.starHandler(e, i)} id={i}>
+            <i className={i <= this.state.current ? 'star light iconfont icon-pingfen' : 'star iconfont icon-pingfen'}></i>
+          </li>
+        )
+        showStarList.push(
+          <li key={i} id={i}>
+            <i className='star iconfont icon-pingfen'></i>
+          </li>
+        )
+      })
+      for (let i = 1; i <= 5; i++) {
+        lightStarList.push(
+          <li key={i} id={i}>
+            <i className='star light iconfont icon-pingfen'></i>
+          </li>
+        )
+      }
+      const process = parseFloat(this.state.star / numbers.length).toFixed(2) * 200
+      console.log(process)
+      const width = `${process}px`
+      return (
+        <div className="star-wrap">
+          <p className="title">请评分：{star[this.state.current]}</p>
+          <ul className="wrap">
+            {starList}
+          </ul>
+          <p className="title">该店铺的平均分：{this.state.star}分</p>
+          <div className="show-star">
+            <ul className="wrap-show">
+              {showStarList}
+            </ul>
+            <ul className="wrap-show" style={{'width': width}}>
+              {lightStarList}
+            </ul>
+          </div>
+        </div>
+      )
+    }
+  });
+  ReactDOM.render(
+    <Content/>,
+    document.getElementById('wrapper')
+  );
+</script>
+
+</body>
+</html>
