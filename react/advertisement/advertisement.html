@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>广告轮播</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      width: 948px;
+      height: 260px;
+      margin: 20px auto;
+      border: 1px solid #D5D5D5;
+    }
+    ul, li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper"></div>
+<script type="text/babel">
+  const Content = React.createClass({
+    getInitialState: function () {
+      return {
+        value: '',
+        todo_lists: []
+      }
+    },
+    render: function () {
+
+      return (
+        <div className="wrap">
+          <ul className="img-wrap">
+            <li><img src="./image/1.png" alt=""/></li>
+            <li><img src="./image/2.png" alt=""/></li>
+            <li><img src="./image/3.png" alt=""/></li>
+            <li><img src="./image/4.png" alt=""/></li>
+          </ul>
+        </div>
+      )
+    }
+  });
+  ReactDOM.render(
+    <Content/>,
+    document.getElementById('wrapper')
+  );
+</script>
+
+</body>
+</html>
