@@ -1,16 +1,6 @@
-import React from 'react';
+import React from 'react/index';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-// class Square extends React.Component {
-//   render() {
-//     return (
-//       <button className="square" onClick={() => this.props.onClick()}>
-//         {this.props.value}
-//       </button>
-//     );
-//   }
-// }
 
 function Square(props) {
   return (
@@ -122,7 +112,7 @@ class Game extends React.Component {
       const content = move ? `Move to ${move}` : 'Game start'
       return (
         <li key={move}>
-          <a href="#" onClick={() => this.jumpTo(move)}>{content}</a>
+          <a href="javascript:void(0)" onClick={() => this.jumpTo(move)}>{content}</a>
         </li>
       )
     })
@@ -146,3 +136,4 @@ ReactDOM.render(
 <Game />,
   document.getElementById('root')
 );
+
