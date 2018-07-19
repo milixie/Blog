@@ -1,0 +1,322 @@
+{
+  "siteFile": {
+    "/favicon.ico": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js"
+  },
+  "logger": {
+    "consoleLevel": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+    "dir": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+    "encoding": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "env": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "level": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "coreLogger": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "allowDebugAtProd": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+    "dir": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+    "dynamic": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-static/config/config.prod.js",
+    "maxFiles": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-static/config/config.default.js",
+    "maxAge": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-static/config/config.prod.js"
+  },
+  "keys": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+  "middleware": "/Users/luojilab/mili/Blog/react/web-egg/config/config.default.js",
+  "session": {
+    "maxAge": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-session/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "maxAge": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-watcher/config/config.default.js",
+    "eventSources": {
+      "default": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-multipart/config/config.default.js"
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view/config/config.default.js",
+    "mapping": {
+      ".js": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+      ".jsx": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js"
+    }
+  },
+  "reactssr": {
+    "doctype": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "layout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "manifest": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectHeadRegex": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectBodyRegex": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectCss": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectJs": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "crossorigin": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectRes": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "fallbackToClient": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js",
+    "afterRender": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/config/config.default.js"
+  },
+  "env": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "name": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "version": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "description": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "build": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "build:test": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "build:prod": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "debug": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "dev": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "start": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "kill-port": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "lint": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "fix": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "ii": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "changelog": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "axios": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "cross-env": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-logger": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-view-react-ssr": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "extend": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "history": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "lodash": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "mockjs": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "moment": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-dom": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-redux": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-router": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-router-config": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-router-dom": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "react-router-redux": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "redux": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "antd": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "autoprefixer": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-core": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-plugin-add-module-exports": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-plugin-import": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-plugin-syntax-dynamic-import": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-assign": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-rest-spread": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-preset-env": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "babel-preset-react": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "conventional-changelog-cli": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "css-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "easywebpack-cli": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "easywebpack-react": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-webpack": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "egg-webpack-react": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "eslint-plugin-react": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "ip": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "less": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "less-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "node-sass": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "postcss-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "sass-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "stylus": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "stylus-loader": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "url": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "license": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "homepage": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "strict": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "depth": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    }
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxAge": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "logging": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "port": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg/config/config.default.js"
+}

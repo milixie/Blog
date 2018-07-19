@@ -1,0 +1,249 @@
+2018-07-19 16:59:06,567 ERROR 77440 [-/192.168.153.109/-/311ms GET /] nodejs.TypeError: Cannot read property 'map' of undefined
+    at List.render (webpack:///./app/web/component/home/list.jsx?:46:31)
+    at processChild (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2204:18)
+    at resolve (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2061:5)
+    at ReactDOMServerRenderer.render (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2380:22)
+    at ReactDOMServerRenderer.read (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2354:19)
+    at Object.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2726:25)
+    at Engine.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:85:27)
+    at Engine.renderElement (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:68:35)
+    at /Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack-react/app.js:28:26
+    at Generator.next (<anonymous>)
+
+pid: 77440
+hostname: bogon
+
+2018-07-19 16:59:38,555 ERROR 77440 [-/192.168.153.109/-/279ms GET /] nodejs.TypeError: Cannot read property 'map' of undefined
+    at List.render (webpack:///./app/web/component/home/list.jsx?:46:31)
+    at processChild (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2204:18)
+    at resolve (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2061:5)
+    at ReactDOMServerRenderer.render (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2380:22)
+    at ReactDOMServerRenderer.read (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2354:19)
+    at Object.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2726:25)
+    at Engine.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:85:27)
+    at Engine.renderElement (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:68:35)
+    at /Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack-react/app.js:28:26
+    at Generator.next (<anonymous>)
+
+pid: 77440
+hostname: bogon
+
+2018-07-19 17:00:35,844 ERROR 77440 [-/192.168.153.109/-/948ms GET /] nodejs.TypeError: Cannot read property 'map' of undefined
+    at List.render (webpack:///./app/web/component/home/list.jsx?:46:31)
+    at processChild (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2204:18)
+    at resolve (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2061:5)
+    at ReactDOMServerRenderer.render (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2380:22)
+    at ReactDOMServerRenderer.read (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2354:19)
+    at Object.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2726:25)
+    at Engine.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:85:27)
+    at Engine.renderElement (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:68:35)
+    at /Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack-react/app.js:28:26
+    at Generator.next (<anonymous>)
+
+pid: 77440
+hostname: bogon
+
+2018-07-19 17:15:24,647 ERROR 77663 [-/192.168.153.109/-/7344ms GET /] nodejs.ReferenceError: itme is not defined
+    at eval (webpack:///./app/web/component/home/list.jsx?:55:21)
+    at Array.map (<anonymous>)
+    at List.render (webpack:///./app/web/component/home/list.jsx?:46:31)
+    at processChild (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2204:18)
+    at resolve (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2061:5)
+    at ReactDOMServerRenderer.render (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2380:22)
+    at ReactDOMServerRenderer.read (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2354:19)
+    at Object.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/react-dom/cjs/react-dom-server.node.development.js:2726:25)
+    at Engine.renderToString (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:85:27)
+    at Engine.renderElement (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-view-react-ssr/lib/engine.js:68:35)
+
+pid: 77663
+hostname: bogon
+
+2018-07-19 17:42:30,339 ERROR 77987 nodejs.WebpackOptionsValidationError: Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration[0].module has an unknown property 'loaders'. These properties are valid:
+   object { exprContextCritical?, exprContextRecursive?, exprContextRegExp?, exprContextRequest?, noParse?, rules?, defaultRules?, unknownContextCritical?, unknownContextRecursive?, unknownContextRegExp?, unknownContextRequest?, unsafeCache?, wrappedContextCritical?, wrappedContextRecursive?, wrappedContextRegExp?, strictExportPresence?, strictThisContextOnImports? }
+   -> Options affecting the normal modules (`NormalModuleFactory`).
+ - configuration[0].module has an unknown property 'loaders'. These properties are valid:
+   object { exprContextCritical?, exprContextRecursive?, exprContextRegExp?, exprContextRequest?, noParse?, rules?, defaultRules?, unknownContextCritical?, unknownContextRecursive?, unknownContextRegExp?, unknownContextRequest?, unsafeCache?, wrappedContextCritical?, wrappedContextRecursive?, wrappedContextRegExp?, strictExportPresence?, strictThisContextOnImports? }
+   -> Options affecting the normal modules (`NormalModuleFactory`).
+    at webpack (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/lib/webpack.js:24:9)
+    at WebpackServer.build (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack-tool/lib/tool.js:101:50)
+    at WebpackServer.build (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:58:18)
+    at config.webpackConfigList.forEach (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:26:31)
+    at Array.forEach (<anonymous>)
+    at build.dll (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:25:37)
+    at compiler.hooks.done.tap.compilation (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack-tool/lib/tool.js:107:19)
+    at SyncHook.eval [as call] (eval at create (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/node_modules/tapable/lib/HookCodeFactory.js:17:12), <anonymous>:7:1)
+    at SyncHook.lazyCompileHook [as _call] (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/node_modules/tapable/lib/Hook.js:35:21)
+    at MultiCompiler.compiler.hooks.done.tap.stats (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/lib/MultiCompiler.js:44:22)
+details: undefined
+missing: undefined
+origin: undefined
+dependencies: undefined
+module: undefined
+name: "WebpackOptionsValidationError"
+validationErrors: [{"keyword":"anyOf","dataPath":"[0].module","schemaPath":"#/properties/module/anyOf","params":{},"message":"should match some schema in anyOf","schema":[{"$ref":"#/definitions/module"}],"parentSchema":{"description":"Options affecting the normal modules (`NormalModuleFactory`).","anyOf":"~0~schema"},"data":{"loaders":[{"test":"/\\.jsx?$/","exclude":"/node_modules/","loader":"babel-loader","query":{"presets":["es2015","react"]}},{"test":"/\\.scss$/","loaders":["style","css","sass"]}],"rules":[{"test":"/\\.jsx?$/","exclude":"/node_modules/","use":[{"loader":"babel-loader","options":{}}]},{"test":"/\\.jsx?$/","use":[{"loader":"eslint-loader","options":{}}],"exclude":"/node_modules/","enforce":"pre"},{"test":"/\\.css/","use":["/Users/luojilab/mili/Blog/react/web-egg/node_modules/mini-css-extract-plugin/dist/loader.js",{"options":{"sourceMap":true},"loader":"css-loader"},{"loader":"postcss-loader","options":{"sourceMap":true}}],"exclude":["/Users/luojilab/mili/Blog/react/web-egg/app/web/page/css/module"]},{"test":"/\\.(png|jpe?g|gif|svg)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"img/[name].[ext]"}}]},{"test":"/\\.(mp4|webm|ogg|mp3|wav|flac|aac)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"media/[name].[ext]"}}]},{"test":"/\\.(woff2?|eot|ttf|otf)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"font/[name].[ext]"}}]},{"test":"/\\.css/","use":["/Users/luojilab/mili/Blog/react/web-egg/node_modules/mini-css-extract-plugin/dist/loader.js",{"options":{"sourceMap":true,"modules":true,"importLoaders":1},"loader":"css-loader"},{"loader":"postcss-loader","options":{"sourceMap":true}}],"include":["/Users/luojilab/mili/Blog/react/web-egg/app/web/page/css/module"]}]},"children":[{"keyword":"additionalProperties","dataPath":"[0].module","schemaPath":"#/additionalProperties","params":{"additionalProperty":"loaders"},"message":"should NOT have additional properties","schema":false,"parentSchema":{"additionalProperties":false,"properties":{"exprContextCritical":{"description":"Enable warnings for full dynamic dependencies","type":"boolean"},"exprContextRecursive":{"description":"Enable recursive directory lookup for full dynamic dependencies","type":"boolean"},"exprContextRegExp":{"description":"Sets the default regular expression for full dynamic dependencies","anyOf":[{"type":"boolean"},{"instanceof":"RegExp"}]},"exprContextRequest":{"description":"Set the default request for full dynamic dependencies","type":"string"},"noParse":{"description":"Don't parse files matching. It's matched against the full resolved request.","anyOf":[{"items":{"description":"A regular expression, when matched the module is not parsed","instanceof":"RegExp"},"minItems":1,"type":"array"},{"instanceof":"RegExp"},{"instanceof":"Function"},{"items":{"description":"An absolute path, when the module starts with this path it is not parsed","type":"string","absolutePath":true},"minItems":1,"type":"array"},{"type":"string","absolutePath":true}]},"rules":{"allOf":[{"$ref":"#/definitions/ruleSet-rules"}],"description":"An array of rules applied for modules."},"defaultRules":{"description":"An array of rules applied by default for modules.","anyOf":[{"$ref":"#/definitions/ruleSet-rules"}]},"unknownContextCritical":{"description":"Enable warnings when using the require function in a not statically analyse-able way","type":"boolean"},"unknownContextRecursive":{"description":"Enable recursive directory lookup when using the require function in a not statically analyse-able way","type":"boolean"},"unknownContextRegExp":{"description":"Sets the regular expression when using the require function in a not statically analyse-able way","anyOf":[{"type":"boolean"},{"instanceof":"RegExp"}]},"unknownContextRequest":{"description":"Sets the request when using the require function in a not statically analyse-able way","type":"string"},"unsafeCache":{"description":"Cache the resolving of module requests","anyOf":[{"type":"boolean"},{"instanceof":"Function"}]},"wrappedContextCritical":{"description":"Enable warnings for partial dynamic dependencies","type":"boolean"},"wrappedContextRecursive":{"description":"Enable recursive directory lookup for partial dynamic dependencies","type":"boolean"},"wrappedContextRegExp":{"description":"Set the inner regular expression for partial dynamic dependencies","instanceof":"RegExp"},"strictExportPresence":{"description":"Emit errors instead of warnings when imported names don't exist in imported module","type":"boolean"},"strictThisContextOnImports":{"description":"Handle the this context correctly according to the spec for namespace objects","type":"boolean"}},"type":"object"},"data":"~0~data"}]}]
+pid: 77987
+hostname: bogon
+
+2018-07-19 17:43:19,434 ERROR 78009 nodejs.WebpackOptionsValidationError: Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration[0].module.rules[7] should be an object.
+   -> A rule
+ - configuration[0].module.rules[7] should be an object.
+   -> A rule
+    at webpack (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/lib/webpack.js:24:9)
+    at WebpackServer.build (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack-tool/lib/tool.js:101:50)
+    at WebpackServer.build (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:58:18)
+    at config.webpackConfigList.forEach (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:26:31)
+    at Array.forEach (<anonymous>)
+    at build.dll (/Users/luojilab/mili/Blog/react/web-egg/node_modules/egg-webpack/lib/server.js:25:37)
+    at compiler.hooks.done.tap.compilation (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack-tool/lib/tool.js:107:19)
+    at SyncHook.eval [as call] (eval at create (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/node_modules/tapable/lib/HookCodeFactory.js:17:12), <anonymous>:7:1)
+    at SyncHook.lazyCompileHook [as _call] (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/node_modules/tapable/lib/Hook.js:35:21)
+    at MultiCompiler.compiler.hooks.done.tap.stats (/Users/luojilab/mili/Blog/react/web-egg/node_modules/webpack/lib/MultiCompiler.js:44:22)
+details: undefined
+missing: undefined
+origin: undefined
+dependencies: undefined
+module: undefined
+name: "WebpackOptionsValidationError"
+validationErrors: [{"keyword":"anyOf","dataPath":"[0].module","schemaPath":"#/properties/module/anyOf","params":{},"message":"should match some schema in anyOf","schema":[{"$ref":"#/definitions/module"}],"parentSchema":{"description":"Options affecting the normal modules (`NormalModuleFactory`).","anyOf":"~0~schema"},"data":{"rules":[{"test":"/\\.jsx?$/","exclude":"/node_modules/","use":[{"loader":"babel-loader","options":{}}]},{"test":"/\\.jsx?$/","use":[{"loader":"eslint-loader","options":{}}],"exclude":"/node_modules/","enforce":"pre"},{"test":"/\\.css/","use":["/Users/luojilab/mili/Blog/react/web-egg/node_modules/mini-css-extract-plugin/dist/loader.js",{"options":{"sourceMap":true},"loader":"css-loader"},{"loader":"postcss-loader","options":{"sourceMap":true}}],"exclude":["/Users/luojilab/mili/Blog/react/web-egg/app/web/page/css/module"]},{"test":"/\\.(png|jpe?g|gif|svg)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"img/[name].[ext]"}}]},{"test":"/\\.(mp4|webm|ogg|mp3|wav|flac|aac)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"media/[name].[ext]"}}]},{"test":"/\\.(woff2?|eot|ttf|otf)(\\?.*)?$/","use":[{"loader":"url-loader","options":{"limit":1024,"name":"font/[name].[ext]"}}]},"/\\.scss$/",["style","css","sass"],{"test":"/\\.css/","use":["/Users/luojilab/mili/Blog/react/web-egg/node_modules/mini-css-extract-plugin/dist/loader.js",{"options":{"sourceMap":true,"modules":true,"importLoaders":1},"loader":"css-loader"},{"loader":"postcss-loader","options":{"sourceMap":true}}],"include":["/Users/luojilab/mili/Blog/react/web-egg/app/web/page/css/module"]}]},"children":[{"keyword":"type","dataPath":"[0].module.rules[7]","schemaPath":"#/type","params":{"type":"object"},"message":"should be object","schema":"object","parentSchema":{"additionalProperties":false,"properties":{"enforce":{"description":"Enforce this rule as pre or post step","enum":["pre","post"]},"exclude":{"description":"Shortcut for resource.exclude","allOf":[{"$ref":"#/definitions/ruleSet-condition"},{"absolutePath":true}]},"include":{"description":"Shortcut for resource.include","allOf":[{"$ref":"#/definitions/ruleSet-condition"},{"absolutePath":true}]},"issuer":{"description":"Match the issuer of the module (The module pointing to this module)","allOf":[{"$ref":"#/definitions/ruleSet-condition"},{"absolutePath":true}]},"loader":{"description":"Shortcut for use.loader","anyOf":[{"$ref":"#/definitions/ruleSet-loader"},{"$ref":"#/definitions/ruleSet-use"}]},"loaders":{"description":"Shortcut for use.loader","anyOf":[{"$ref":"#/definitions/ruleSet-use"}]},"oneOf":{"description":"Only execute the first matching rule in this array","anyOf":[{"$ref":"#/definitions/ruleSet-rules"}]},"options":{"description":"Shortcut for use.options","anyOf":[{"$ref":"#/definitions/ruleSet-query"}]},"parser":{"description":"Options for parsing","additionalProperties":true,"type":"object"},"resolve":{"description":"Options for the resolver","type":"object","anyOf":[{"$ref":"#/definitions/resolve"}]},"sideEffects":{"description":"Flags a module as with or without side effects","type":"boolean"},"query":{"description":"Shortcut for use.query","anyOf":[{"$ref":"#/definitions/ruleSet-query"}]},"type":{"description":"Module type to use for the module","enum":["javascript/auto","javascript/dynamic","javascript/esm","json","webassembly/experimental"]},"resource":{"description":"Match the resource path of the module","allOf":[{"$ref":"#/definitions/ruleSet-condition"},{"absolutePath":true}]},"resourceQuery":{"description":"Match the resource query of the module","anyOf":[{"$ref":"#/definitions/ruleSet-condition"}]},"compiler":{"description":"Match the child compiler name","anyOf":[{"$ref":"#/definitions/ruleSet-condition"}]},"rules":{"description":"Match and execute these rules when this rule is matched","anyOf":[{"$ref":"#/definitions/ruleSet-rules"}]},"test":{"description":"Shortcut for resource.test","allOf":[{"$ref":"#/definitions/ruleSet-condition"},{"absolutePath":true}]},"use":{"description":"Modifiers applied to the module when rule is matched","anyOf":[{"$ref":"#/definitions/ruleSet-use"}]}},"type":"object"},"data":"~0~data~rules~7"},{"keyword":"anyOf","dataPath":"[0].module.rules[7]","schemaPath":"#/items/anyOf","params":{},"message":"should match some schema in anyOf","schema":[{"$ref":"#/definitions/ruleSet-rule"}],"parentSchema":{"description":"A rule","anyOf":"~0~children~1~schema"},"data":"~0~data~rules~7"}]}]
+pid: 78009
+hostname: bogon
+
+2018-07-19 17:44:06,428 ERROR 78030 [-/192.168.153.109/-/754ms GET /] nodejs.Error: Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type.
+> .list-wrap {
+| 	font-size: 12px;
+| }
+You may need an appropriate loader to handle this file type.
+> .list-wrap {
+| 	font-size: 12px;
+| }
+    at eval (webpack:///./app/web/component/home/list.scss?:1:7)
+    at Object../app/web/component/home/list.scss (evalmachine.<anonymous>:131:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/home/list.jsx?:2:68)
+    at Module../app/web/component/home/list.jsx (evalmachine.<anonymous>:120:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?:5:81)
+    at Module../app/web/page/home/home.jsx (evalmachine.<anonymous>:166:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?./node_modules/babel-loader/lib!./app/web/framework/entry/server-loader.js:6:124)
+
+pid: 78030
+hostname: bogon
+
+2018-07-19 17:45:17,752 ERROR 78030 [-/192.168.153.109/-/357ms GET /] nodejs.Error: Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type.
+> .list-wrap {
+| 	font-size: 12px;
+| }
+You may need an appropriate loader to handle this file type.
+> .list-wrap {
+| 	font-size: 12px;
+| }
+    at eval (webpack:///./app/web/component/home/list.scss?:1:7)
+    at Object../app/web/component/home/list.scss (evalmachine.<anonymous>:131:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/home/list.jsx?:2:68)
+    at Module../app/web/component/home/list.jsx (evalmachine.<anonymous>:120:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?:5:81)
+    at Module../app/web/page/home/home.jsx (evalmachine.<anonymous>:166:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?./node_modules/babel-loader/lib!./app/web/framework/entry/server-loader.js:6:124)
+
+pid: 78030
+hostname: bogon
+
+2018-07-19 17:58:34,232 ERROR 78199 [-/192.168.153.109/-/712ms GET /] nodejs.Error: Module build failed (from ./node_modules/css-loader/index.js):
+Unknown word (2:5)
+
+  1 | 
+> 2 |     var content = require("!!../../../../node_modules/css-loader/index.js??ref--6-1!../../../../node_modules/postcss-loader/lib/index.js??ref--6-2!./header.css");
+    |     ^
+  3 |     var insertCss = require("!../../../../node_modules/isomorphic-style-loader/lib/insertCss.js");
+  4 | 
+  5 |     if (typeof content === 'string') {
+
+Unknown word (2:5)
+
+  1 | 
+> 2 |     var content = require("!!../../../../node_modules/css-loader/index.js??ref--6-1!../../../../node_modules/postcss-loader/lib/index.js??ref--6-2!./header.css");
+    |     ^
+  3 |     var insertCss = require("!../../../../node_modules/isomorphic-style-loader/lib/insertCss.js");
+  4 | 
+  5 |     if (typeof content === 'string') {
+
+    at eval (webpack:///./app/web/component/header/header.css?./node_modules/css-loader!./node_modules/isomorphic-style-loader/lib!./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/lib??ref--6-2:1:7)
+    at Object../node_modules/css-loader/index.js!./node_modules/isomorphic-style-loader/lib/index.js!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/lib/index.js?!./app/web/component/header/header.css (evalmachine.<anonymous>:189:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/header/header.css?:4:15)
+    at Object../app/web/component/header/header.css (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/header/header.jsx?:4:69)
+    at Module../app/web/component/header/header.jsx (evalmachine.<anonymous>:108:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?./node_modules/babel-loader/lib!./app/web/framework/entry/server-loader.js:5:85)
+
+pid: 78199
+hostname: bogon
+
+2018-07-19 17:58:51,771 ERROR 78199 [-/192.168.153.109/-/432ms GET /] nodejs.Error: Module build failed (from ./node_modules/css-loader/index.js):
+Unknown word (2:5)
+
+  1 | 
+> 2 |     var content = require("!!../../../../node_modules/css-loader/index.js??ref--6-1!../../../../node_modules/postcss-loader/lib/index.js??ref--6-2!./header.css");
+    |     ^
+  3 |     var insertCss = require("!../../../../node_modules/isomorphic-style-loader/lib/insertCss.js");
+  4 | 
+  5 |     if (typeof content === 'string') {
+
+Unknown word (2:5)
+
+  1 | 
+> 2 |     var content = require("!!../../../../node_modules/css-loader/index.js??ref--6-1!../../../../node_modules/postcss-loader/lib/index.js??ref--6-2!./header.css");
+    |     ^
+  3 |     var insertCss = require("!../../../../node_modules/isomorphic-style-loader/lib/insertCss.js");
+  4 | 
+  5 |     if (typeof content === 'string') {
+
+    at eval (webpack:///./app/web/component/header/header.css?./node_modules/css-loader!./node_modules/isomorphic-style-loader/lib!./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/lib??ref--6-2:1:7)
+    at Object../node_modules/css-loader/index.js!./node_modules/isomorphic-style-loader/lib/index.js!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/lib/index.js?!./app/web/component/header/header.css (evalmachine.<anonymous>:189:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/header/header.css?:4:15)
+    at Object../app/web/component/header/header.css (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/header/header.jsx?:4:69)
+    at Module../app/web/component/header/header.jsx (evalmachine.<anonymous>:108:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?./node_modules/babel-loader/lib!./app/web/framework/entry/server-loader.js:5:85)
+
+pid: 78199
+hostname: bogon
+
+2018-07-19 18:00:05,332 ERROR 78237 [-/192.168.153.109/-/638ms GET /] nodejs.Error: Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+
+^
+      Invalid CSS after "": expected 1 selector or at-rule, was "var content = requi"
+      in /Users/luojilab/mili/Blog/react/web-egg/app/web/component/header/header.css (line 1, column 1)
+
+
+^
+      Invalid CSS after "": expected 1 selector or at-rule, was "var content = requi"
+      in /Users/luojilab/mili/Blog/react/web-egg/app/web/component/header/header.css (line 1, column 1)
+    at eval (webpack:///./app/web/component/header/header.css?:1:7)
+    at Object../app/web/component/header/header.css (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/header/header.jsx?:4:69)
+    at Module../app/web/component/header/header.jsx (evalmachine.<anonymous>:108:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/page/home/home.jsx?./node_modules/babel-loader/lib!./app/web/framework/entry/server-loader.js:5:85)
+    at Module../node_modules/babel-loader/lib/index.js!./app/web/framework/entry/server-loader.js!./app/web/page/home/home.jsx (evalmachine.<anonymous>:178:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+
+pid: 78237
+hostname: bogon
+

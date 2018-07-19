@@ -8,11 +8,11 @@ export default class Home extends Component {
   }
 
   render() {
+    console.log(this.props)
     return <div>
-      <Header></Header>
       <div className="main">
         <div className="page-container page-component">
-          <List list={this.props.list}></List>
+          <List list={this.props.data}></List>
         </div>
       </div>
     </div>;

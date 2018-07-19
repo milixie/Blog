@@ -1,0 +1,125 @@
+{
+  "ant/tab/tab.css": "/public/css/ant/tab/tab.css",
+  "ant/tab/tab.js": "/public/js/ant/tab/tab.js",
+  "ant/tab/tab.css.map": "/public/css/ant/tab/tab.css.map",
+  "ant/tab/tab.js.map": "/public/js/ant/tab/tab.js.map",
+  "css/module/module.css": "/public/css/css/module/module.css",
+  "css/module/module.js": "/public/js/css/module/module.js",
+  "css/module/module.css.map": "/public/css/css/module/module.css.map",
+  "css/module/module.js.map": "/public/js/css/module/module.js.map",
+  "hello/component.css": "/public/css/hello/component.css",
+  "hello/component.js": "/public/js/hello/component.js",
+  "hello/component.css.map": "/public/css/hello/component.css.map",
+  "hello/component.js.map": "/public/js/hello/component.js.map",
+  "hello/element.css": "/public/css/hello/element.css",
+  "hello/element.js": "/public/js/hello/element.js",
+  "hello/element.css.map": "/public/css/hello/element.css.map",
+  "hello/element.js.map": "/public/js/hello/element.js.map",
+  "home/home.css": "/public/css/home/home.css",
+  "home/home.js": "/public/js/home/home.js",
+  "home/home.css.map": "/public/css/home/home.css.map",
+  "home/home.js.map": "/public/js/home/home.js.map",
+  "layout.js": "/public/js/layout.js",
+  "layout.js.map": "/public/js/layout.js.map",
+  "spa/client.css": "/public/css/spa/client.css",
+  "spa/client.js": "/public/js/spa/client.js",
+  "spa/client.css.map": "/public/css/spa/client.css.map",
+  "spa/client.js.map": "/public/js/spa/client.js.map",
+  "spa/redux.css": "/public/css/spa/redux.css",
+  "spa/redux.js": "/public/js/spa/redux.js",
+  "spa/redux.css.map": "/public/css/spa/redux.css.map",
+  "spa/redux.js.map": "/public/js/spa/redux.js.map",
+  "spa/ssr.css": "/public/css/spa/ssr.css",
+  "spa/ssr.js": "/public/js/spa/ssr.js",
+  "spa/ssr.css.map": "/public/css/spa/ssr.css.map",
+  "spa/ssr.js.map": "/public/js/spa/ssr.js.map",
+  "js/vendor.js": "/public/js/vendor.js",
+  "img/loading.gif": "/public/img/loading.gif",
+  "vendor.js": "/public/js/vendor.js",
+  "deps": {
+    "ant/tab/tab.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/ant/tab/tab.js"
+      ],
+      "css": [
+        "/public/css/ant/tab/tab.css"
+      ]
+    },
+    "css/module/module.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/css/module/module.js"
+      ],
+      "css": [
+        "/public/css/css/module/module.css"
+      ]
+    },
+    "hello/component.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/hello/component.js"
+      ],
+      "css": [
+        "/public/css/hello/component.css"
+      ]
+    },
+    "hello/element.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/hello/element.js"
+      ],
+      "css": [
+        "/public/css/hello/element.css"
+      ]
+    },
+    "home/home.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/home/home.js"
+      ],
+      "css": [
+        "/public/css/home/home.css"
+      ]
+    },
+    "spa/client.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/spa/client.js"
+      ],
+      "css": [
+        "/public/css/spa/client.css"
+      ]
+    },
+    "spa/redux.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/spa/redux.js"
+      ],
+      "css": [
+        "/public/css/spa/redux.css"
+      ]
+    },
+    "spa/ssr.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/spa/ssr.js"
+      ],
+      "css": [
+        "/public/css/spa/ssr.css"
+      ]
+    },
+    "layout.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/layout.js"
+      ],
+      "css": []
+    }
+  },
+  "info": {
+    "publicPath": "/public/",
+    "buildPath": "public",
+    "mapped": true
+  }
+}

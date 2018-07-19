@@ -271,4 +271,32 @@ ReactDOM.render(
 
 ```
 
+#### 加入 `sass`
+
+`npm i node-sass sass-loader css-loader style-loader`
+
+`webpack` 的配置中加入
+
+```
+
+module: {
+    rules: [
+      {test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/},
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader",
+          options: {
+          }
+        }]
+      }
+    ]
+  },
+```
+
 执行 `npm run dev` 即可
+

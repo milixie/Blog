@@ -20,7 +20,19 @@ module.exports = {
   // loaders
   module: {
     rules: [
-      {test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/}
+      {test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/},
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader",
+          options: {
+          }
+        }]
+      }
     ]
   },
   plugins: [

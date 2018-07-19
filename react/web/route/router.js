@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom'
 import test from '../src/test'
-import app from '../src/App'
+import app from '../src/app/App'
 
 const getRouter = () => {
   return (

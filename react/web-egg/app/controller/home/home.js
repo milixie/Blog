@@ -1,9 +1,28 @@
 const Model = require('../../mocks/article/list');
+const axios = require('axios')
 module.exports = app => {
   return class AppController extends app.Controller {
     async index() {
       const { ctx } = this;
-      await ctx.render('home/home.js', Model.getPage(1, 10));
+      let renderData = {}
+      try {
+        const { data: result } = await axios.get('https://www.carbrand.club/carbrands/?format=json')
+        console.log(result.code)
+        if (Number(result.code) === 0) {
+          renderData = {
+            code: '0',
+            msg: '',
+            data: result.data && result.data.carList
+          }
+        }
+      } catch(err) {
+        renderData = {
+          code: '100007',
+          msg: '系统异常',
+          data: ''
+        }
+      }
+      await ctx.render('home/home.js', renderData);
     }
 
     async client() {

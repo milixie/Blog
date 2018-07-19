@@ -21,11 +21,27 @@ module.exports = {
     framework: 'app/web/framework',
     store: 'app/web/store'
   },
+  module: {
+    rules: [{
+      test: /\.css$/,
+      use: [
+        'sass-loader',
+        // 'css-loader'
+      ]
+    }]
+  },
   cssModule: {
     include: 'app/web/page/css/module'
   },
   dll: ['react', 'react-dom'],
-  loaders: {},
+  loaders: {
+    eslint: false,
+    css: {
+      exclude: [], // 开启node_modules 目录, 解决mint-ui css in module
+    },
+    less: false, // 没有使用, 禁用可以减少npm install安装时间
+    stylus: false, // 没有使用, 禁用可以减少npm install安装时间
+  },
   plugins: {
     imagemini: false
   },
