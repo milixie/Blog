@@ -1,6 +1,6 @@
 # Blog
 
-[如何在HTML中实现炫酷的文字效果](https://github.com/milixie/Blob/font/index.html)
+[如何在HTML中实现炫酷的文字效果](https://github.com/milixie/Blog/blob/master/font/index.html)
 
 [react实现简单评分效果](https://github.com/milixie/Blog/blob/master/star/index.html)
 
