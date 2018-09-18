@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>React Demo</title>
+  <style>
+    body {
+      --star-density: 0.8;
+      background-image: paint(starry-sky);
+    }
+    body:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      --star-density: 0.5;
+      background-image: paint(starry-sky);
+    }
+
+  </style>
+  <script>
+    CSS.paintWorklet.addModule('starry-sky.js');
+  </script>
 </head>
 <body>
 <div id="app"></div>
+<button id="ripple" class="" style="--animation-tick: 0;">
+  Click me!
+</button>
 </body>
 </html>
