@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		.grid {
+			background: #ff6b00;
+			display: grid;
+			grid-template: repeat(3, 120px) / 200px auto 1fr;
+			grid-gap: 10px 20px;
+			grid-auto-columns: 100px;
+			grid-auto-rows: 120px;
+		}
+		.item-grid {
+			border: 2px solid green;
+			background: #f7e0e8;
+		}
+		.item-grid img {
+			max-width: 100px;
+		}
+		.box1 {
+			grid-column: 1 / 6;
+			grid-row: 2 / 4;
+		}
+		.btns {
+			padding: 10px;
+		}
+		button {
+			background: #f6f6f6;
+			border-radius: 4px;
+			outline: none;
+			border: 1px solid #e5e5e5;
+			padding: 4px 6px;
+			cursor: pointer;
+			transition: all 0.2s;
+			margin: 10px;
+		}
+		.btns button:hover {
+			background: #ff6b00;
+			border-color: #ff3700;
+			color: #fff;
+			transform: scale(1.05);
+		}
+		.radio-wrap {
+			margin-top: 30px;
+		}
+		.radio-wrap label{
+			padding-left: 20px;
+		}
+		.grid-2 {
+			margin: 20px 0 100px;
+			display: grid;
+			grid-template: repeat(3, 100px) / 1fr 2fr 2fr 1fr 1fr;
+			background: blue;
+			grid-gap: 10px;
+		}
+		.grid-2 > div {
+			color: #fff;
+		}
+		.grid-item1 {
+			background: red;
+		}
+		.grid-item2 {
+			background: #e80;
+		}
+		.grid-item3 {
+			background: green;
+		}
+		.grid-item4 {
+			background: #f40;
+		}
+		.grid-item5 {
+			background: #e99;
+		}
+		.grid-item6 {
+			background: #040;
+		}
+	</style>
+</head>
+<body>
+	<div class="btns">
+		子项属性<p>grid-column - grid-row：表示grid子项所占据的区域的起始和终止位置，包括水平方向和垂直方向</p>
+		<button class="set-grid-column">设置grid-column：使得item3占据位置从第二列到第三列</button>
+		<button class="set-grid-row">设置grid-row：使得item3占据位置从第1行到第3行</button>
+		<p>grid-area 子项网格所占的区域</p>
+		<button class="set-grid-area">设置grid-area：使得第4个元素位置区域为第5列、第2行到第3行</button>
+	</div>
+	<div class="radio-wrap">
+		<p>设置justify-self：设置item2水平对齐方式</p>
+		<label>stretch: <input type="radio" name="justify" value="stretch" class="justify-change"></label>
+		<label>start: <input type="radio" name="justify" value="start" class="justify-change"></label>
+		<label>end: <input type="radio" name="justify" value="end" class="justify-change"></label>
+		<label>center: <input type="radio" name="justify" value="center" class="justify-change"></label>
+	</div>
+	<div class="radio-wrap">
+		<p>设置align-self：设置item2垂直方向对齐方式</p>
+		<label>stretch: <input type="radio" name="align" value="stretch" class="align-change"></label>
+		<label>start: <input type="radio" name="align" value="start" class="align-change"></label>
+		<label>end: <input type="radio" name="align" value="end" class="align-change"></label>
+		<label>center: <input type="radio" name="align" value="center" class="align-change"></label>
+	</div>
+<div class="grid-2">
+	<div class="grid-item1">grid-item1 指定了位置</div>
+	<div class="grid-item2">grid-item2 指定了位置</div>
+	<div class="grid-item3">grid-item3 第三个元素</div>
+	<div class="grid-item4">grid-item4</div>
+	<div class="grid-item5">grid-item5</div>
+	<div class="grid-item6">grid-item6</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.set-grid-column').on('click', function() {
+			$('.grid-item3').css({ gridColumn: '2 / 4' })
+		})
+
+		$('.set-grid-row').on('click', function() {
+			$('.grid-item3').css({ gridRow: '1 / 4' })
+		})
+
+		$('.set-grid-area').on('click', function() {
+			$('.grid-item4').css({ gridArea: '2 / 5 / 4 / 6' })
+		})
+
+		$('.justify-change').change(function(){
+			$('.grid-item2').css({ justifySelf: this.value })
+		})
+
+		$('.align-change').change(function(){
+			$('.grid-item2').css({ alignSelf: this.value })
+		})
+	}) 
+</script>
+</body>
+</html>

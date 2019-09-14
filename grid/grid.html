@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		.grid {
+			background: #ff6b00;
+		}
+		.item-grid {
+			border: 2px solid blue;
+			background: #f7e0e8;
+		}
+		.item-grid img {
+			max-width: 100px;
+		}
+		.btns {
+			padding: 10px;
+		}
+		button {
+			background: #f6f6f6;
+			border-radius: 4px;
+			outline: none;
+			border: 1px solid #e5e5e5;
+			padding: 4px 6px;
+			cursor: pointer;
+			transition: all 0.2s;
+			margin: 10px;
+		}
+		.btns button:hover {
+			background: #ff6b00;
+			border-color: #ff3700;
+			color: #fff;
+			transform: scale(1.05);
+		}
+		.radio-wrap label{
+			padding-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="btns">
+		<button class="set-grid">把盒子模型设置成grid容器布局</button>
+		<button class="set-template">设置grid-template将网格分为3列3行</button>
+		<button class="set-gap">设置grid-gap网格之间的间距，垂直间隔20px,水平间隔10px</button>
+	</div>
+	<div>
+		<div class="radio-wrap">
+			<p>justify-items的设置：水平方向对齐方式</p>
+			<label>stretch: <input type="radio" name="justify" value="stretch" class="justify-change"></label>
+			<label>start: <input type="radio" name="justify" value="start" class="justify-change"></label>
+			<label>end: <input type="radio" name="justify" value="end" class="justify-change"></label>
+			<label>center: <input type="radio" name="justify" value="center" class="justify-change"></label>
+		</div>
+		<div class="radio-wrap">
+			<p>align-items的设置：垂直方向对齐方式</p>
+			<label>stretch: <input type="radio" name="align" value="stretch" class="align-change"></label>
+			<label>start: <input type="radio" name="align" value="start" class="align-change"></label>
+			<label>end: <input type="radio" name="align" value="end" class="align-change"></label>
+			<label>center: <input type="radio" name="align" value="center" class="align-change"></label>
+		</div>
+		<div class="radio-wrap">
+			<p>justify-content的设置：水平方向分布方式，仅在grid容器宽度小于设置的总宽度</p>
+			<label>stretch: <input type="radio" name="justifyContent" value="stretch" class="justify-content-change"></label>
+			<label>start: <input type="radio" name="justifyContent" value="start" class="justify-content-change"></label>
+			<label>end: <input type="radio" name="justifyContent" value="end" class="justify-content-change"></label>
+			<label>center: <input type="radio" name="justifyContent" value="center" class="justify-content-change"></label>
+			<label>space-between: <input type="radio" name="justifyContent" value="space-between" class="justify-content-change"></label>
+			<label>space-around: <input type="radio" name="justifyContent" value="space-around" class="justify-content-change"></label>
+			<label>space-evenly: <input type="radio" name="justifyContent" value="space-evenly" class="justify-content-change"></label>
+		</div>
+		<div class="radio-wrap">
+			<button class="align-content-height">点击给grid设置一个高度600px</button>
+			<p>align-content的设置：垂直方向分布方式</p>
+			<label>stretch: <input type="radio" name="alignContent" value="stretch" class="align-content-change"></label>
+			<label>start: <input type="radio" name="alignContent" value="start" class="align-content-change"></label>
+			<label>end: <input type="radio" name="alignContent" value="end" class="align-content-change"></label>
+			<label>center: <input type="radio" name="alignContent" value="center" class="align-content-change"></label>
+			<label>space-between: <input type="radio" name="alignContent" value="space-between" class="align-content-change"></label>
+			<label>space-around: <input type="radio" name="alignContent" value="space-around" class="align-content-change"></label>
+			<label>space-evenly: <input type="radio" name="alignContent" value="space-evenly" class="align-content-change"></label>
+		</div>
+	</div>
+</div>
+<div class="grid">
+	<div class="item-grid box1"><img src="./img/1.png">grid-1</div>
+	<div class="item-grid box2"><img src="./img/8.png">grid two</div>
+	<div class="item-grid box3"><img src="./img/9.png">grid 3</div>
+	<div class="item-grid box4"><img src="./img/1.jpg">grid 4</div>
+	<div class="item-grid box5"><img src="./img/11.png">grid 5</div>
+	<div class="item-grid box6"><img src="./img/2.jpg">grid 6</div>
+	<div class="item-grid box7"><img src="./img/3.jpg">grid 7</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//  设置成grid容器布局
+		$('.set-grid').on('click', function() {
+			$('.grid').css({ display: 'grid' })
+		})
+
+		$('.set-template').on('click', function() {
+			$('.grid').css({ gridTemplate: 'repeat(3, 160px) / 200px 100px 200px ' })
+		})
+
+		$('.set-gap').on('click', function() {
+			$('.grid').css({ gridGap: '20px 10px' })
+		})
+
+		$('.justify-change').change(function() {
+			$('.grid').css({ justifyItems: this.value })
+		})
+
+		$('.align-change').change(function() {
+			$('.grid').css({ alignItems: this.value })
+		})
+
+		$('.justify-content-change').change(function() {
+			$('.grid').css({ justifyContent: this.value })
+		})
+
+		$('.align-content-height').on('click', function() {
+			$('.grid').css({ height: '600px' })
+		})
+
+		$('.align-content-change').change(function() {
+			$('.grid').css({ alignContent: this.value })
+		})
+
+	}) 
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
