@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.container {
+			display: grid;
+			background: #6e0a80;
+			grid-gap: 10px 10px;
+			padding: 10px;
+			grid-template: repeat(3, 100px) / 1fr 2fr 1fr;
+			grid-template-areas: 
+        "苹果 香蕉 香蕉"
+        "苹果 香蕉 香蕉";
+		}
+		.item-a {
+			background: #f90;
+		}
+		.item-b {
+			background: #d50;
+		}
+		.item-c {
+			background: #0ef;
+		}
+		.item-d {
+			background: #2e9;
+		}
+		.item-e {
+			background: #89e;
+		}
+		.item-f {
+			background: #693;
+		}
+		.item-g {
+			background: #e02;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="item-a">item-A</div>
+	<div class="item-b">item-B</div>
+	<div class="item-c">item-C</div>
+	<div class="item-d">item-D</div>
+	<div class="item-e">item-E</div>
+	<div class="item-f">item-F</div>
+	<div class="item-g">item-G</div>
+</div>
+</body>
+</html>

@@ -5,6 +5,10 @@
 > - Grid布局的优点
 > - Grid布局相关术语介绍
 > - 容器属性
+> - 作用在容器子项上的属性
+
+
+> - 注意事项、备注
 
 
 #### 网格
@@ -91,16 +95,255 @@ pc端的浏览器的兼容性还是不错的
 
 它的值为：
 
-- `display: grid;`
+- `display: grid;`：设置为容器元素
 
-- `display: inline-grid`
+![网格](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2NTQ0NTMz.png)
 
-- `display: subgrid`
+- `display: inline-grid` 设置为容器元素，且为行内网格
+
+![行内网格](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2NTQ0NDcy.png)
+
+- `display: subgrid` ：如果网格容器本身是网格项，此属性用来继承父网格容器的列和行大小
+
+![subgrid的兼容性](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2NTIxODYy.png)
+
+2. `grid-template`: 定义行与列的轨道大小，它是一个复合写法，具体属性包含了：
+
+- `grid-template-rows`: 水平方向划分行，值为每一行的高度，空格分隔
+- `grid-template-columns`: 垂直方向划分列，值为每一列的宽度，空格分隔
+- `grid-template-areas`: 网格划分区域，值为命名
+
+语法：
+```css
+.container {
+	grid-template-rows: <track-size> | <line-name> <track-size>;
+	grid-template-columns: <track-size> | <line-name> <track-size>;
+	grid-template-areas: 
+	    <grid-area-name> | . | none
+	    <grid-area-name> | . | none
+}
+
+// 复合写法：
+.container {
+	grid-template: <grid-template-rows> / <grid-template-columns>
+}
+
+```
+
+- `<track-size>`: 可以使用css的长度单位、百分比、auto或者一个新的单位`fr`
+	其中 `auto` 是用来表示剩下的长度
+	单位 `fr` ：除去其他的设定的固定的宽度以外，剩下的按比例分，类似于flex中的`flex: n;`看示例
+
+- `<line-name>`: 可以给每条网格线设置名称 [任何名称]
+
+- `<grid-area-name>` : 区域名称 "任何名称"	
+
+- 对于重复的值，可以使用 `repeat` 去表示，例如设置三行都是100px的高度： `grid-template-rows: repeat(3, 100px)`	
+
+```
+.container {
+	grid-template-rows: [第一条行线] 25% 100px auto;
+	grid-template-columns: [第一条列线] 100px 20px auto 40px;
+}
+```
+表现为如下：
+
+![grid-template](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2ODM3OTYw.png)
+
+`grid-template-areas`:
+
+![grid-template-areas](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2Nzc0MzM1.png)
 
 
+3. `grid-gap` ：行和列之间的间隔宽度 ， 它是两个属性的复合写法
+
+- `grid-gap-rows`: 行与行之间的间隔
+
+- `grid-gap-columns`: 列与列之间的间隔
+
+```css
+.container {
+	grid-gap-rows: 20px;
+	grid-gap-columns: 10px; 
+}
+
+// 复合写法：
+.container {
+	grid-gap: 20px 10px;
+}
+```
+
+4. `place-items` ： 每个单元格内部的水平垂直对齐方式的复合写法
+
+- `justify-items`: 水平方向对齐方式
+- `align-items`: 垂直方向对齐方式
+
+两个属性的值都有以下几种
+
+- `stretch` : 默认值，水平|垂直 内容拉伸填充
+
+- `start`: 水平|垂直 （宽度|高度）收缩为内容大小，（左侧|上侧）对齐
+
+- `end`：水平|垂直 （宽度|高度）收缩为内容大小，（右侧|下侧）对齐
+
+- `center`：水平|垂直 （宽度|高度）收缩为内容大小，居中对齐
+
+```css
+.container {
+	place-items: <align-items> / <justify-items>;
+}
+```
+
+看示例
+
+5. `place-content`: 以下两个属性的复合写法，是表示网络单元的水平布局方式
+
+- `justify-content`: 仅在网格总宽度小于grid容器宽度时候有效果
+
+值分为以下几种：
+>- stretch：拉伸，宽度填满grid容器，需要定的网格尺寸为auto的时候有效，如果定死宽度则无法拉伸
+>- start：左对齐
+>- end：右对齐
+>- center：居中对齐
+>- space-between：两端对齐
+>- space-around： 每个grid子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半
+>- space-evenly：每个grid子项两侧空白间距完全相等
+
+- `align-content`: 网络元素的垂直方向布局方式, 如果grid子项只有一行则不生效，它的值同上
+
+看示例吧
+
+6. `grid-auto`: 以下三个属性的复合写法
+
+- `grid-auto-rows`:网格项目多余设置的单元格，会创建隐式轨道
+
+- `grid-auto-columns`:网格项目多余设置的单元格，会创建隐式轨道
+
+```css
+.container {
+	grid-auto-rows: 100px;
+	grid-auto-columns: 70px;
+}
+```
+
+看示例
+
+- `grid-auto-flow`: 控制没有明确指定位置的grid子项的放置方式
+
+值分为以下几种：
+>- row: 默认值，没有指定位置的网格按顺序水平方向排列
+>- column: 没有指定位置的网格垂直顺序排列
+>- row dense：自动排列启动密集排序，水平方向
+>- column dense：自动排列启动密集排序，垂直方向
+
+看示例
+
+7. `grid`: 以下几个属性的复合写法：
+- `grid-template-rows`
+- `grid-template-columns`
+- `grid-template-areas`
+- `grid-auto-rows`
+- `grid-auto-columns`
+- `grid-auto-flow`
+
+具体设置值如下：
+1.grid:none：所有子属性都是初始化的值
+2.grid: <grid-template>
+3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
+4.grid: auto-flow & dense ? <grid-template-rows> ? / <grid-template-columns>
+
+`auto-flow`： 表示的值为 `row` | `column`，但是统一使用 `auto-flow`来表示，具体需要看它放置的位置在哪里，如果放置在 `/` 的左侧，就表示 `grid-auto-flow: row`， 如果放在右侧，就表示 `grid-auto-flow: column`
 
 
+```css
+grid: 100px 60px / 1fr 2fr
+相当于：
+    grid-template-rows: 100px 60px;
+    grid-template-columns: 1fr 2fr;
+3.grid: 100px 60px / auto-flow 1fr 2fr
+相当于：
+grid-template-rows: 100px 60px;
+grid-template-columns: 1fr 2fr;
+grid-auto-flow: column
+4.grid: auto-flow dense 100px 60px / 1fr 2fr;
+相当于：
+grid-template-rows: 100px 60px
+grid-template-columns: 1fr 2fr;
+grid-auto-flow: row
 
+```
+
+看示例
+
+以上属性都是外层容器属性的值
+
+
+#### 作用在容器子项上的属性
+
+1. `grid-column`: 以下两个属性的复合写法
+
+>- `grid-column-start`
+>- `grid-column-end` 
+
+```css
+.item {
+	grid-column-start: <name> | <number> | span <name> | span <number>
+	grid-column: <start-line> <end-line>
+}
+```
+
+值的含义：
+
+`<name>`自定义网格线的名称
+`<number>` 从第几条网格线开始
+`span <name>` 当前网格会自动扩充，直到命中指定的网格线名称
+`span <number>` 当前网格会自动跨越指定的网格数量
+`auto` 全自动，包括定位和跨度
+
+2. `grid-row`: 以下两个属性的复合写法
+>- `grid-row-start`
+>- `grid-row-end` 
+
+```css
+.item {
+	grid-row-start: <name> | <number> | span <name> | span <number>
+	grid-row: <start-line> <end-line>
+}
+```
+
+3. `grid-area`: 当前网格所占区域，使用`grid-template-areas`自定义网络区域，使用`grid-area`让grid子项指定这些使用区域，就自动进行了区域分布
+例如：
+```css
+grid-area：
+<name> 区域名称，由容器属性grid-template-area创建
+<row-start> / <column-start> / <row-end> / <column-end> 占据网格区域的纵横起始位置
+```
+
+看示例
+
+4. `justify-self`: 单个网格元素的水平对齐方式
+
+值分为以下几种：
+>- stretch（默认）:拉伸，水平填充
+>- start  水平尺寸收缩为内容大小，沿着网格线左侧对齐
+>- end   水平尺寸收缩为内容大小， 沿着网格线右侧对齐
+>- center 水平尺寸收缩为内容大小，当前区域内部水平居中对齐显示
+
+5. `align-self`: 单个网格元素的垂直对齐方式
+例如：
+>- stretch（默认）:拉伸，垂直填充
+>- start  垂直尺寸收缩为内容大小，沿着网格线上侧对齐
+>- end   垂直尺寸收缩为内容大小， 沿着网格线下侧对齐
+>- center 垂直尺寸收缩为内容大小，当前区域内部垂直居中对齐显示
+
+以上两个属性可以使用 `place-self` 去写
+`place-items：<align-self> / <justify-self> `
+
+#### 注意事项
+
+>- 当元素设置了网格布局，column、float、clear、vertical-align属性无效
+>- grid布局是二维布局，适合布局整体
+>- IE对grid布局支持不好，需要加-ms-前缀
 
 
 
