@@ -7,8 +7,6 @@
 > - 容器属性
 > - 作用在容器子项上的属性
 > - grid 布局中会用到的一些css函数
-
-
 > - 注意事项、备注
 
 
@@ -21,7 +19,7 @@
 #### CSS布局发展进程
 
 - `table` 表格布局：`table` 比其他 `html`标记占更多的字节、布局比较死板不灵活、会阻挡浏览器渲染引擎的渲染顺序从而使得加载速度慢
-- `float` 方式布局：使用 `float` 去布局，会使得元素脱离文档流，浮动高度塌陷，还需要额外的清除浮动解决这种高度塌陷、不易于垂直居中等问题
+- `float` + `position`方式布局：使用 `float` 浮动和 `position` 定位去布局，`float`会使得元素脱离文档流，浮动高度塌陷，还需要额外的清除浮动解决这种高度塌陷、不易于垂直居中等问题
 - `flexbox` 弹性布局：一维布局，最适合应用于程序的组件和比较小规模的布局，比较好用而且支持性较好
 - `grid` 网格布局：二维布局，适用于大规模的布局
 
@@ -37,7 +35,7 @@
 - 定位项目
 - 创建额外的轨道
 - 对齐控制
-- 控制重叠内容
+- 控制重叠内容，直接在子项上设置`z-index`的值即可
 
 ##### 兼容性
 
@@ -90,6 +88,16 @@ pc端的浏览器的兼容性还是不错的
 
 7. 单位：`fr` 单位：剩余空间分配数，用于在一系列长度值中分配剩余空间，按数字比例分配
 
+例如：
+
+网格总宽度如果是600px，那么下面这种设置中，1fr = (600 - 50 - 150) * (1 / (1+3)) = 100px
+
+```
+.grid {
+	grid-template-columns: 50px 1fr 3fr 150px;
+}
+```
+
 #### 容器中的属性
 
 1. `display`
@@ -105,6 +113,8 @@ pc端的浏览器的兼容性还是不错的
 ![行内网格](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2NTQ0NDcy.png)
 
 - `display: subgrid` ：如果网格容器本身是网格项，此属性用来继承父网格容器的列和行大小
+
+它的兼容性很差，基本可以先不了解
 
 ![subgrid的兼容性](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2NTIxODYy.png)
 
@@ -133,7 +143,7 @@ pc端的浏览器的兼容性还是不错的
 
 - `<track-size>`: 可以使用css的长度单位、百分比、auto或者一个新的单位`fr`
 	其中 `auto` 是用来表示剩下的长度
-	单位 `fr` ：除去其他的设定的固定的宽度以外，剩下的按比例分，类似于flex中的`flex: n;`看示例
+	单位 `fr` ：除去其他的设定的固定的宽度以外，剩下的按比例分，类似于flex中的`flex: n;`
 
 - `<line-name>`: 可以给每条网格线设置名称 [任何名称]
 
@@ -179,21 +189,16 @@ pc端的浏览器的兼容性还是不错的
 
 两个属性的值都有以下几种
 
-- `stretch` : 默认值，水平|垂直 内容拉伸填充
-
-- `start`: 水平|垂直 （宽度|高度）收缩为内容大小，（左侧|上侧）对齐
-
-- `end`：水平|垂直 （宽度|高度）收缩为内容大小，（右侧|下侧）对齐
-
-- `center`：水平|垂直 （宽度|高度）收缩为内容大小，居中对齐
+>- `stretch` : 默认值，水平|垂直 内容拉伸填充
+>- `start`: 水平|垂直 （宽度|高度）收缩为内容大小，（左侧|上侧）对齐
+>- `end`：水平|垂直 （宽度|高度）收缩为内容大小，（右侧|下侧）对齐
+>- `center`：水平|垂直 （宽度|高度）收缩为内容大小，居中对齐
 
 ```css
 .container {
 	place-items: <align-items> / <justify-items>;
 }
 ```
-
-看示例
 
 5. `place-content`: 以下两个属性的复合写法，是表示网络单元的水平布局方式
 
@@ -210,8 +215,6 @@ pc端的浏览器的兼容性还是不错的
 
 - `align-content`: 网络元素的垂直方向布局方式, 如果grid子项只有一行则不生效，它的值同上
 
-看示例吧
-
 6. `grid-auto`: 以下三个属性的复合写法
 
 - `grid-auto-rows`:网格项目多余设置的单元格，会创建隐式轨道
@@ -224,8 +227,6 @@ pc端的浏览器的兼容性还是不错的
 	grid-auto-columns: 70px;
 }
 ```
-
-看示例
 
 - `grid-auto-flow`: 控制没有明确指定位置的grid子项的放置方式
 
@@ -247,8 +248,11 @@ pc端的浏览器的兼容性还是不错的
 
 具体设置值如下：
 1.grid:none：所有子属性都是初始化的值
+
 2.grid: <grid-template>
+
 3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
+
 4.grid: auto-flow & dense ? <grid-template-rows> ? / <grid-template-columns>
 
 `auto-flow`： 表示的值为 `row` | `column`，但是统一使用 `auto-flow`来表示，具体需要看它放置的位置在哪里，如果放置在 `/` 的左侧，就表示 `grid-auto-flow: row`， 如果放在右侧，就表示 `grid-auto-flow: column`
@@ -259,12 +263,16 @@ grid: 100px 60px / 1fr 2fr
 相当于：
     grid-template-rows: 100px 60px;
     grid-template-columns: 1fr 2fr;
+
 3.grid: 100px 60px / auto-flow 1fr 2fr
+
 相当于：
 grid-template-rows: 100px 60px;
 grid-template-columns: 1fr 2fr;
 grid-auto-flow: column
+
 4.grid: auto-flow dense 100px 60px / 1fr 2fr;
+
 相当于：
 grid-template-rows: 100px 60px
 grid-template-columns: 1fr 2fr;
@@ -281,8 +289,8 @@ grid-auto-flow: row
 
 1. `grid-column`: 以下两个属性的复合写法
 
->- `grid-column-start`
->- `grid-column-end` 
+- `grid-column-start`
+- `grid-column-end` 
 
 ```css
 .item {
@@ -300,8 +308,8 @@ grid-auto-flow: row
 `auto` 全自动，包括定位和跨度
 
 2. `grid-row`: 以下两个属性的复合写法
->- `grid-row-start`
->- `grid-row-end` 
+- `grid-row-start`
+- `grid-row-end` 
 
 ```css
 .item {
@@ -317,8 +325,6 @@ grid-area：
 <name> 区域名称，由容器属性grid-template-area创建
 <row-start> / <column-start> / <row-end> / <column-end> 占据网格区域的纵横起始位置
 ```
-
-看示例
 
 4. `justify-self`: 单个网格元素的水平对齐方式
 
@@ -348,24 +354,33 @@ grid-area：
 `repeat(<repeat>, <value>)`
 
 `<repeat>`: 取值有以下几种： 
-	1. 整数，确定确切的重复次数
-	2. `<auto-fill>`: 以网格项为准自动填充，需要结合minmax()函数来使用
-	3. `<auto-fit>` : 以网格容器为准自动填充，需要结合minmax()函数来使用
-`<value>`： 取值有以下几种：
-	1. 固定长度
-	2. 百分比
-	3. fr单位
-	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
-	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
-	6. auto：不推荐使用
 
-看示例	
+	1. 整数，确定确切的重复次数
+
+	2. `<auto-fill>`: 以网格项为准自动填充，需要结合minmax()函数来使用
+
+	3. `<auto-fit>` : 以网格容器为准自动填充，需要结合minmax()函数来使用
+
+`<value>`： 取值有以下几种：
+
+	1. 固定长度
+
+	2. 百分比
+
+	3. fr单位
+
+	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
+
+	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
+
+	6. auto：不推荐使用
 
 可以多次使用
 
 `grid-template-columns: 20px auto repeat(3, 1fr) 40px`	
 
 2. `fit-content()`：参数是长度值或百分比
+
 公式：min(maximum size, max(minimum size, argument))
 
 它在内容的最小值和参数中取一个最大值，然后再在内容的最大值中取一个最小值
@@ -376,10 +391,15 @@ grid-area：
 
 取值：
   1. 固定长度
+
 	2. 百分比
+
 	3. fr单位
+
 	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
+
 	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
+
 	6. auto：不推荐使用
 
 
@@ -387,6 +407,7 @@ grid-area：
 
 >- 当元素设置了网格布局，column、float、clear、vertical-align属性无效
 >- grid布局是二维布局，适合布局整体
+
 
 
 
