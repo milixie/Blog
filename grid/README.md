@@ -6,6 +6,7 @@
 > - Grid布局相关术语介绍
 > - 容器属性
 > - 作用在容器子项上的属性
+> - grid 布局中会用到的一些css函数
 
 
 > - 注意事项、备注
@@ -137,8 +138,6 @@ pc端的浏览器的兼容性还是不错的
 - `<line-name>`: 可以给每条网格线设置名称 [任何名称]
 
 - `<grid-area-name>` : 区域名称 "任何名称"	
-
-- 对于重复的值，可以使用 `repeat` 去表示，例如设置三行都是100px的高度： `grid-template-rows: repeat(3, 100px)`	
 
 ```
 .container {
@@ -339,11 +338,55 @@ grid-area：
 以上两个属性可以使用 `place-self` 去写
 `place-items：<align-self> / <justify-self> `
 
+#### grid布局中的css函数	
+
+1. `repeat()`:  跟踪列表的重复片段，允许大量重复显示模式的行或列以以更紧凑的方式编写
+
+可用范围：`grid-template-columns` 和 `grid-template-rows`
+
+语法：
+`repeat(<repeat>, <value>)`
+
+`<repeat>`: 取值有以下几种： 
+	1. 整数，确定确切的重复次数
+	2. `<auto-fill>`: 以网格项为准自动填充，需要结合minmax()函数来使用
+	3. `<auto-fit>` : 以网格容器为准自动填充，需要结合minmax()函数来使用
+`<value>`： 取值有以下几种：
+	1. 固定长度
+	2. 百分比
+	3. fr单位
+	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
+	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
+	6. auto：不推荐使用
+
+看示例	
+
+可以多次使用
+
+`grid-template-columns: 20px auto repeat(3, 1fr) 40px`	
+
+2. `fit-content()`：参数是长度值或百分比
+公式：min(maximum size, max(minimum size, argument))
+
+它在内容的最小值和参数中取一个最大值，然后再在内容的最大值中取一个最小值
+
+当内容少时，它取内容的长度，如果内容多，内容长度大于参数长度时，它取参数长度，可以理解为它可以控制最大值是多少
+
+3. `minmax(min, max)` ：定义了长度范围区间
+
+取值：
+  1. 固定长度
+	2. 百分比
+	3. fr单位
+	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
+	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
+	6. auto：不推荐使用
+
+
 #### 注意事项
 
 >- 当元素设置了网格布局，column、float、clear、vertical-align属性无效
 >- grid布局是二维布局，适合布局整体
->- IE对grid布局支持不好，需要加-ms-前缀
 
 
 

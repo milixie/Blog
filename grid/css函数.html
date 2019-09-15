@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	  .grid, .container, .container2 {
+			display: grid;
+			background: #6e0a80;
+			grid-gap: 10px 10px;
+			padding: 10px;
+		}
+		.grid > div {
+			background: #f90;
+		}
+		.radio-wrap label{
+			padding-left: 20px;
+		}
+		.item-a {
+			background: #f90;
+		}
+		.item-b {
+			background: #d50;
+		}
+		.item-c {
+			background: #0ef;
+		}
+		.item-d {
+			background: #2e9;
+		}
+		.item-e {
+			background: #89e;
+		}
+		.item-f {
+			background: #693;
+		}
+		.item-g {
+			background: #e02;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: 100px fit-content(200px) 1fr 200px;
+		}
+	</style>
+</head>
+<body>
+<div class="radio-wrap">
+	<p>repeat的设置：value的值不同设置</p>
+	<label>固定长度情况: <input type="radio" name="repeat-value" value="100px" class="repeat-value-change"></label>
+	<label>百分比: <input type="radio" name="repeat-value" value="20%" class="repeat-value-change"></label>
+	<label>fr单位: <input type="radio" name="repeat-value" value="1fr" class="repeat-value-change"></label>
+	<label>max-content: <input type="radio" name="repeat-value" value="max-content" class="repeat-value-change"></label>
+	<label>min-content: <input type="radio" name="repeat-value" value="min-content" class="repeat-value-change"></label>
+	<label>auto: <input type="radio" name="repeat-value" value="auto" class="repeat-value-change"></label>
+</div>
+<h4>repeat示例</h4>
+<div class="container">
+	<div class="item-a">item-A</div>
+	<div class="item-b">内容突然多了呢item-B</div>
+	<div class="item-c">item-C</div>
+	<div class="item-d">item-D</div>
+	<div class="item-e">item-E</div>
+	<div class="item-f">内容突然多了呢item-F</div>
+	<div class="item-g">内容突然多了呢itemitem-G</div>
+</div>
+
+<div class="radio-wrap">
+	<p>repeat的设置：auto-fill vs auto-fit</p>
+	<label>auto-fill: <input type="radio" name="auto-value" value="auto-fill" class="auto-value-change"></label>
+	<label>auto-fit: <input type="radio" name="auto-value" value="auto-fit" class="auto-value-change"></label>
+</div>
+<h4>repeat示例</h4>
+<div class="container2">
+	<div class="item-a">item-A</div>
+	<div class="item-b">item-B</div>
+	<div class="item-c">这是一行内容这是一行内容这是一行内容item-C</div>
+	<div class="item-d">item-D</div> 
+	<div class="item-e">item-E</div>
+	<!--<div class="item-f">item-F</div>
+	<div class="item-g">item-G</div>-->
+</div>
+
+<h4>fit-content示例</h4>
+<div class="grid">
+	<div>这是一行内容</div>
+	<div>这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容这是一行内容</div>
+	<div>这是一行内容</div>
+	<div>这是一行内容这是一行内容这是一行内容</div>
+	<div>这是一行内容</div>
+	<div>这是一行内容</div>
+	<div>这是一行内容</div>
+	<div>这是一行内容</div>
+	<div>这是一行内容</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.repeat-value-change').change(function() {
+			$('.container').css({ gridTemplateColumns: `repeat(3, ${this.value})` })
+		})
+
+		$('.auto-value-change').change(function() {
+			$('.container2').css({ gridTemplateColumns: `repeat(${this.value}, minmax(50px, 100px))` })
+		})
+	})
+	</script>
+</body>
+</html>
