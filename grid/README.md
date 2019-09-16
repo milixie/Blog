@@ -1,7 +1,7 @@
 ### Grid 布局学习
 
 > - 先了解下网格
-> - CSS布局发展进程
+> - CSS布局发展过程
 > - Grid布局的优点
 > - Grid布局相关术语介绍
 > - 容器属性
@@ -9,14 +9,13 @@
 > - grid 布局中会用到的一些css函数
 > - 注意事项、备注
 
-
 #### 网格
 
-在了解和学习网格布局之前，我们先了解下什么是网格，网格是一组相交的水平和垂直线，它定义的网格的行和列
+在了解和学习网格布局之前，我们先了解下什么是网格，网格是一组相交的水平和垂直线，它定义了网格的行和列
 
 ![网格图片](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ0MDc4NDc0.png)
 
-#### CSS布局发展进程
+#### CSS布局发展过程
 
 - `table` 表格布局：`table` 比其他 `html`标记占更多的字节、布局比较死板不灵活、会阻挡浏览器渲染引擎的渲染顺序从而使得加载速度慢
 - `float` + `position`方式布局：使用 `float` 浮动和 `position` 定位去布局，`float`会使得元素脱离文档流，浮动高度塌陷，还需要额外的清除浮动解决这种高度塌陷、不易于垂直居中等问题
@@ -247,13 +246,14 @@ pc端的浏览器的兼容性还是不错的
 - `grid-auto-flow`
 
 具体设置值如下：
-1.grid:none：所有子属性都是初始化的值
 
-2.grid: <grid-template>
+	1.grid:none：所有子属性都是初始化的值
 
-3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
+	2.grid: <grid-template>
 
-4.grid: auto-flow & dense ? <grid-template-rows> ? / <grid-template-columns>
+	3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
+
+	4.grid: auto-flow & dense ? <grid-template-rows> ? / <grid-template-columns>
 
 `auto-flow`： 表示的值为 `row` | `column`，但是统一使用 `auto-flow`来表示，具体需要看它放置的位置在哪里，如果放置在 `/` 的左侧，就表示 `grid-auto-flow: row`， 如果放在右侧，就表示 `grid-auto-flow: column`
 
@@ -390,16 +390,17 @@ grid-area：
 3. `minmax(min, max)` ：定义了长度范围区间
 
 取值：
-  1. 固定长度
+
+	1. 固定长度
 
 	2. 百分比
 
 	3. fr单位
 
 	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
-
+  
 	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
-
+	
 	6. auto：不推荐使用
 
 
