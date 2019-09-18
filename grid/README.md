@@ -10,7 +10,7 @@
 > - 注意事项、备注
 
 例如这个页面就是用grid布局的
-![Grid布局](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTgx.html)
+[Grid布局](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTgx.html)
 
 #### 网格
 
@@ -219,7 +219,7 @@ pc端的浏览器的兼容性还是不错的
 
 6. `grid-auto`: 以下三个属性的复合写法
 
-![grid-auto demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTM5NTU1.html)
+![demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTM5NTU1.html)
 
 - `grid-auto-rows`:网格项目多余设置的单元格，会创建隐式轨道
 
@@ -424,7 +424,7 @@ grid-area：
 >- 当元素设置了网格布局，column、float、clear、vertical-align属性无效
 >- grid布局是二维布局，适合布局整体
 
-![一个grid demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTM3.html)
+![一个grid的demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTM3.html)
 
 
 
