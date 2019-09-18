@@ -253,7 +253,7 @@ pc端的浏览器的兼容性还是不错的
 
 	3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
 
-	4.grid: auto-flow & dense ? <grid-template-rows> ? / <grid-template-columns>
+	4.grid: auto-flow & dense ? <grid-auto-rows> ? / <grid-template-columns>
 
 `auto-flow`： 表示的值为 `row` | `column`，但是统一使用 `auto-flow`来表示，具体需要看它放置的位置在哪里，如果放置在 `/` 的左侧，就表示 `grid-auto-flow: row`， 如果放在右侧，就表示 `grid-auto-flow: column`
 
@@ -306,7 +306,7 @@ grid-auto-flow: row dense
 `span <name>` 当前网格会自动扩充，直到命中指定的网格线名称
 
 `span <number>` 当前网格会自动跨越指定的网格数量
-	
+
 `auto` 全自动，包括定位和跨度
 
 2. `grid-row`: 以下两个属性的复合写法
