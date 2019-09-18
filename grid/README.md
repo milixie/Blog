@@ -9,6 +9,9 @@
 > - grid 布局中会用到的一些css函数
 > - 注意事项、备注
 
+例如这个页面就是用grid布局的
+![Grid布局](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTgx.html)
+
 #### 网格
 
 在了解和学习网格布局之前，我们先了解下什么是网格，网格是一组相交的水平和垂直线，它定义了网格的行和列
@@ -216,6 +219,8 @@ pc端的浏览器的兼容性还是不错的
 
 6. `grid-auto`: 以下三个属性的复合写法
 
+![grid-auto demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTM5NTU1.html)
+
 - `grid-auto-rows`:网格项目多余设置的单元格，会创建隐式轨道
 
 - `grid-auto-columns`:网格项目多余设置的单元格，会创建隐式轨道
@@ -268,22 +273,28 @@ grid: 100px 60px / 1fr 2fr
 
 相当于：
 grid-template-rows: 100px 60px;
-grid-template-columns: 1fr 2fr;
+grid-auto-columns: 1fr 2fr;
 grid-auto-flow: column
 
 4.grid: auto-flow dense 100px 60px / 1fr 2fr;
 
 相当于：
-grid-template-rows: 100px 60px
+grid-auto-rows: 100px 60px
 grid-template-columns: 1fr 2fr;
 grid-auto-flow: row dense
 
 ```
 
+使用grid复合写法的例子：
+![grid](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDY0.html)
+
 以上属性都是外层容器属性的值
 
 
 #### 作用在容器子项上的属性
+
+操作demo：
+![操作](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTA4MzI1.html)
 
 1. `grid-column`: 以下两个属性的复合写法
 
@@ -348,6 +359,8 @@ grid-area：
 
 #### grid布局中的css函数	
 
+![css函数](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDgy.html)
+
 1. `repeat()`:  跟踪列表的重复片段，允许大量重复显示模式的行或列以以更紧凑的方式编写
 
 可用范围：`grid-template-columns` 和 `grid-template-rows`
@@ -410,6 +423,8 @@ grid-area：
 
 >- 当元素设置了网格布局，column、float、clear、vertical-align属性无效
 >- grid布局是二维布局，适合布局整体
+
+![一个grid demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTM3.html)
 
 
 
