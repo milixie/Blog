@@ -10,12 +10,22 @@
 			grid-gap: 10px 10px;
 			padding: 10px;
 			grid-template: repeat(3, 100px) / 1fr 2fr 1fr;
+			grid-auto-flow: column;
 			grid-template-areas: 
         "苹果 香蕉 香蕉"
         "苹果 香蕉 香蕉";
 		}
+		.grid {
+			display: grid;
+			grid: repeat(3, 100px) / auto-flow 1fr 2fr 1fr;
+			grid-gap: 10px 10px;
+			padding: 10px;
+			background: #6e0a80;
+		}
 		.item-a {
 			background: #f90;
+			grid-row: 1 / 3;
+			grid-column: 2 / 4;
 		}
 		.item-b {
 			background: #d50;
@@ -47,6 +57,15 @@
 	<div class="item-f">item-F</div>
 	<div class="item-g">item-G</div>
 </div>
-
+<h3>使用grid复合的写法</h3>
+<div class="grid">
+	<div class="item-a">item-A</div>
+	<div class="item-b">item-B</div>
+	<div class="item-c">item-C</div>
+	<div class="item-d">item-D</div>
+	<div class="item-e">item-E</div>
+	<div class="item-f">item-F</div>
+	<div class="item-g">item-G</div>
+</div>
 </body>
 </html>

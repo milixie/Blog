@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>store</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		ul, li {
+			list-style: none;
+		}
+		.grid {
+			display: grid;
+			height: 100vh;
+			grid-template-rows: 50px repeat(12, 1fr) 40px;
+			grid-template-columns: repeat(6, 1fr);
+			background: #f6f6f6;
+		}
+		.header {
+			grid-column: 1 / 7;
+			grid-row: 1 / 2;
+			text-align: center;
+			background: rgba(199, 200, 243, 0.3);
+			line-height: 50px;
+			z-index: 2;
+			font-size: 20px;
+			color: blue;
+		}
+		.content-item {
+			overflow-y: scroll;
+		}
+		.content {
+			grid-column: 1 / 7;
+			grid-row: 1 / 15;
+			text-align: center;
+		}
+		.content img {
+			width: 80%;
+			transition: all 5s;
+		}
+		.content img:hover {
+			width: 90%;
+		}
+		.left-item {
+			grid-column: 1 / 2;
+			grid-row: 2 / 14;
+			z-index: 2;
+		}
+		.footer {
+			grid-column: 1 / 7;
+			grid-row: 14 / 15;
+		}
+		.right-item {
+			grid-column: 6 / 7;
+			grid-row: 2 / 14;
+			z-index: 2;
+		}
+		h4 {
+			background: rgba(255, 107, 0, 0.3);
+			padding: 2px 10px;
+			margin-top: 10px;
+		}
+		.panel {
+			background: rgba(205, 205, 255, 0.3);
+			border-radius: 5px;
+			box-shadow: 6px 2px 10px #eee;
+			margin: 0 0 10px 10px;
+		}
+		.panel-right {
+			background: rgba(200, 255, 255, 0.3);
+			border-radius: 5px;
+			box-shadow: 6px 2px 10px #eee;
+			margin: 0 10px 10px 0;
+		}
+		.common-ul {
+			font-size: 12px;
+			padding: 6px 12px;
+		}
+		.common-ul li {
+			padding: 4px 10px;
+			margin: 4px 0;
+			background: rgba(12,34,255, 0.1)
+		}
+		.footer {
+			text-align: center;
+			line-height: 40px;
+			z-index: 2;
+			background: rgba(233, 0, 24, 0.1);
+		}
+		.grade-1 {
+			grid-column: 3 / 5;
+			grid-row: 4 / 5;
+			align-self: center;
+			justify-self: center;
+			font-size: 32px;
+			color: red;
+			z-index: 2
+		}
+		.grade-2 {
+			grid-row: 3 / 4;
+			grid-column: 3 / 5;
+			font-size: 24px;
+			color: green;
+			align-self: center;
+			justify-self: center;
+		}
+		.grade-3 {
+			grid-row: 10 / 14;
+			grid-column: 2 / 3;
+			z-index: 2;
+		}
+
+		@media screen and (max-width: 768px){
+		  .grid {
+		  	height: auto;
+		  	grid-template-rows: 50px auto auto auto auto 40px;
+		  }
+		  .left-item {
+		  	grid-column: 1 / 7;
+				grid-row: 4 / 5;
+		  }
+		  .right-item {
+		  	grid-column: 1 / 7;
+				grid-row: 5 / 6;
+		  }
+		  .content {
+				grid-row: 2 / 4;
+		  }
+
+		  .grade-1 {
+		  	grid-row: 3 / 4;
+		  	grid-column: 5 / 7;
+		  }
+
+		  .grade-2 {
+		  	grid-row: 2 / 3;
+				grid-column: 5 / 7;
+				z-index: 3;
+		  }
+
+		  .grade-3 {
+		  	grid-column: 1 / 4;
+		  	grid-row: 2 / 4;
+		  }
+		  .footer {
+		  	grid-row: 6 / 7;
+		  }
+		}
+	</style>
+</head>
+<body>
+<div class="grid">
+	<nav class="header">某电商品牌双11成交记录</nav>
+	<div class="left-item content-item">
+		<div class="panel">
+			<h4>交易来源</h4>
+			<ul class="common-ul">
+				<li>搜索引擎 35%</li>
+				<li>直接访问 20%</li>
+				<li>邮件营销 15%</li>
+				<li>视频广告 20%</li>
+				<li>联名营销 10%</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h4>收入top来源</h4>
+			<ul class="common-ul">
+				<li>搜索引擎 35%</li>
+				<li>直接访问 20%</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h4>客服人员</h4>
+			<ul class="common-ul">
+				<li>搜索引擎 35%</li>
+				<li>直接访问 20%</li>
+				<li>视频广告 20%</li>
+				<li>联名营销 10%</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h4>交易来源</h4>
+			<ul class="common-ul">
+				<li>直接访问 20%</li>
+				<li>邮件营销 15%</li>
+				<li>联名营销 10%</li>
+			</ul>
+		</div>
+		<div class="panel">
+			<h4>成交top商品</h4>
+			<ul class="common-ul">
+				<li>APP薛兆丰课程 35%</li>
+				<li>薛兆丰经济学课程 20%</li>
+				<li>武志红的心理学 15%</li>
+				<li>王太平的手机摄影课程 20%</li>
+				<li>营销课程 10%</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content content-item">
+		<img src="https://piccdn.luojilab.com/fe-oss/default/MTU2ODcwNDAyNjIy.png">
+	</div>
+	<div class="grade-1">总成交额1032.38万</div>
+	<div class="grade-2">总成交量53.563万件</div>
+	<div class="panel grade-3">
+		<h4>交易来源</h4>
+		<ul class="common-ul">
+			<li>搜索引擎 35%</li>
+			<li>直接访问 20%</li>
+			<li>邮件营销 15%</li>
+			<li>视频广告 20%</li>
+			<li>联名营销 10%</li>
+		</ul>
+	</div>
+	<div class="right-item content-item">
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+		<div class="panel-right">
+			<h4>成交top店铺</h4>
+			<ul class="common-ul">
+				<li>得到APP 30%</li>
+				<li>天猫旗舰店 20%</li>
+				<li>淘宝店铺 15%</li>
+				<li>京东自营店铺 20%</li>
+				<li>其他渠道 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+				<li>网易koala 10%</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">这里是底部哦</div>
+</div>
+</body>
+</html>

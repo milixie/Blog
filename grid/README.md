@@ -276,11 +276,9 @@ grid-auto-flow: column
 相当于：
 grid-template-rows: 100px 60px
 grid-template-columns: 1fr 2fr;
-grid-auto-flow: row
+grid-auto-flow: row dense
 
 ```
-
-看示例
 
 以上属性都是外层容器属性的值
 
@@ -302,9 +300,13 @@ grid-auto-flow: row
 值的含义：
 
 `<name>`自定义网格线的名称
+
 `<number>` 从第几条网格线开始
+
 `span <name>` 当前网格会自动扩充，直到命中指定的网格线名称
+
 `span <number>` 当前网格会自动跨越指定的网格数量
+	
 `auto` 全自动，包括定位和跨度
 
 2. `grid-row`: 以下两个属性的复合写法
