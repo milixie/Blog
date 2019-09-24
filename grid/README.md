@@ -343,6 +343,10 @@ grid-auto-flow: row dense
 
 `auto` 全自动，包括定位和跨度
 
+例如：下图中的`item-a`定义了它从第一条水平方向的网格线到第三条水平方向的网格线，从第2条垂直网格线到第3条垂直网格线，也就是占据了第1、2行第2列
+
+![图片](https://piccdn.luojilab.com/fe-oss/default/MTU2OTMyNjE3ODQy.png)
+
 2. `grid-row`: 以下两个属性的复合写法
 - `grid-row-start`
 - `grid-row-end` 
@@ -457,7 +461,7 @@ grid-area：
 
 [MDN：grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid)
 
-[阮一峰：CSS Grid 网格布局教程]([http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html))
+[阮一峰：CSS Grid 网格布局教程]([http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
 
 
