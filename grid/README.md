@@ -1,13 +1,22 @@
 ### Grid 布局学习
 
-> - 先了解下网格
+
+
+`Grid`布局是微软在2010年提出来的一种新的布局方式，到2016年的时候提交了该布局的草案，经过这三四年的发展，`grid`布局慢慢变的成熟，兼容性也越来越好，可以适当学起来用起来了
+
+
+
+本次学习的几个点：
+
 > - CSS布局发展过程
-> - Grid布局的优点
-> - Grid布局相关术语介绍
-> - 容器属性
-> - 作用在容器子项上的属性
-> - grid 布局中会用到的一些css函数
+> - Grid布局的优点以及相关术语介绍
+> - Grid布局的使用
 > - 注意事项、备注
+> - 参考资料
+
+
+
+在我们开始学习前，先了解下它能用在什么情况下
 
 例如这个页面就是用grid布局的:
 
@@ -26,30 +35,42 @@
 - `flexbox` 弹性布局：一维布局，最适合应用于程序的组件和比较小规模的布局，比较好用而且支持性较好
 - `grid` 网格布局：二维布局，适用于大规模的布局
 
+例如：下面这两种类型的布局就很适合用grid布局：
 
-例如：下面这种类型的布局就很适合用grid布局：
+![图片](https://piccdn.luojilab.com/fe-oss/default/MTU2OTMyNDA0MDkw.png)
+
 ![图片](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ1MDIxNTgw.png)
+
+
+
+~备注~
+
+本人认为`Grid`布局的出现并不是要取代上面的几种布局方式，而且跟上面的几种方式一起结合使用，用更简洁的代码实现页面布局
+
 
 
 #### Grid布局的优点
 
 ##### 优势
-- 固定或弹性的轨道尺寸
-- 定位项目
-- 创建额外的轨道
-- 对齐控制
+- 固定或弹性的轨道尺寸：可以给每个轨道设置固定的尺寸，也可以设置`auto` | `1fr` | `10%` 等弹性的尺寸，实际展示的轨道大小会随着父级的宽高变化而变化
+
+- 定位项目：可以给每个子项设置具体所占据的位置
+- 创建隐式的轨道：当子项设置的定位位置超出了父级设定的轨道大小，会创建隐式的轨道
+- 对齐控制：和`flexbox`一样，有多种对齐方式的控制
 - 控制重叠内容，直接在子项上设置`z-index`的值即可
 
 ##### 兼容性
 
 ![兼容性](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ1MTAzMjY3.png)
 
-pc端的浏览器的兼容性还是不错的
+pc端的浏览器的兼容性还是不错的，IE10和11需要添加`-ms-`来实现兼容
+
+移动端需要注意的是:ios10.3版本以下不支持，使用需斟酌或者做好兼容处理
 
 
 #### Grid布局中的相关术语
 
-1. `Grid Container` : 网格容器，一个元素应用了 `display: grid;` 后就是一个网格容器了，它是所有网格项的父元素
+1. `Grid Container` : 网格容器，一个元素应用了 `display: grid;` 后就是一个网格容器了，它是所有网格项的父元素，例如下面的代码里`<div class="grid"></div>`就是网格容器
 
 ```
 // html
@@ -70,13 +91,13 @@ pc端的浏览器的兼容性还是不错的
 
 2. `Grid item` : 网格项，上面的 `grid-item` 就是网格子项
 
-3. `Grid Line` : 网格线，组成网格项的分界线，虚拟的
+3. `Grid Line` : 网格线，组成网格项的分界线，虚拟的，下图的3×4的网格里有4条水平网格线和5条垂直网格线
 
 ![网格线](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ1NTE3NzA0.png)
 
 4. `Grid track` : 轨道，网格轨道，两个相邻的网格线之间为网格轨道
 
-如下图：共有7个网格轨道
+如下图：共有7个网格轨道，水平方向3个网格轨道，垂直方向4个网格轨道
 
 ![网格轨道](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ1NTUyNjcw.png)
 
@@ -102,6 +123,8 @@ pc端的浏览器的兼容性还是不错的
 ```
 
 #### 容器中的属性
+
+[查看练习demo](https://piccdn.luojilab.com/fe-oss/default/MTU2OTMyNDYwMDEz.html)
 
 1. `display`
 
@@ -162,7 +185,7 @@ pc端的浏览器的兼容性还是不错的
 
 ![grid-template](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2ODM3OTYw.png)
 
-`grid-template-areas`:
+`grid-template-areas`: 设置区域名称的
 
 ![grid-template-areas](https://piccdn.luojilab.com/fe-oss/default/MTU2ODQ2Nzc0MzM1.png)
 
@@ -220,7 +243,7 @@ pc端的浏览器的兼容性还是不错的
 
 6. `grid-auto`: 以下三个属性的复合写法
 
-[demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTM5NTU1.html)
+[grid-auto的相关demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxOTM5NTU1.html)
 
 - `grid-auto-rows`:网格项目多余设置的单元格，会创建隐式轨道
 
@@ -241,7 +264,7 @@ pc端的浏览器的兼容性还是不错的
 >- row dense：自动排列启动密集排序，水平方向
 >- column dense：自动排列启动密集排序，垂直方向
 
-看示例
+看示例 [demo](https://piccdn.luojilab.com/fe-oss/default/MTU2OTMyNDYwMDEz.html)
 
 7. `grid`: 以下几个属性的复合写法：
 - `grid-template-rows`
@@ -254,11 +277,11 @@ pc端的浏览器的兼容性还是不错的
 具体设置值如下：
 
 	1.grid:none：所有子属性都是初始化的值
-
+	
 	2.grid: <grid-template>
-
+	
 	3.grid: <grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>?
-
+	
 	4.grid: auto-flow & dense ? <grid-auto-rows> ? / <grid-template-columns>
 
 `auto-flow`： 表示的值为 `row` | `column`，但是统一使用 `auto-flow`来表示，具体需要看它放置的位置在哪里，如果放置在 `/` 的左侧，就表示 `grid-auto-flow: row`， 如果放在右侧，就表示 `grid-auto-flow: column`
@@ -287,7 +310,7 @@ grid-auto-flow: row dense
 ```
 
 使用grid复合写法的例子：
-[grid](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDY0.html)
+[grid复合写法demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDY0.html)
 
 以上属性都是外层容器属性的值
 
@@ -359,7 +382,7 @@ grid-area：
 
 #### grid布局中的css函数	
 
-[css函数](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDgy.html)
+[查看css函数的相关demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIzMDgy.html)
 
 1. `repeat()`:  跟踪列表的重复片段，允许大量重复显示模式的行或列以以更紧凑的方式编写
 
@@ -371,23 +394,23 @@ grid-area：
 `<repeat>`: 取值有以下几种： 
 
 	1. 整数，确定确切的重复次数
-
+	
 	2. `<auto-fill>`: 以网格项为准自动填充，需要结合minmax()函数来使用
-
+	
 	3. `<auto-fit>` : 以网格容器为准自动填充，需要结合minmax()函数来使用
 
 `<value>`： 取值有以下几种：
 
 	1. 固定长度
-
+	
 	2. 百分比
-
+	
 	3. fr单位
-
+	
 	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
-
+	
 	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
-
+	
 	6. auto：不推荐使用
 
 可以多次使用
@@ -407,13 +430,13 @@ grid-area：
 取值：
 
 	1. 固定长度
-
+	
 	2. 百分比
-
+	
 	3. fr单位
-
+	
 	4. max-content: 表示网格的轨道长度自适应内容最大的那个单元格
-  
+	  
 	5. min-content：表示网格的轨道长度自适应内容最小的那个单元格
 	
 	6. auto：不推荐使用
@@ -427,6 +450,14 @@ grid-area：
 [一个grid的demo](https://piccdn.luojilab.com/fe-oss/default/MTU2ODgxODIyOTM3.html)
 
 
+
+#### 参考资料
+
+[张鑫旭空间：grid布局](https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/)
+
+[MDN：grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid)
+
+[阮一峰：CSS Grid 网格布局教程]([http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html))
 
 
 
