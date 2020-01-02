@@ -1,5 +1,7 @@
 # Blog
 
+[如何等待异步加载n张图片完成？](https://github.com/milixie/Blog/issues/17)
+
 [ios键盘底部显示搜索按钮和顶部的完成按钮，并监听事件](https://github.com/milixie/Blog/issues/16)
 
 [ios手机调起键盘后，整个页面被顶上去了，关闭后仍然在上面，底部有一块空白](https://github.com/milixie/Blog/issues/15)
