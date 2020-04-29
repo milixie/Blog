@@ -13,6 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "echarts": "^3.7.2",
-    "jquery": "^3.2.1"
+    "jquery": "^3.5.0"
   }
 }
