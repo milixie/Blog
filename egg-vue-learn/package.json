@@ -17,7 +17,7 @@
     "fix": "eslint --fix ."
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "co": "^4.6.0",
     "co-wait": "^0.0.0",
     "core-js": "^2.4.0",
